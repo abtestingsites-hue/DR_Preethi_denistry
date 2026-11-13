@@ -29,21 +29,21 @@ export const EditorialHero: React.FC = () => {
           </p>
         </div>
 
-        {/* Big Editorial Headline with The Medium Pencil Shading & Architectural Crosshatch Texture */}
+        {/* Dynamic Studio Headline: Writing -> Pencil Hatching Shading -> Smooth Realistic Solid Final Render */}
         <div className="relative py-2 max-w-5xl mx-auto flex flex-col items-center justify-center">
           
           <div className="w-full flex justify-center">
             <svg
               viewBox="0 0 1100 180"
-              className="w-full max-w-[1050px] h-auto overflow-visible"
+              className="w-full max-w-[1050px] h-auto overflow-visible select-none"
               aria-label="DR. PREETHI'S DENTISTRY"
             >
               <defs>
                 {/* Pencil Sketch / Shading Diagonal Hatch Pattern */}
                 <pattern
-                  id="pencilHatch"
-                  width="12"
-                  height="12"
+                  id="pencilHatchPattern"
+                  width="10"
+                  height="10"
                   patternTransform="rotate(45 0 0)"
                   patternUnits="userSpaceOnUse"
                 >
@@ -51,25 +51,25 @@ export const EditorialHero: React.FC = () => {
                     x1="0"
                     y1="0"
                     x2="0"
-                    y2="12"
+                    y2="10"
                     stroke="#FFFFFF"
-                    strokeWidth="1.8"
-                    opacity="0.85"
+                    strokeWidth="1.6"
+                    opacity="0.9"
                   />
                   <line
-                    x1="6"
+                    x1="5"
                     y1="0"
-                    x2="6"
-                    y2="12"
-                    stroke="#FFFFFF"
-                    strokeWidth="1.2"
-                    opacity="0.45"
+                    x2="5"
+                    y2="10"
+                    stroke="#FAF8F2"
+                    strokeWidth="1.0"
+                    opacity="0.5"
                   />
                 </pattern>
 
-                {/* Subtle Charcoal Shadow */}
-                <filter id="pencilGlow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.7"/>
+                {/* Subtle Charcoal Glow & Depth */}
+                <filter id="studioTitleShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#000000" floodOpacity="0.75"/>
                 </filter>
               </defs>
 
@@ -82,7 +82,7 @@ export const EditorialHero: React.FC = () => {
                 stroke="#FAF8F2"
                 strokeWidth="1"
                 strokeDasharray="4 6"
-                opacity="0.4"
+                opacity="0.35"
               />
               <line
                 x1="80"
@@ -92,39 +92,56 @@ export const EditorialHero: React.FC = () => {
                 stroke="#FAF8F2"
                 strokeWidth="1"
                 strokeDasharray="4 6"
-                opacity="0.4"
+                opacity="0.35"
               />
 
-              {/* Background Pencil Hatching Fill Layer */}
+              {/* Layer 1: Pencil Hatching Texture Layer (Fills across during stage 2) */}
               <text
                 x="50%"
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-[url(#pencilHatch)] animate-hatch-fill"
+                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-[url(#pencilHatchPattern)] animate-pencil-hatch pointer-events-none"
                 style={{
                   fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
                   fontWeight: 900,
-                  filter: "url(#pencilGlow)",
+                  filter: "url(#studioTitleShadow)",
                 }}
               >
                 DR. PREETHI'S DENTISTRY
               </text>
 
-              {/* Foreground Animated Pencil Sketch Contour Outline */}
+              {/* Layer 2: Animated Drawing Pencil Outline Stroke (Draws stroke by stroke) */}
               <text
                 x="50%"
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-transparent stroke-white animate-sketch-write"
+                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-transparent stroke-white animate-pencil-outline pointer-events-none"
                 style={{
                   fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
                   fontWeight: 900,
-                  strokeWidth: "2.5px",
+                  strokeWidth: "2.4px",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
-                  filter: "url(#pencilGlow)",
+                  filter: "url(#studioTitleShadow)",
+                }}
+              >
+                DR. PREETHI'S DENTISTRY
+              </text>
+
+              {/* Layer 3: Realistic Solid Smoothened Typography Layer (Fades in seamlessly after shading) */}
+              <text
+                x="50%"
+                y="55%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-white stroke-white/20 animate-smooth-solid"
+                style={{
+                  fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
+                  fontWeight: 900,
+                  strokeWidth: "0.5px",
+                  filter: "url(#studioTitleShadow)",
                 }}
               >
                 DR. PREETHI'S DENTISTRY
