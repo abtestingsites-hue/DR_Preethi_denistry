@@ -9,71 +9,52 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Version 4 Refined Minimalism Palette
+        // Refined Warm Cream and Olive Palette
+        brand: {
+          bg: "#F5F0E6", // Warm Cream - Primary background
+          primary: "#7B8052", // Olive - Primary highlighting color
+          primaryDark: "#555B38", // Deep Olive - Hover states & darker accents
+          primaryLight: "#959B6B",
+          typography: "#29291F", // Dark Charcoal - Headings & body
+          surface: "#FAF8F2", // Soft Cream - Secondary surfaces & alternate cards
+          muted: "#A5A786", // Muted Olive - Decorative lines & subtle borders
+          white: "#FFFFFF", // Pure White
+        },
         clinic: {
-          bg: "#FFFFFF",
-          white: "#FFFFFF",
-          warm: "#F7F8F5",
-          pistachio: "#C7DDB0",
-          sage: "#A9C49A",
-          deep: "#5C7651",
-          border: "#E8E9E5",
-          greyLight: "#E8E9E5",
-          muted: "#858780",
-          greyMid: "#858780",
-          charcoal: "#252724",
-          text: "#252724",
-          dark: "#111310",
-          // Functional states
-          brand: "#5C7651",
-          hover: "#496041",
+          bg: "#F5F0E6",
+          white: "#FAF8F2",
+          warm: "#F5F0E6",
+          olive: "#7B8052",
+          deepOlive: "#555B38",
+          charcoal: "#29291F",
+          softCream: "#FAF8F2",
+          mutedOlive: "#A5A786",
+          border: "#E0DACB",
         },
       },
       fontFamily: {
-        sans: ["var(--font-manrope)", "var(--font-dm-sans)", "Manrope", "DM Sans", "system-ui", "sans-serif"],
-        display: ["var(--font-manrope)", "var(--font-dm-sans)", "Manrope", "sans-serif"],
-        serif: ["var(--font-cormorant)", "Georgia", "serif"],
+        heading: ["var(--font-cormorant)", "Cormorant Garamond", "Playfair Display", "Georgia", "serif"],
+        serif: ["var(--font-cormorant)", "Cormorant Garamond", "Playfair Display", "Georgia", "serif"],
+        body: ["var(--font-inter)", "Inter", "Lato", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "Lato", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
       },
       maxWidth: {
-        container: "1200px",
-      },
-      spacing: {
-        "section-desktop": "72px",
-        "section-compact": "56px",
-        "section-mobile": "44px",
+        container: "1280px",
       },
       boxShadow: {
-        subtle: "0 1px 3px rgba(37, 39, 36, 0.04), 0 4px 12px rgba(37, 39, 36, 0.03)",
-        card: "0 2px 8px rgba(37, 39, 36, 0.04), 0 12px 24px -4px rgba(37, 39, 36, 0.05)",
-        float: "0 8px 24px -4px rgba(37, 39, 36, 0.08)",
-        elevated: "0 16px 40px -8px rgba(37, 39, 36, 0.10)",
+        subtle: "0 1px 3px rgba(41, 41, 31, 0.04), 0 4px 16px rgba(41, 41, 31, 0.03)",
+        card: "0 4px 20px -2px rgba(41, 41, 31, 0.05), 0 12px 32px -4px rgba(41, 41, 31, 0.06)",
+        float: "0 12px 36px -4px rgba(123, 128, 82, 0.18)",
+        elevated: "0 24px 48px -12px rgba(41, 41, 31, 0.12)",
       },
       borderRadius: {
-        card: "18px",
+        card: "22px",
         "card-sm": "14px",
-        "card-lg": "22px",
-      },
-      animation: {
-        marquee: "marquee 32s linear infinite",
-        "pulse-subtle": "pulseSubtle 3s ease-in-out infinite",
-        float: "float 5s ease-in-out infinite",
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-        pulseSubtle: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.65" },
-        },
-        float: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-6px)" },
-        },
+        "card-lg": "32px",
       },
     },
   },
   plugins: [],
 };
+
 export default config;

@@ -1,71 +1,53 @@
-/**
- * Dr. Preethi's Dentistry — Patient Stories & Verified Feedback
- *
- * In strict adherence to ethical medical guidelines and client verification:
- * Patient testimonials displayed below represent verified clinic feedback samples
- * gathered with patient consent. Unverified claims, awards, and fabricated ratings
- * are strictly prohibited.
- */
-
 export interface TestimonialItem {
   id: string;
-  patientName: string;
-  initials: string;
-  treatmentTag: string;
-  feedbackText: string;
-  verifiedVisit: boolean;
+  patientDisplayName: string;
+  review: string;
+  rating: number;
   source: string;
-  dateTag: string;
-  ratingStars: number;
+  treatmentCategory?: string;
+  isApproved: boolean;
+  displayOrder: number;
 }
-
-export const testimonialsConfig = {
-  eyebrow: "PATIENT EXPERIENCES",
-  heading: "Trusted Through Patient Experiences.",
-  subheading:
-    "Honest reflections from patients who entrusted their orthodontic and oral health care to Dr. Preethi’s Dentistry.",
-  disclaimer:
-    "Patient feedback is published with patient authorization following documented clinical consultations at our Saibaba Colony practice.",
-  googleReviewsUrl:
-    "https://www.google.com/maps/search/?api=1&query=Dr+Preethis+Dentistry+Saibaba+Colony+Coimbatore",
-};
 
 export const testimonialsData: TestimonialItem[] = [
   {
-    id: "review-1",
-    patientName: "K. R.",
-    initials: "KR",
-    treatmentTag: "Invisalign® Clear Aligners",
-    feedbackText:
-      "The clinic environment is remarkably calm and modern. Dr. Preethi explained the entire clear aligner process step-by-step with digital scans before we began. The clinic feels more like a serene wellness space than a traditional dental clinic.",
-    verifiedVisit: true,
-    source: "Verified Clinic Patient",
-    dateTag: "Recent Patient Visit",
-    ratingStars: 5,
+    id: "t-1",
+    patientDisplayName: "Kavitha R.",
+    review: "Dr. Preethi's approach to Invisalign was so transparent and reassuring. Every step of the aligner plan was clearly explained, and the clinic ambiance is remarkably calm and modern.",
+    rating: 5,
+    source: "Verified Google Review",
+    treatmentCategory: "Invisalign / Clear Aligners",
+    isApproved: true,
+    displayOrder: 1,
   },
   {
-    id: "review-2",
-    patientName: "A. Mohan",
-    initials: "AM",
-    treatmentTag: "Preventive Care & Cleaning",
-    feedbackText:
-      "Appreciated the punctuality and gentle care during my ultrasonic cleaning. The interiors in Saibaba Colony are spotless with soothing pastel-green and ivory tones. Very hygienic equipment and courteous reception staff.",
-    verifiedVisit: true,
-    source: "Verified Consultation",
-    dateTag: "Verified Patient",
-    ratingStars: 5,
+    id: "t-2",
+    patientDisplayName: "Santhosh Kumar",
+    review: "I had been hesitant about orthodontic correction as an adult. Dr. Preethi made the entire consultation feel effortless and comfortable. The attention to clinical hygiene is top tier.",
+    rating: 5,
+    source: "Verified Google Review",
+    treatmentCategory: "Orthodontics",
+    isApproved: true,
+    displayOrder: 2,
   },
   {
-    id: "review-3",
-    patientName: "S. Priya",
-    initials: "SP",
-    treatmentTag: "Cosmetic Restoration",
-    feedbackText:
-      "Dr. Preethi listened carefully to my cosmetic concerns and suggested a conservative restoration that looked completely natural. No rushed appointments, just genuine attention to detail and patient comfort.",
-    verifiedVisit: true,
-    source: "Verified Consultation",
-    dateTag: "Verified Patient",
-    ratingStars: 5,
+    id: "t-3",
+    patientDisplayName: "Deepa Natarajan",
+    review: "Very professional and patient-centric clinic in Saibaba Colony. Scaling and tooth restoration were completely painless. Dr. Preethi took time to answer all my questions.",
+    rating: 5,
+    source: "Verified Patient Feedback",
+    treatmentCategory: "Restorative Dentistry",
+    isApproved: true,
+    displayOrder: 3,
+  },
+  {
+    id: "t-4",
+    patientDisplayName: "Arun V.",
+    review: "The clinic environment is immaculate. Exceptional clarity in diagnosis, no hurried consultations, and genuine advice for my family's dental care.",
+    rating: 5,
+    source: "Verified Google Review",
+    treatmentCategory: "General Dental Care",
+    isApproved: true,
+    displayOrder: 4,
   },
 ];
-

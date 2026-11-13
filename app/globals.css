@@ -1,114 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-manrope: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-dm-sans: "DM Sans", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  /* Elegant Premium Dental Color Palette */
+  --color-warm-cream: #F5F0E6;       /* Primary background */
+  --color-olive: #7B8052;            /* Primary highlight, buttons, active nav, icons */
+  --color-deep-olive: #555B38;       /* Hover states, dark button hover */
+  --color-dark-charcoal: #29291F;    /* Headings and body text */
+  --color-soft-cream: #FAF8F2;       /* Secondary surfaces, alternate section cards */
+  --color-muted-olive: #A5A786;      /* Decorative lines, subtle borders */
+  --color-pure-white: #FFFFFF;       /* Pure white accents */
 
-  /* Version 4 Refined Minimalism Palette (Authentic Clinic Green & Crisp Off-White) */
-  --color-primary-white: #FFFFFF;
-  --color-warm-white: #F7F8F5;
-  --color-pistachio: #C7DDB0;
-  --color-soft-sage: #A9C49A;
-  --color-deep-green: #5C7651;
-  --color-brand-green: #5C7651;
-  --color-light-grey: #E8E9E5;
-  --color-medium-grey: #858780;
-  --color-charcoal: #252724;
-  --color-near-black: #111310;
+  --font-heading: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --container-width: 1280px;
 }
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    background-color: #FFFFFF;
-    color: #252724;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    background-color: #FFFFFF;
-    color: #252724;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    overflow-x: hidden;
-  }
-
-  ::selection {
-    background-color: #C7DDB0;
-    color: #111310;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .backdrop-blur-glass {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-warm-cream);
+  color: var(--color-dark-charcoal);
+  -webkit-font-smoothing: antialiased;
+}
 
-  .border-hairline {
-    border-width: 1px;
-    border-color: #E8E9E5;
-  }
+body {
+  margin: 0;
+  background-color: var(--color-warm-cream);
+  color: var(--color-dark-charcoal);
+  font-family: var(--font-body);
+  overflow-x: clip;
+}
 
-  .content-container {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-  @screen sm {
-    .content-container {
-      padding-left: 1.75rem;
-      padding-right: 1.75rem;
-    }
-  }
+section {
+  position: relative;
+  width: 100%;
+}
 
-  @screen lg {
-    .content-container {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-    }
+::selection {
+  background-color: #7B8052;
+  color: #FFFFFF;
+}
+
+/* Handwritten SVG Drawing Animation - Preserved Smoothly */
+@keyframes strokeDraw {
+  0% {
+    stroke-dashoffset: 800;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+.animate-stroke-write {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: strokeDraw 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-::-webkit-scrollbar-track {
-  background: #F7F8F5;
+/* Clean Deckle Edge Paper Effect */
+.torn-edge-top {
+  clip-path: polygon(
+    0% 0%, 5% 10px, 10% 3px, 15% 12px, 20% 5px, 25% 11px, 30% 4px, 35% 13px, 
+    40% 6px, 45% 12px, 50% 5px, 55% 11px, 60% 4px, 65% 13px, 70% 5px, 
+    75% 11px, 80% 4px, 85% 12px, 90% 6px, 95% 11px, 100% 0%, 
+    100% 100%, 0% 100%
+  );
 }
 
-::-webkit-scrollbar-thumb {
-  background: #C7DDB0;
-  border-radius: 9999px;
+.torn-edge-bottom {
+  clip-path: polygon(
+    0% 0%, 100% 0%, 100% calc(100% - 12px),
+    95% 100%, 90% calc(100% - 6px), 85% 100%, 80% calc(100% - 5px),
+    75% 100%, 70% calc(100% - 7px), 65% 100%, 60% calc(100% - 5px),
+    55% 100%, 50% calc(100% - 7px), 45% 100%, 40% calc(100% - 6px),
+    35% 100%, 30% calc(100% - 7px), 25% 100%, 20% calc(100% - 5px),
+    15% 100%, 10% calc(100% - 7px), 5% 100%, 0% calc(100% - 12px)
+  );
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #5C7651;
+/* Free floating nav hover line */
+.hover-line {
+  position: relative;
 }
-
-/* Respect Reduced Motion Preferences */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.hover-line::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #7B8052;
+  transition: width 0.3s ease-in-out;
+}
+.hover-line:hover::after {
+  width: 100%;
 }

@@ -1,125 +1,82 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { GlobalNavbar } from "@/components/layout/GlobalNavbar";
+import { EditorialFooter } from "@/components/layout/EditorialFooter";
+import { FloatingWhatsAppButton } from "@/components/ui/FloatingWhatsAppButton";
 import { clinicInfo } from "@/data/clinicInfo";
 
-export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-};
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
+  title: "Dr. Preethi's Dentistry | Orthodontist & Invisalign Provider Coimbatore",
+  description: "Dr. Preethi Subramanian — Orthodontist & Invisalign Provider in Saibaba Colony, Coimbatore. Experience premium, patient-centred orthodontic and modern dental care.",
   metadataBase: new URL("https://drpreethidentistry.com"),
-  title: {
-    default: "Dr. Preethi’s Dentistry | Premium Dental Care · Saibaba Colony, Coimbatore",
-    template: "%s | Dr. Preethi’s Dentistry",
-  },
-  description:
-    "Experience thoughtful, modern dentistry and Invisalign® clear aligner consultations in Saibaba Colony, Coimbatore. Luxury minimalism, unhurried patient care, and advanced oral aesthetics.",
-  keywords: [
-    "Dr Preethi Dentistry",
-    "Dentist Saibaba Colony",
-    "Dental Clinic Coimbatore",
-    "Invisalign Coimbatore",
-    "Clear Aligners Saibaba Colony",
-    "Cosmetic Dentistry Coimbatore",
-    "Aesthetic Dental Clinic Coimbatore",
-    "Orthodontic Consultations Coimbatore",
-  ],
-  authors: [{ name: "Dr. Preethi" }],
-  creator: "Dr. Preethi’s Dentistry",
-  publisher: "Dr. Preethi’s Dentistry",
-  robots: {
-    index: true,
-    follow: true,
-  },
   openGraph: {
-    type: "website",
-    locale: "en_IN",
+    title: "Dr. Preethi's Dentistry | Orthodontist & Invisalign Provider Coimbatore",
+    description: "Personalised orthodontic care, clear aligners, and comprehensive dentistry in Saibaba Colony, Coimbatore.",
     url: "https://drpreethidentistry.com",
-    siteName: "Dr. Preethi’s Dentistry",
-    title: "Dr. Preethi’s Dentistry | Premium Dental Care · Saibaba Colony, Coimbatore",
-    description:
-      "Your Smile. Reimagined. Discover thoughtful modern dentistry, personalized consultations, and smile-enhancing treatments in a welcoming environment.",
-    images: [
-      {
-        url: "/Clinic.png",
-        width: 838,
-        height: 630,
-        alt: "Dr. Preethi’s Dentistry Clinic Interior — Saibaba Colony, Coimbatore",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Dr. Preethi’s Dentistry | Saibaba Colony, Coimbatore",
-    description:
-      "Modern dentistry and Invisalign® clear aligner consultations in a calming, luxury clinical setting.",
-    images: ["/Clinic.png"],
-  },
-  icons: {
-    icon: "/favicon.ico",
+    siteName: "Dr. Preethi's Dentistry",
+    locale: "en_IN",
+    type: "website",
   },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
-  // Verified Schema.org Structured Data
-  const jsonLd = {
+}>) {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "Dentist",
+    "@type": ["Dentist", "DentalClinic"],
     name: clinicInfo.name,
-    description:
-      "Premium dental clinic in Saibaba Colony, Coimbatore offering Invisalign® clear aligners, aesthetic smile design, and gentle family dentistry.",
-    image: "/Clinic.png",
+    image: "https://drpreethidentistry.com/Doctor.png",
+    telephone: clinicInfo.phoneRaw,
+    url: "https://drpreethidentistry.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: clinicInfo.locality,
-      addressLocality: clinicInfo.city,
-      addressRegion: clinicInfo.state,
-      postalCode: clinicInfo.pincode,
+      streetAddress: "Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road",
+      addressLocality: "Saibaba Colony, Coimbatore",
+      addressRegion: "Tamil Nadu",
+      postalCode: "641043",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "11.0232454",
-      longitude: "76.9388307",
+      latitude: 11.0232454,
+      longitude: 76.9388307,
     },
-    telephone: clinicInfo.phoneDisplay,
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "09:30",
-        closes: "20:00",
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday"],
-        opens: "09:30",
-        closes: "18:30",
-      },
-    ],
-    priceRange: "₹₹",
-    medicalSpecialty: ["Dentistry", "Orthodontics"],
+    medicalSpecialty: ["Orthodontics", "DentalHygiene", "PediatricDentistry"],
+    priceRange: "$$",
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-clinic-bg text-clinic-text font-sans antialiased selection:bg-clinic-pastel selection:text-clinic-dark flex flex-col">
-        {children}
+      <body className="min-h-screen bg-[#F5F0E6] text-[#29291F] antialiased font-sans flex flex-col selection:bg-[#7B8052] selection:text-white">
+        <GlobalNavbar />
+        <main className="flex-1 w-full">{children}</main>
+        <EditorialFooter />
+        <FloatingWhatsAppButton />
       </body>
     </html>
   );
 }
-

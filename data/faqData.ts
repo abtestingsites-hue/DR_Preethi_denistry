@@ -1,52 +1,57 @@
 export interface FAQItem {
   id: string;
+  category: "Invisalign" | "Orthodontics" | "Treatments" | "Appointments" | "General Dental Care" | "Clinic Information";
   question: string;
   answer: string;
-  category: "booking" | "invisalign" | "location" | "consultation";
 }
 
 export const faqData: FAQItem[] = [
   {
-    id: "faq-request-appointment",
-    category: "booking",
-    question: "How can I request an appointment?",
-    answer:
-      "You can submit an appointment request through our online booking form on this website by choosing your preferred date, preferred time window, and treatment interest. Our reception team in Saibaba Colony will then follow up by phone or WhatsApp to confirm your specific consultation time and answer any preliminary questions.",
+    id: "faq-1",
+    category: "Invisalign",
+    question: "How do Invisalign clear aligners work?",
+    answer: "Invisalign uses a series of custom-made, clear plastic aligners that apply gentle, controlled force to gradually move teeth into their ideal positions. Each set is worn for 1 to 2 weeks before advancing to the next series under clinical supervision.",
   },
   {
-    id: "faq-enquire-invisalign",
-    category: "invisalign",
-    question: "How can I enquire about Invisalign?",
-    answer:
-      "You can select 'Invisalign® & Clear Aligners' in our appointment request form or click any 'Enquire About Invisalign' button on this site. During your in-person consultation, Dr. Preethi will evaluate your bite, discuss digital scan possibilities, and outline a clear roadmap tailored to your orthodontic goals.",
+    id: "faq-2",
+    category: "Invisalign",
+    question: "Are clear aligners noticeable when speaking or smiling?",
+    answer: "No. Invisalign aligners are manufactured from medical-grade transparent thermoplastic, making them virtually invisible during daily social and professional interactions.",
   },
   {
-    id: "faq-clinic-location",
-    category: "location",
-    question: "Where is the clinic located?",
-    answer:
-      "Dr. Preethi’s Dentistry is located in Saibaba Colony, Coimbatore, Tamil Nadu 641011. The clinic is easily accessible with convenient local parking and prominent neighborhood landmarks. An interactive Google Maps directions tool is available in our Contact section below.",
+    id: "faq-3",
+    category: "Invisalign",
+    question: "How many hours per day do I need to wear my aligners?",
+    answer: "For optimal predictability, aligners must be worn for 20 to 22 hours each day, taken out only when eating, drinking anything other than plain cool water, and brushing.",
   },
   {
-    id: "faq-what-to-expect",
-    category: "consultation",
-    question: "What should I expect at my consultation?",
-    answer:
-      "At your consultation, Dr. Preethi conducts an unhurried, one-on-one examination to discuss your dental concerns and aesthetic goals. If you are exploring clear aligners, we perform a precision 3D digital intraoral scan to visualize your dental arch without uncomfortable putty trays, followed by a transparent discussion of treatment pathways.",
+    id: "faq-4",
+    category: "Orthodontics",
+    question: "What is the ideal age for an orthodontic consultation?",
+    answer: "The general recommendation is an initial orthodontic check around age 7 to evaluate jaw growth and dental eruption. However, orthodontic correction and clear aligners are highly effective for teens and adults of any age.",
   },
   {
-    id: "faq-contact-reception",
-    category: "booking",
-    question: "How can I contact the reception team?",
-    answer:
-      "Our reception team can be reached by telephone at +91 94420 12345 during clinic working hours (Monday through Saturday, 09:30 AM to 08:00 PM). You can also connect directly via our official WhatsApp consultation link for prompt assistance.",
+    id: "faq-5",
+    category: "Treatments",
+    question: "Is professional scaling painful or damaging to tooth enamel?",
+    answer: "No. Modern ultrasonic scaling uses delicate micro-vibrations and water cooling to dislodge hardened plaque and calculus without scraping or eroding natural tooth enamel.",
   },
   {
-    id: "faq-change-appointment",
-    category: "booking",
-    question: "How can I reschedule an appointment?",
-    answer:
-      "If you need to reschedule or modify your appointment request, please contact our reception desk by phone or WhatsApp at least 24 hours prior to your scheduled time. Our clinic staff will gladly assist in finding an alternate date and time that fits your schedule.",
+    id: "faq-6",
+    category: "Appointments",
+    question: "How do I schedule an appointment at Dr. Preethi's Dentistry?",
+    answer: "You can book directly through our online appointment form on this website, which connects immediately with our verified WhatsApp line for swift confirmation, or by calling our clinic number.",
+  },
+  {
+    id: "faq-7",
+    category: "Clinic Information",
+    question: "Where is the clinic located in Coimbatore?",
+    answer: "Dr. Preethi's Dentistry is conveniently located on the Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road, Saibaba Colony, Coimbatore, Tamil Nadu 641043.",
+  },
+  {
+    id: "faq-8",
+    category: "General Dental Care",
+    question: "How often should I visit the dentist for a routine checkup?",
+    answer: "We recommend scheduling a preventive dental examination and cleaning every 6 months to maintain optimal gum health and detect any early issues before they require complex treatment.",
   },
 ];
-
