@@ -29,7 +29,11 @@ export const EditorialHero: React.FC = () => {
           </p>
         </div>
 
-        {/* Dynamic Studio Headline: Writing -> Pencil Hatching Shading -> Smooth Realistic Solid Final Render */}
+        {/* The Medium Studio Style:
+            Step 1: First writes the outline of the letters stroke by stroke
+            Step 2: Then pencil crosshatch shading sketches inside the letters
+            Stays as the authentic pencil sketch look with architectural drafting lines
+        */}
         <div className="relative py-2 max-w-5xl mx-auto flex flex-col items-center justify-center">
           
           <div className="w-full flex justify-center">
@@ -39,11 +43,11 @@ export const EditorialHero: React.FC = () => {
               aria-label="DR. PREETHI'S DENTISTRY"
             >
               <defs>
-                {/* Pencil Sketch / Shading Diagonal Hatch Pattern */}
+                {/* Authentic Fine Pencil Shading Pattern */}
                 <pattern
-                  id="pencilHatchPattern"
-                  width="10"
-                  height="10"
+                  id="pencilShadePattern"
+                  width="8"
+                  height="8"
                   patternTransform="rotate(45 0 0)"
                   patternUnits="userSpaceOnUse"
                 >
@@ -51,25 +55,25 @@ export const EditorialHero: React.FC = () => {
                     x1="0"
                     y1="0"
                     x2="0"
-                    y2="10"
+                    y2="8"
                     stroke="#FFFFFF"
-                    strokeWidth="1.6"
-                    opacity="0.9"
+                    strokeWidth="1.5"
+                    opacity="0.88"
                   />
                   <line
-                    x1="5"
+                    x1="4"
                     y1="0"
-                    x2="5"
-                    y2="10"
+                    x2="4"
+                    y2="8"
                     stroke="#FAF8F2"
-                    strokeWidth="1.0"
-                    opacity="0.5"
+                    strokeWidth="0.8"
+                    opacity="0.45"
                   />
                 </pattern>
 
-                {/* Subtle Charcoal Glow & Depth */}
-                <filter id="studioTitleShadow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#000000" floodOpacity="0.75"/>
+                {/* Charcoal Shadow */}
+                <filter id="pencilSketchShadow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.7"/>
                 </filter>
               </defs>
 
@@ -82,7 +86,7 @@ export const EditorialHero: React.FC = () => {
                 stroke="#FAF8F2"
                 strokeWidth="1"
                 strokeDasharray="4 6"
-                opacity="0.35"
+                opacity="0.4"
               />
               <line
                 x1="80"
@@ -92,56 +96,37 @@ export const EditorialHero: React.FC = () => {
                 stroke="#FAF8F2"
                 strokeWidth="1"
                 strokeDasharray="4 6"
-                opacity="0.35"
+                opacity="0.4"
               />
 
-              {/* Layer 1: Pencil Hatching Texture Layer (Fills across during stage 2) */}
+              {/* Step 2: Pencil Crosshatch Shading Fills In */}
               <text
                 x="50%"
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-[url(#pencilHatchPattern)] animate-pencil-hatch pointer-events-none"
+                className="font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-[url(#pencilShadePattern)] animate-pencil-shading pointer-events-none"
                 style={{
-                  fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
-                  fontWeight: 900,
-                  filter: "url(#studioTitleShadow)",
+                  fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
+                  filter: "url(#pencilSketchShadow)",
                 }}
               >
                 DR. PREETHI'S DENTISTRY
               </text>
 
-              {/* Layer 2: Animated Drawing Pencil Outline Stroke (Draws stroke by stroke) */}
+              {/* Step 1: First writes the outline stroke by stroke */}
               <text
                 x="50%"
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-transparent stroke-white animate-pencil-outline pointer-events-none"
+                className="font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-transparent stroke-white animate-draw-outline pointer-events-none"
                 style={{
-                  fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
-                  fontWeight: 900,
-                  strokeWidth: "2.4px",
+                  fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
+                  strokeWidth: "2.2px",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
-                  filter: "url(#studioTitleShadow)",
-                }}
-              >
-                DR. PREETHI'S DENTISTRY
-              </text>
-
-              {/* Layer 3: Realistic Solid Smoothened Typography Layer (Fades in seamlessly after shading) */}
-              <text
-                x="50%"
-                y="55%"
-                dominantBaseline="middle"
-                textAnchor="middle"
-                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-white stroke-white/20 animate-smooth-solid"
-                style={{
-                  fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
-                  fontWeight: 900,
-                  strokeWidth: "0.5px",
-                  filter: "url(#studioTitleShadow)",
+                  filter: "url(#pencilSketchShadow)",
                 }}
               >
                 DR. PREETHI'S DENTISTRY
