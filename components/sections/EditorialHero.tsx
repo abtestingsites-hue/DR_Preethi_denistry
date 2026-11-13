@@ -29,34 +29,102 @@ export const EditorialHero: React.FC = () => {
           </p>
         </div>
 
-        {/* Big Editorial Headline with Frame-by-Frame Stroke Write Animation */}
+        {/* Big Editorial Headline with The Medium Pencil Shading & Architectural Crosshatch Texture */}
         <div className="relative py-2 max-w-5xl mx-auto flex flex-col items-center justify-center">
           
           <div className="w-full flex justify-center">
             <svg
-              viewBox="0 0 1100 170"
+              viewBox="0 0 1100 180"
               className="w-full max-w-[1050px] h-auto overflow-visible"
               aria-label="DR. PREETHI'S DENTISTRY"
             >
               <defs>
-                <filter id="hero-glow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#000000" floodOpacity="0.6"/>
+                {/* Pencil Sketch / Shading Diagonal Hatch Pattern */}
+                <pattern
+                  id="pencilHatch"
+                  width="12"
+                  height="12"
+                  patternTransform="rotate(45 0 0)"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="12"
+                    stroke="#FFFFFF"
+                    strokeWidth="1.8"
+                    opacity="0.85"
+                  />
+                  <line
+                    x1="6"
+                    y1="0"
+                    x2="6"
+                    y2="12"
+                    stroke="#FFFFFF"
+                    strokeWidth="1.2"
+                    opacity="0.45"
+                  />
+                </pattern>
+
+                {/* Subtle Charcoal Shadow */}
+                <filter id="pencilGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.7"/>
                 </filter>
               </defs>
-              
-              {/* Primary Main Line: DR. PREETHI'S DENTISTRY with genuine stroke animation */}
+
+              {/* Architectural drafting guidelines matching The Medium studio UI */}
+              <line
+                x1="80"
+                y1="35"
+                x2="1020"
+                y2="35"
+                stroke="#FAF8F2"
+                strokeWidth="1"
+                strokeDasharray="4 6"
+                opacity="0.4"
+              />
+              <line
+                x1="80"
+                y1="135"
+                x2="1020"
+                y2="135"
+                stroke="#FAF8F2"
+                strokeWidth="1"
+                strokeDasharray="4 6"
+                opacity="0.4"
+              />
+
+              {/* Background Pencil Hatching Fill Layer */}
               <text
                 x="50%"
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-serif font-bold text-[72px] sm:text-[92px] md:text-[104px] tracking-[0.14em] fill-transparent stroke-white animate-stroke-write"
+                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-[url(#pencilHatch)] animate-hatch-fill"
                 style={{
-                  fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
-                  strokeWidth: "2.2px",
+                  fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
+                  fontWeight: 900,
+                  filter: "url(#pencilGlow)",
+                }}
+              >
+                DR. PREETHI'S DENTISTRY
+              </text>
+
+              {/* Foreground Animated Pencil Sketch Contour Outline */}
+              <text
+                x="50%"
+                y="55%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                className="font-black text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.1em] fill-transparent stroke-white animate-sketch-write"
+                style={{
+                  fontFamily: "'Montserrat', 'Special Elite', 'Arial Black', sans-serif",
+                  fontWeight: 900,
+                  strokeWidth: "2.5px",
                   strokeLinecap: "round",
                   strokeLinejoin: "round",
-                  filter: "url(#hero-glow)"
+                  filter: "url(#pencilGlow)",
                 }}
               >
                 DR. PREETHI'S DENTISTRY
@@ -64,25 +132,15 @@ export const EditorialHero: React.FC = () => {
             </svg>
           </div>
 
-          {/* Tagline: Treatment-related line */}
-          <div className="mt-1 mb-2">
-            <span className="text-sm sm:text-base md:text-lg font-serif italic tracking-[0.2em] uppercase text-[#FAF8F2] font-semibold drop-shadow-md">
-              INVISALIGN® CLEAR ALIGNERS & SPECIALIST ORTHODONTIC CARE
+          {/* Requested Tagline: CARE DESIGNED AROUND YOUR SMILE */}
+          <div className="mt-2 mb-2">
+            <span className="text-base sm:text-lg md:text-xl font-serif italic tracking-[0.25em] uppercase text-[#FAF8F2] font-bold drop-shadow-lg">
+              CARE DESIGNED AROUND YOUR SMILE
             </span>
           </div>
 
           {/* Elegant Olive divider line */}
           <div className="w-full max-w-sm h-[2px] bg-[#A5A786] my-2" />
-
-          {/* Subtitle in clean typography */}
-          <div className="space-y-1.5 pt-1">
-            <p className="text-sm sm:text-base font-serif font-semibold uppercase tracking-wider text-white drop-shadow-sm">
-              ORTHODONTIST & INVISALIGN® PROVIDER
-            </p>
-            <p className="text-xs sm:text-sm uppercase tracking-wider text-[#FAF8F2]/90 font-medium drop-shadow-sm">
-              SAIBABA COLONY · COIMBATORE
-            </p>
-          </div>
         </div>
 
         {/* Action Buttons in Olive & Soft Cream */}

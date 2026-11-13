@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Special+Elite&family=Caveat:wght@600;700&family=Montserrat:wght@800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,14 +57,18 @@ section {
   color: #FFFFFF;
 }
 
-/* Handwritten SVG Drawing Animation - Preserved Smoothly */
-@keyframes strokeDraw {
+/* Handwritten / Pencil Sketch SVG Drawing Animation - The Medium Studio Style */
+@keyframes pencilShadeDraw {
   0% {
-    stroke-dashoffset: 800;
-    opacity: 0.2;
+    stroke-dashoffset: 1200;
+    opacity: 0.1;
   }
-  50% {
-    opacity: 1;
+  30% {
+    opacity: 0.7;
+  }
+  70% {
+    stroke-dashoffset: 200;
+    opacity: 0.95;
   }
   100% {
     stroke-dashoffset: 0;
@@ -72,10 +76,28 @@ section {
   }
 }
 
-.animate-stroke-write {
-  stroke-dasharray: 800;
-  stroke-dashoffset: 800;
-  animation: strokeDraw 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.animate-sketch-write {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: pencilShadeDraw 3.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes hatchReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+}
+
+.animate-hatch-fill {
+  animation: hatchReveal 2.8s ease-out forwards;
 }
 
 /* Clean Deckle Edge Paper Effect */
