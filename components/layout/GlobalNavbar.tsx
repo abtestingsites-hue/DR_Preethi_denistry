@@ -61,25 +61,28 @@ export const GlobalNavbar: React.FC = () => {
           />
         </Link>
 
-        {/* Center: Desktop Navigation - 14-15px font, weight 500-600, 28-36px gaps */}
+        {/* Center: Desktop Navigation - matches reference active underline and styling */}
         <nav className="hidden lg:flex items-center gap-7 xl:gap-8">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = link.name === "HOME" ? isHomePage : pathname === link.href;
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-[14px] xl:text-[15px] tracking-[0.06em] font-medium transition-colors duration-200 py-1 hover-line ${
+                className={`relative text-[13px] xl:text-[14px] tracking-[0.08em] font-medium transition-colors duration-200 py-1 ${
                   useDarkTheme
                     ? isActive
                       ? "text-[#7B8052] font-semibold"
                       : "text-[#29291F] hover:text-[#7B8052]"
                     : isActive
                       ? "text-white font-semibold"
-                      : "text-white/85 hover:text-white"
+                      : "text-white/90 hover:text-white"
                 }`}
               >
                 {link.name}
+                {isActive && (
+                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#959B6B] rounded-full" />
+                )}
               </Link>
             );
           })}
