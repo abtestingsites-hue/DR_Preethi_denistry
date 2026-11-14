@@ -8,8 +8,8 @@ export const MeetDoctorSection: React.FC = () => {
     <section id="doctor" className="relative bg-[#F5F0E6]">
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="max-w-2xl space-y-2 text-center md:text-left">
             <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#FAF8F2]">
@@ -36,13 +36,13 @@ export const MeetDoctorSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Doctor Profile Layout: Golden Ratio Proportion (5 Cols Photo ~38.2% / 7 Cols Clinical Narrative ~61.8%) */}
-      <div className="w-full max-w-[1360px] mx-auto px-6 sm:px-10 lg:px-14 py-16 sm:py-24">
+      {/* Main Doctor Profile Layout - Full screen width matching Navbar & Footer */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-14 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
-          {/* Doctor Portrait Image (5 Cols) */}
+          {/* Doctor Portrait Image (5 Cols) with 3D Depth Shadow */}
           <div className="lg:col-span-5 relative max-w-md mx-auto w-full">
-            <div className="rounded-[24px] overflow-hidden bg-[#FAF8F2] border border-[#A5A786]/40 shadow-card aspect-[4/5] relative">
+            <div className="rounded-[24px] overflow-hidden bg-[#FAF8F2] border border-[#A5A786]/40 shadow-elevated aspect-[4/5] relative">
               <img
                 src="/Doctor.png"
                 alt="Dr. Preethi Subramanian"
@@ -63,7 +63,7 @@ export const MeetDoctorSection: React.FC = () => {
 
           {/* About Doctor Details (7 Cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-[12px] uppercase tracking-[0.12em] font-bold text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35">
+            <span className="text-[12px] uppercase tracking-[0.12em] font-bold text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
               SPECIALIST ORTHODONTIST
             </span>
 
@@ -80,11 +80,11 @@ export const MeetDoctorSection: React.FC = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 max-w-lg">
-              <div className="p-4 rounded-[16px] bg-[#FAF8F2] border border-[#A5A786]/30">
+              <div className="p-4 rounded-[16px] bg-[#FAF8F2] border border-[#A5A786]/30 shadow-subtle">
                 <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B8052] block">Clinical Focus</span>
                 <span className="text-[14px] font-bold text-[#29291F] mt-0.5 block">Clear Aligners &amp; Orthodontics</span>
               </div>
-              <div className="p-4 rounded-[16px] bg-[#FAF8F2] border border-[#A5A786]/30">
+              <div className="p-4 rounded-[16px] bg-[#FAF8F2] border border-[#A5A786]/30 shadow-subtle">
                 <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B8052] block">Location</span>
                 <span className="text-[14px] font-bold text-[#29291F] mt-0.5 block">Saibaba Colony, Coimbatore</span>
               </div>
@@ -93,7 +93,7 @@ export const MeetDoctorSection: React.FC = () => {
             <div className="pt-3 flex flex-wrap items-center gap-4">
               <Link
                 href="/booking"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated group"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-elevated group"
               >
                 <span>Book Consultation with Dr. Preethi</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -101,7 +101,7 @@ export const MeetDoctorSection: React.FC = () => {
 
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center px-6 sm:px-7 h-[48px] rounded-full bg-[#FAF8F2] border border-[#A5A786]/50 text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-sm"
+                className="inline-flex items-center justify-center px-6 sm:px-7 h-[48px] rounded-full bg-[#FAF8F2] border border-[#A5A786]/50 text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-subtle"
               >
                 <span>Read Full Profile</span>
               </Link>

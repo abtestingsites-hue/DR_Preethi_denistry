@@ -19,8 +19,8 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
     <section id="clinic-gallery" className="relative bg-[#F5F0E6]">
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="max-w-2xl space-y-2 text-center md:text-left">
             <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#FAF8F2]">
@@ -47,8 +47,8 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
         </div>
       </div>
 
-      {/* Gallery Grid: 4:3 Aspect Ratio, 24px Gap, 18px Radius */}
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
+      {/* Gallery Grid - Full screen width matching Navbar & Footer with 3D Depth Shadows */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {images.map((item, index) => {
             const isHovered = hoveredId === item.id;
@@ -58,7 +58,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setActiveLightboxIndex(index)}
-                className="group relative overflow-hidden rounded-[18px] bg-[#FAF8F2] border border-[#A5A786]/40 aspect-[4/3] cursor-pointer shadow-card hover:shadow-elevated hover:border-[#7B8052] transition-all duration-300"
+                className="group relative overflow-hidden rounded-[18px] bg-[#FAF8F2] border border-[#A5A786]/40 aspect-[4/3] cursor-pointer shadow-elevated hover:shadow-2xl hover:border-[#7B8052] transition-all duration-300"
               >
                 <img
                   src={item.imageUrl}
@@ -67,7 +67,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 />
 
                 <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-3 py-1 rounded-full bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] uppercase font-bold tracking-wider text-[#7B8052] border border-[#A5A786]/35 shadow-sm">
+                  <span className="px-3 py-1 rounded-full bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] uppercase font-bold tracking-wider text-[#7B8052] border border-[#A5A786]/35 shadow-md">
                     {item.category}
                   </span>
                 </div>
@@ -98,7 +98,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                   <p className="text-[13px] text-[#FAF8F2]/85 mt-1.5 line-clamp-2 leading-[1.5] font-light">
                     {item.description}
                   </p>
-                  <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1 rounded-full inline-block mt-3 w-fit shadow-sm">
+                  <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1 rounded-full inline-block mt-3 w-fit shadow-md">
                     Click to view full photo
                   </span>
                 </div>

@@ -61,8 +61,8 @@ export const InstagramReelsSection: React.FC = () => {
     <section id="reels" className="relative bg-[#F5F0E6]">
       
       {/* Top Olive Ribbon Banner seamlessly incorporating Instagram ID & followers */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-2 text-center md:text-left">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#FAF8F2]/90">
@@ -103,13 +103,13 @@ export const InstagramReelsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Autoplaying Reels Feeds Grid: 4 cols on desktop xl, 3 on lg, 2 on sm, 1 on mobile */}
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
+      {/* Autoplaying Reels Feeds Grid: Full Screen Edge-to-Edge width with 3D Depth Shadows */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8 md:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
           {reels.map((reel, index) => (
             <div
               key={reel.id}
-              className="relative aspect-[9/16] rounded-[18px] overflow-hidden bg-[#29291F] border border-[#A5A786]/40 shadow-card hover:shadow-elevated transition-all duration-300 group"
+              className="relative aspect-[9/16] rounded-[18px] overflow-hidden bg-[#29291F] border border-[#A5A786]/40 shadow-elevated hover:shadow-2xl transition-all duration-300 group"
             >
               {/* Autoplay Video Loop */}
               <video
@@ -127,7 +127,7 @@ export const InstagramReelsSection: React.FC = () => {
 
               {/* Top Reel Header Overlay */}
               <div className="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
-                <span className="px-2.5 py-1 rounded-full bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-[#7B8052] border border-[#A5A786]/30 shadow-sm">
+                <span className="px-2.5 py-1 rounded-full bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-[#7B8052] border border-[#A5A786]/30 shadow-md">
                   {reel.category}
                 </span>
 
@@ -136,7 +136,7 @@ export const InstagramReelsSection: React.FC = () => {
                 </span>
               </div>
 
-              {/* Bottom In-Video Control Overlay: Caption + Sound Toggle */}
+              {/* Bottom In-Video Control Overlay */}
               <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/95 via-black/60 to-transparent text-white z-10 space-y-2">
                 <h4 className="text-[14px] font-serif font-bold text-white leading-snug drop-shadow-md">
                   {reel.title}

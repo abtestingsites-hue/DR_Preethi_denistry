@@ -42,10 +42,10 @@ const config: Config = {
         container: "1280px",
       },
       boxShadow: {
-        subtle: "0 1px 3px rgba(41, 41, 31, 0.04), 0 4px 16px rgba(41, 41, 31, 0.03)",
-        card: "0 4px 20px -2px rgba(41, 41, 31, 0.05), 0 12px 32px -4px rgba(41, 41, 31, 0.06)",
-        float: "0 12px 36px -4px rgba(123, 128, 82, 0.18)",
-        elevated: "0 24px 48px -12px rgba(41, 41, 31, 0.12)",
+        subtle: "0 2px 8px rgba(41, 41, 31, 0.05), 0 1px 2px rgba(41, 41, 31, 0.03)",
+        card: "0 10px 28px -4px rgba(41, 41, 31, 0.12), 0 20px 48px -8px rgba(41, 41, 31, 0.14)",
+        float: "0 16px 40px -4px rgba(123, 128, 82, 0.28)",
+        elevated: "0 20px 40px -6px rgba(41, 41, 31, 0.18), 0 32px 64px -12px rgba(41, 41, 31, 0.22)",
       },
       borderRadius: {
         card: "22px",

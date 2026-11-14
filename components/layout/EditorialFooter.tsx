@@ -6,18 +6,19 @@ import { clinicInfo } from "@/data/clinicInfo";
 export const EditorialFooter: React.FC = () => {
   return (
     <footer className="bg-[#29291F] text-[#FAF8F2] pt-12 pb-8 border-t border-[#A5A786]/20">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
+      {/* Edge-aligned full width container with left corner logo matching GlobalNavbar */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10">
         
         {/* Compact Grid Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-[#A5A786]/20">
           
-          {/* Brand Col */}
+          {/* Brand Col aligned to far left */}
           <div className="lg:col-span-4 space-y-3">
             <Link href="/" className="inline-block group">
               <img
                 src="/clinic-logo-dark.png"
                 alt="Dr. Preethi's Dentistry"
-                className="h-10 sm:h-12 w-auto object-contain filter brightness-0 invert opacity-95 transition-transform group-hover:scale-105"
+                className="w-[180px] sm:w-[200px] lg:w-[220px] h-auto object-contain filter brightness-0 invert opacity-95 transition-transform group-hover:scale-105"
               />
             </Link>
 
@@ -58,7 +59,7 @@ export const EditorialFooter: React.FC = () => {
           {/* Contact Details */}
           <div className="lg:col-span-4 space-y-2.5">
             <h4 className="text-[11px] uppercase font-bold tracking-widest text-[#A5A786]">
-              CLINIC LOCATION & HOURS
+              CLINIC LOCATION &amp; HOURS
             </h4>
             <p className="text-xs text-[#FAF8F2]/80 leading-relaxed flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#7B8052] shrink-0 mt-0.5" />
@@ -96,10 +97,10 @@ export const EditorialFooter: React.FC = () => {
 
         {/* Compact Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#FAF8F2]/50 gap-3">
-          <p>© {new Date().getFullYear()} Dr. Preethi's Dentistry. All rights reserved. Saibaba Colony, Coimbatore.</p>
+          <p>© {new Date().getFullYear()} Dr. Preethi&apos;s Dentistry. All rights reserved. Saibaba Colony, Coimbatore.</p>
           <div className="flex items-center gap-5">
             <Link href="/#faq" className="hover:text-[#FAF8F2] transition-colors">FAQ</Link>
-            <Link href="/blog" className="hover:text-[#FAF8F2] transition-colors">Doctor's Journal</Link>
+            <Link href="/blog" className="hover:text-[#FAF8F2] transition-colors">Doctor&apos;s Journal</Link>
             <Link href="/privacy" className="hover:text-[#FAF8F2] transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[#FAF8F2] transition-colors">Terms of Service</Link>
           </div>
