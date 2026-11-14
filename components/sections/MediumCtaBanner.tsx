@@ -23,8 +23,8 @@ export const MediumCtaBanner: React.FC = () => {
     <section id="contact-section" className="bg-[#FAF8F2] text-[#29291F] py-16 sm:py-24 px-6 sm:px-12 border-t border-[#A5A786]/30">
       <div className="max-w-[1400px] mx-auto space-y-12">
         
-        {/* Banner Top Header */}
-        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-8 sm:px-12 rounded-3xl torn-edge-top torn-edge-bottom shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Banner Top Header with clean, plain blended architectural styling */}
+        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-8 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
             <h2 className="text-2xl sm:text-3xl font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
               WANT TO BEGIN YOUR SMILE JOURNEY?

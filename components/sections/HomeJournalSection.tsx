@@ -12,8 +12,8 @@ export const HomeJournalSection: React.FC = () => {
     <section id="journal" className="py-20 md:py-24 bg-[#F5F0E6] border-t border-[#A5A786]/30">
       <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
         
-        {/* Header Styled in Contact Section Banner Style */}
-        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-8 sm:px-12 rounded-3xl torn-edge-top torn-edge-bottom shadow-md flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
+        {/* Header Styled in Contact Section Banner Style with clean, architectural contours */}
+        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-8 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
           <div className="space-y-1 text-center md:text-left">
             <span className="text-[11px] uppercase tracking-widest text-[#FAF8F2]/75 font-bold block">
               CLINICAL JOURNAL & INSIGHTS

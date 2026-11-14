@@ -9,9 +9,11 @@ export const EditorialHero: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Reveal the hero content on first scroll
-      if (window.scrollY > 20) {
+      // Toggle reveal of hero content when scrolling down; hide when returning to top
+      if (window.scrollY > 30) {
         setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
       }
     };
 
@@ -38,17 +40,14 @@ export const EditorialHero: React.FC = () => {
         <div className="absolute inset-0 bg-[#29291F]/50 backdrop-blur-[1px]" />
       </div>
 
-      {/* Prompt cue before first scroll (Navbar and clean image remain visible) */}
+      {/* Prompt cue before first scroll: Minimalist architectural bouncing down arrow (no pill text) */}
       {!hasScrolled && (
         <button
           onClick={triggerScroll}
-          aria-label="Scroll to enter"
-          className="absolute bottom-10 z-20 flex flex-col items-center gap-2 text-white/80 hover:text-white transition-all animate-bounce cursor-pointer group"
+          aria-label="Scroll down to explore"
+          className="absolute bottom-10 z-20 flex flex-col items-center justify-center w-12 h-12 rounded-full bg-[#7B8052]/80 hover:bg-[#7B8052] text-white border border-white/30 backdrop-blur-sm transition-all animate-bounce cursor-pointer shadow-float group"
         >
-          <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#FAF8F2] bg-[#7B8052]/80 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">
-            Scroll to Explore
-          </span>
-          <ChevronDown className="w-5 h-5 text-[#FAF8F2]" />
+          <ChevronDown className="w-6 h-6 text-[#FAF8F2] group-hover:scale-110 transition-transform" />
         </button>
       )}
 
@@ -200,8 +199,8 @@ export const EditorialHero: React.FC = () => {
 
       </div>
 
-      {/* Torn Edge Bottom Divider into the Olive Care Banner */}
-      <div className="absolute bottom-0 inset-x-0 h-5 bg-[#7B8052] torn-edge-top z-20 pointer-events-none" />
+      {/* Clean blended base transition */}
+      <div className="absolute bottom-0 inset-x-0 h-px bg-white/20 z-20 pointer-events-none" />
     </section>
   );
 };

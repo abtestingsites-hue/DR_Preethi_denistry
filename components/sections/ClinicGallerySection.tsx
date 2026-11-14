@@ -18,8 +18,8 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
   return (
     <section id="clinic-gallery" className="relative bg-[#F5F0E6]">
       
-      {/* Top Olive Ribbon Banner matching CARE DESIGNED AROUND YOUR SMILE style */}
-      <div className="bg-[#7B8052] text-white py-12 px-6 sm:px-12 torn-edge-top torn-edge-bottom relative z-10 shadow-md">
+      {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
+      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
           <div className="max-w-3xl space-y-2">

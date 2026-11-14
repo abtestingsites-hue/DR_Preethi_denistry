@@ -7,8 +7,8 @@ export const MeetDoctorSection: React.FC = () => {
   return (
     <section id="doctor" className="relative bg-[#F5F0E6]">
       
-      {/* Top Olive Ribbon Banner matching CARE DESIGNED AROUND YOUR SMILE style */}
-      <div className="bg-[#7B8052] text-white py-12 px-6 sm:px-12 torn-edge-top torn-edge-bottom relative z-10 shadow-md">
+      {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
+      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
           <div className="max-w-3xl space-y-2">
@@ -49,30 +49,28 @@ export const MeetDoctorSection: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Authentic Crest/Shield Badge */}
-            <div className="absolute -bottom-8 -right-3 z-20">
-              <div
-                className="w-48 sm:w-56 bg-[#FAF8F2] border-2 border-[#7B8052] p-5 shadow-elevated flex flex-col items-center text-center transition-transform hover:scale-105"
-                style={{
-                  clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)",
-                  paddingBottom: "2.2rem"
-                }}
-              >
-                <div className="w-10 h-10 rounded-full bg-[#7B8052] flex items-center justify-center text-white mb-2 shadow-sm">
-                  <ShieldCheck className="w-5 h-5 text-white" />
+            {/* Authentic Shield Icon Emblem: Architecturally refined badge with enlarged shield */}
+            <div className="absolute -bottom-6 -right-2 sm:-right-4 z-20">
+              <div className="bg-[#FAF8F2] border-2 border-[#7B8052] rounded-2xl p-4 sm:p-5 shadow-elevated flex items-center gap-4 transition-transform hover:scale-105">
+                {/* Shield Icon: Prominent and elegant */}
+                <div className="w-14 h-14 rounded-xl bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] shrink-0 shadow-sm">
+                  <ShieldCheck className="w-8 h-8 text-[#FAF8F2]" />
                 </div>
-                <span className="text-[10px] uppercase tracking-widest font-extrabold text-[#7B8052] block">
-                  CERTIFIED SPECIALIST
-                </span>
-                <p className="text-base font-serif font-bold text-[#29291F] mt-0.5 leading-tight">
-                  Orthodontist
-                </p>
-                <p className="text-xs font-semibold text-[#7B8052] mt-0.5">
-                  Invisalign® Provider
-                </p>
-                <p className="text-[10px] text-[#29291F]/60 mt-1">
-                  Saibaba Colony, Coimbatore
-                </p>
+                {/* Shield Content */}
+                <div className="text-left">
+                  <span className="text-[10px] uppercase tracking-widest font-extrabold text-[#7B8052] block">
+                    CERTIFIED SPECIALIST
+                  </span>
+                  <p className="text-base sm:text-lg font-serif font-bold text-[#29291F] leading-tight">
+                    Orthodontist
+                  </p>
+                  <p className="text-xs font-semibold text-[#7B8052] mt-0.5">
+                    Invisalign® Provider
+                  </p>
+                  <p className="text-[10px] text-[#29291F]/60 mt-0.5">
+                    Saibaba Colony, Coimbatore
+                  </p>
+                </div>
               </div>
             </div>
           </div>

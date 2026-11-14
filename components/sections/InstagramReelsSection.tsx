@@ -61,7 +61,7 @@ export const InstagramReelsSection: React.FC = () => {
     <section id="reels" className="relative bg-[#F5F0E6]">
       
       {/* Top Olive Ribbon Banner seamlessly incorporating Instagram ID & followers */}
-      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 torn-edge-top torn-edge-bottom relative z-10 shadow-md">
+      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-1.5 text-center md:text-left">

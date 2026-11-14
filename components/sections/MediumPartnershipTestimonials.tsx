@@ -40,8 +40,8 @@ export const MediumPartnershipTestimonials: React.FC = () => {
   return (
     <section ref={containerRef} id="testimonials" className="relative bg-[#F5F0E6] py-16">
       
-      {/* Top Banner */}
-      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 text-center shadow-md torn-edge-bottom mb-12">
+      {/* Top Banner with clean, plain blended architectural styling */}
+      <div className="bg-[#7B8052] text-white py-8 px-6 sm:px-12 text-center shadow-sm border-y border-[#555B38]/30 mb-12">
         <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider">
           OUR GOAL IS TO CREATE <span className="font-extrabold text-[#FAF8F2] underline decoration-white/40 underline-offset-4">CONFIDENT SMILES</span> & LASTING RELATIONSHIPS.
         </h2>
