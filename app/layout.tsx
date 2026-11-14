@@ -3,7 +3,7 @@ import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { GlobalNavbar } from "@/components/layout/GlobalNavbar";
 import { EditorialFooter } from "@/components/layout/EditorialFooter";
-import { FloatingWhatsAppButton } from "@/components/ui/FloatingWhatsAppButton";
+import { FloatingActionButtons } from "@/components/ui/FloatingActionButtons";
 import { clinicInfo } from "@/data/clinicInfo";
 
 const cormorant = Cormorant_Garamond({
@@ -75,7 +75,7 @@ export default function RootLayout({
         <GlobalNavbar />
         <main className="flex-1 w-full">{children}</main>
         <EditorialFooter />
-        <FloatingWhatsAppButton />
+        <FloatingActionButtons />
       </body>
     </html>
   );

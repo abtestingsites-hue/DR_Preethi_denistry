@@ -20,12 +20,12 @@ export const MediumCtaBanner: React.FC = () => {
   };
 
   return (
-    <section id="contact-section" className="bg-[#FAF8F2] text-[#29291F] py-16 sm:py-24 px-6 sm:px-12 border-t border-[#A5A786]/30">
-      <div className="max-w-[1400px] mx-auto space-y-12">
+    <section id="contact-section" className="bg-[#FAF8F2] text-[#29291F] py-16 sm:py-24 px-6 sm:px-12 lg:px-16 border-t border-[#A5A786]/30">
+      <div className="w-full space-y-12">
         
-        {/* Banner Top Header with clean, plain blended architectural styling */}
-        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-8 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center md:text-left">
+        {/* Banner Top Header with clean, plain centered architectural styling */}
+        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-6 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col items-center justify-center text-center gap-4">
+          <div className="space-y-1 max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
               WANT TO BEGIN YOUR SMILE JOURNEY?
             </h2>
@@ -35,7 +35,7 @@ export const MediumCtaBanner: React.FC = () => {
           </div>
           <a
             href={`tel:${clinicInfo.phoneRaw}`}
-            className="shrink-0 px-6 py-3 rounded-full bg-[#FAF8F2] text-[#29291F] font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-md flex items-center gap-2"
+            className="shrink-0 px-6 py-2.5 rounded-full bg-[#FAF8F2] text-[#29291F] font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-md flex items-center gap-2 mt-1"
           >
             <Phone className="w-4 h-4 text-[#7B8052]" />
             <span>Call {clinicInfo.phoneDisplay}</span>

@@ -16,11 +16,11 @@ export const HomeFaqSection: React.FC = () => {
 
   return (
     <section id="faq" className="py-20 md:py-24 bg-[#FAF8F2] border-t border-[#A5A786]/30">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12">
+      <div className="w-full px-6 sm:px-12 lg:px-16">
         
-        {/* Header Styled in Contact Section Banner Style with clean architectural contours */}
-        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-8 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
-          <div className="space-y-1 text-center md:text-left">
+        {/* Header Styled in Centered Banner Style */}
+        <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-6 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col items-center justify-center text-center gap-4 mb-12">
+          <div className="space-y-1 max-w-3xl">
             <span className="text-[11px] uppercase tracking-widest text-[#FAF8F2]/75 font-bold block">
               PATIENT INQUIRIES & GUIDANCE
             </span>
@@ -33,7 +33,7 @@ export const HomeFaqSection: React.FC = () => {
           </div>
           <Link
             href="/faq"
-            className="shrink-0 px-6 py-3 rounded-full bg-[#FAF8F2] text-[#29291F] font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-md flex items-center gap-2"
+            className="shrink-0 px-6 py-2.5 rounded-full bg-[#FAF8F2] text-[#29291F] font-bold text-xs uppercase tracking-wider hover:bg-white transition-all shadow-md flex items-center gap-2 mt-1"
           >
             <span>View All FAQs</span>
             <ArrowRight className="w-4 h-4 text-[#7B8052]" />

@@ -47,7 +47,7 @@ export const MediumPartnershipTestimonials: React.FC = () => {
         </h2>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12 mb-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+      <div className="w-full px-6 sm:px-12 lg:px-16 mb-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
         <div>
           <span className="text-xs uppercase tracking-wider font-bold text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/50">
             5.0 ⭐ VERIFIED PATIENT STORIES

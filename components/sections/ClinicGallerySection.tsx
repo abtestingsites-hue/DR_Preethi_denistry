@@ -20,7 +20,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
           <div className="max-w-3xl space-y-2">
             <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
@@ -47,8 +47,8 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
         </div>
       </div>
 
-      {/* Gallery Grid with Hover Animations */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-12 py-14">
+      {/* Gallery Grid - Full Screen Layout */}
+      <div className="w-full px-4 sm:px-8 lg:px-12 py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((item, index) => {
             const isHovered = hoveredId === item.id;

@@ -15,7 +15,7 @@ export const ServicesGallerySection: React.FC = () => {
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-b border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
           <div className="max-w-3xl space-y-2">
             <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
@@ -42,9 +42,9 @@ export const ServicesGallerySection: React.FC = () => {
         </div>
       </div>
 
-      {/* Grid Gallery Style Matching The Medium UI reference: flush rectangular cards, 3 columns, minimal gaps */}
+      {/* Grid Gallery Style: flush rectangular cards, 3 columns, full screen layout */}
       <div className="w-full px-4 sm:px-8 lg:px-12 py-8 bg-[#F5F0E6]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-w-[1450px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 w-full">
           {treatments.map((treatment) => {
             const isHovered = hoveredId === treatment.id;
             return (
