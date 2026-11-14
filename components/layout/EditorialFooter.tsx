@@ -5,90 +5,90 @@ import { clinicInfo } from "@/data/clinicInfo";
 
 export const EditorialFooter: React.FC = () => {
   return (
-    <footer className="bg-[#29291F] text-[#FAF8F2] pt-12 pb-8 border-t border-[#A5A786]/20">
+    <footer className="bg-[#29291F] text-[#FAF8F2] pt-8 pb-5 border-t border-[#A5A786]/20">
       {/* Edge-aligned full width container with left corner logo matching GlobalNavbar */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10">
         
-        {/* Compact Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-[#A5A786]/20">
+        {/* Compact Grid Section with reduced vertical height */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 pb-6 border-b border-[#A5A786]/20">
           
           {/* Brand Col aligned to far left */}
-          <div className="lg:col-span-4 space-y-3">
+          <div className="lg:col-span-4 space-y-2">
             <Link href="/" className="inline-block group">
               <img
                 src="/clinic-logo-dark.png"
                 alt="Dr. Preethi's Dentistry"
-                className="w-[180px] sm:w-[200px] lg:w-[220px] h-auto object-contain filter brightness-0 invert opacity-95 transition-transform group-hover:scale-105"
+                className="w-[160px] sm:w-[180px] lg:w-[200px] h-auto object-contain filter brightness-0 invert opacity-95 transition-transform group-hover:scale-105"
               />
             </Link>
 
-            <p className="text-xs text-[#FAF8F2]/70 max-w-sm leading-relaxed font-light mt-2">
+            <p className="text-[11px] text-[#FAF8F2]/70 max-w-sm leading-relaxed font-light mt-1">
               Dr. Preethi Subramanian — Orthodontist | Invisalign Provider. Delivering international-standard clinical care, orthodontic precision, and patient-centred dentistry in Coimbatore.
             </p>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-2.5 pt-1">
+            <div className="flex items-center gap-2 pt-1">
               <a
                 href={clinicInfo.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
+                className="w-7 h-7 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-3.5 h-3.5" />
+                <Instagram className="w-3 h-3" />
               </a>
               <a
                 href={`https://wa.me/${clinicInfo.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
+                className="w-7 h-7 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageSquare className="w-3.5 h-3.5" />
+                <MessageSquare className="w-3 h-3" />
               </a>
               <a
                 href={`tel:${clinicInfo.phoneRaw}`}
-                className="w-8 h-8 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
+                className="w-7 h-7 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
                 aria-label="Phone"
               >
-                <Phone className="w-3.5 h-3.5" />
+                <Phone className="w-3 h-3" />
               </a>
             </div>
           </div>
 
           {/* Contact Details */}
-          <div className="lg:col-span-4 space-y-2.5">
-            <h4 className="text-[11px] uppercase font-bold tracking-widest text-[#A5A786]">
+          <div className="lg:col-span-4 space-y-2">
+            <h4 className="text-[10px] uppercase font-bold tracking-widest text-[#A5A786]">
               CLINIC LOCATION &amp; HOURS
             </h4>
-            <p className="text-xs text-[#FAF8F2]/80 leading-relaxed flex items-start gap-2">
+            <p className="text-[11px] text-[#FAF8F2]/80 leading-relaxed flex items-start gap-2">
               <MapPin className="w-3.5 h-3.5 text-[#7B8052] shrink-0 mt-0.5" />
               <span>{clinicInfo.fullAddress}</span>
             </p>
-            <p className="text-xs text-[#FAF8F2]/80 flex items-center gap-2">
+            <p className="text-[11px] text-[#FAF8F2]/80 flex items-center gap-2">
               <Phone className="w-3.5 h-3.5 text-[#7B8052] shrink-0" />
               <span>Call: {clinicInfo.phoneDisplay}</span>
             </p>
-            <p className="text-[11px] text-[#FAF8F2]/60">
+            <p className="text-[10px] text-[#FAF8F2]/60">
               Hours: Mon – Sat: 10:00 AM – 08:00 PM | Sun: Prior Appointment
             </p>
           </div>
 
-          {/* Quick Links Including FAQ & Journal */}
-          <div className="lg:col-span-4 space-y-2.5">
-            <h4 className="text-[11px] uppercase font-bold tracking-widest text-[#A5A786]">
+          {/* Quick Links */}
+          <div className="lg:col-span-4 space-y-2">
+            <h4 className="text-[10px] uppercase font-bold tracking-widest text-[#A5A786]">
               QUICK NAVIGATION
             </h4>
-            <div className="grid grid-cols-2 gap-2 text-xs uppercase tracking-wider font-semibold text-[#FAF8F2]/75">
+            <div className="grid grid-cols-2 gap-1.5 text-[11px] uppercase tracking-wider font-semibold text-[#FAF8F2]/75">
               <Link href="/" className="hover:text-[#FAF8F2] transition-colors">HOME</Link>
               <Link href="/#treatments" className="hover:text-[#FAF8F2] transition-colors">TREATMENTS</Link>
-              <Link href="/#reels" className="hover:text-[#FAF8F2] transition-colors">WATCH REELS</Link>
+              <Link href="/treatments/invisalign-clear-aligners" className="hover:text-[#FAF8F2] transition-colors">INVISALIGN®</Link>
+              <Link href="/#goclear" className="hover:text-[#FAF8F2] transition-colors">GOCLEAR</Link>
               <Link href="/#clinic-gallery" className="hover:text-[#FAF8F2] transition-colors">GALLERY</Link>
               <Link href="/#doctor" className="hover:text-[#FAF8F2] transition-colors">OUR DOCTOR</Link>
               <Link href="/#testimonials" className="hover:text-[#FAF8F2] transition-colors">REVIEWS</Link>
               <Link href="/#journal" className="hover:text-[#FAF8F2] transition-colors text-[#A5A786]">JOURNAL</Link>
               <Link href="/#faq" className="hover:text-[#FAF8F2] transition-colors text-[#A5A786]">FAQ</Link>
-              <Link href="/contact" className="hover:text-[#FAF8F2] transition-colors">CONTACT</Link>
               <Link href="/booking" className="hover:text-[#7B8052] text-[#FAF8F2] transition-colors font-bold">APPOINTMENT</Link>
             </div>
           </div>
@@ -96,9 +96,9 @@ export const EditorialFooter: React.FC = () => {
         </div>
 
         {/* Compact Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#FAF8F2]/50 gap-3">
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-[10px] text-[#FAF8F2]/50 gap-2">
           <p>© {new Date().getFullYear()} Dr. Preethi&apos;s Dentistry. All rights reserved. Saibaba Colony, Coimbatore.</p>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             <Link href="/#faq" className="hover:text-[#FAF8F2] transition-colors">FAQ</Link>
             <Link href="/blog" className="hover:text-[#FAF8F2] transition-colors">Doctor&apos;s Journal</Link>
             <Link href="/privacy" className="hover:text-[#FAF8F2] transition-colors">Privacy Policy</Link>

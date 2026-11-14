@@ -73,7 +73,7 @@ export const GlobalNavbar: React.FC = () => {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative text-[13px] tracking-[0.08em] uppercase font-medium transition-colors duration-200 py-1 ${
+                className={`relative text-[13px] tracking-[0.08em] uppercase font-medium transition-colors duration-200 py-1 hover-line ${
                   useDarkTheme
                     ? isActive
                       ? "text-[#7B8052] font-semibold"

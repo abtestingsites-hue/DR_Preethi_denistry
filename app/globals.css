@@ -43,7 +43,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
   background-color: var(--color-warm-cream);
   color: var(--color-dark-charcoal);
   -webkit-font-smoothing: antialiased;
@@ -136,7 +136,7 @@ section {
   );
 }
 
-/* Free floating nav hover line */
+/* Free floating nav hover line with lime-olive accent */
 .hover-line {
   position: relative;
 }
@@ -147,8 +147,9 @@ section {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #7B8052;
-  transition: width 0.3s ease-in-out;
+  background-color: #9EA657;
+  transition: width 0.25s ease-in-out;
+  border-radius: 9999px;
 }
 .hover-line:hover::after {
   width: 100%;
