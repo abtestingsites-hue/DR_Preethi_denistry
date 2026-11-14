@@ -42,22 +42,21 @@ export const EditorialHero: React.FC = () => {
   return (
     <section 
       onClick={triggerReveal}
-      className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#29291F] pt-24 pb-16 cursor-default select-none"
+      className="relative min-h-[96vh] sm:min-h-screen flex items-center overflow-hidden bg-[#29291F] pt-24 pb-16 cursor-default select-none"
     >
       
-      {/* Background authentic clinic interior with preserved original photograph and framing */}
+      {/* Preserved authentic clinic reception photograph with exact crop and composition */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="/Clinic.png"
           alt="Dr. Preethi's Dentistry Reception Lounge"
-          className="w-full h-full object-cover object-center filter brightness-[0.88] contrast-[1.02]"
+          className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.02]"
         />
-        {/* Soft atmospheric gradient to maintain high legibility for text while preserving wall branding */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#29291F]/30 to-[#29291F]/70" />
-        <div className="absolute inset-0 bg-[#29291F]/20 backdrop-blur-[0.3px]" />
+        {/* Calibrated directional gradient overlay: Leaves wall Invisalign branding crystal clear on left while guaranteeing WCAG AAA text legibility on right */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#29291F]/25 via-[#29291F]/50 to-[#29291F]/85" />
       </div>
 
-      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow centered on lower third */}
+      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow */}
       {!isRevealed && (
         <button
           onClick={triggerReveal}
@@ -68,56 +67,55 @@ export const EditorialHero: React.FC = () => {
         </button>
       )}
 
-      {/* Grid Container: Shifted to balanced Right-Side Composition (Golden Ratio 60% right focal zone) */}
-      <div className="relative z-10 w-full max-w-[1550px] mx-auto px-6 sm:px-10 lg:px-14 flex justify-end">
+      {/* 12-Column Grid Container with 5-6% Horizontal Margins (px-5 sm:px-8 lg:px-[5.5vw]) */}
+      <div className="relative z-10 w-full max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-[5.5vw] flex justify-end">
         
-        {/* Content Box: Occupies the right focal third without obscuring the left Invisalign wall branding */}
+        {/* Right Focal Zone: max 620px width, occupies right half with breathing room from edge */}
         <div
-          className={`w-full md:w-[60%] lg:w-[52%] xl:w-[48%] space-y-6 text-left transition-all duration-700 ease-out ${
+          className={`w-full md:w-[580px] lg:w-[620px] max-w-[620px] flex flex-col text-left transition-all duration-700 ease-out ${
             isRevealed
               ? "opacity-100 translate-y-0 scale-100"
               : "opacity-0 translate-y-6 scale-95 pointer-events-none"
           }`}
         >
           
-          {/* Eyebrow Label with Architectural Lines matching Reference Layout */}
-          <div className="flex items-center gap-3">
-            <div className="w-8 sm:w-12 h-[1.5px] bg-[#FAF8F2]/70" />
-            <span className="text-[11px] sm:text-[12px] uppercase font-bold tracking-[0.22em] text-[#FAF8F2]/90 drop-shadow-sm font-sans">
+          {/* Eyebrow text: 14-16px, uppercase, letter-spacing 3-4px, aligned to content left edge */}
+          <div className="flex items-center gap-3 mb-6">
+            <span className="w-8 h-[1.5px] bg-[#FAF8F2]/60 shrink-0" />
+            <span className="text-[14px] sm:text-[15px] uppercase font-semibold tracking-[0.24em] text-[#FAF8F2]/90 drop-shadow-sm font-sans">
               DR. PREETHI'S DENTISTRY
             </span>
-            <div className="w-8 sm:w-12 h-[1.5px] bg-[#FAF8F2]/70" />
           </div>
 
-          {/* Primary Golden Scale Headline (37px - 56px responsive scale) */}
-          <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-[54px] font-serif font-bold text-white leading-[1.08] tracking-tight drop-shadow-lg">
+          {/* Main Heading: 64-76px on desktop (40-48px tablet, 34-42px mobile), elegant serif font, 2-3 lines */}
+          <h1 className="text-[34px] sm:text-[44px] md:text-[54px] lg:text-[68px] xl:text-[72px] font-serif font-bold text-white leading-[1.06] tracking-tight drop-shadow-lg mb-6">
             Care Designed{" "}
-            <span className="font-serif italic font-normal text-[#E2E8B8] block sm:inline">
+            <span className="font-serif italic font-normal text-[#E2E8B8] block">
               Around Your Smile
             </span>
           </h1>
 
-          {/* Supporting Text at Golden Scale (20px - 23px) */}
-          <p className="text-[17px] sm:text-[20px] lg:text-[23px] text-[#FAF8F2]/90 font-light leading-relaxed drop-shadow-md max-w-xl">
+          {/* Supporting Description: 20-22px (Golden ratio 1.618: ~42px/68px scale), line-height 1.5 */}
+          <p className="text-[17px] sm:text-[19px] lg:text-[21px] text-[#FAF8F2]/90 font-light leading-[1.5] drop-shadow-md mb-8 max-w-[560px]">
             Advanced Orthodontic &amp; Invisalign® Care in a Comfortable, Personalized Environment.
           </p>
 
-          {/* Architectural divider line */}
-          <div className="w-full max-w-md h-[1.5px] bg-[#A5A786]/50 pt-0.5" />
+          {/* Fine horizontal architectural line rule */}
+          <div className="w-full max-w-[480px] h-[1px] bg-[#A5A786]/40 mb-8" />
 
-          {/* Action Buttons: Golden Scale Proportioned, Ergonomic Sizing */}
-          <div className="pt-2 flex flex-wrap items-center gap-3.5 sm:gap-4">
+          {/* CTA Buttons: Horizontally aligned with 16-20px gap, 16px semibold text */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
             <Link
               href="/booking"
-              className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-full bg-[#7B8052] text-white font-semibold text-[12px] sm:text-[13px] uppercase tracking-[0.08em] hover:bg-[#555B38] transition-all shadow-card hover:shadow-elevated hover:scale-105 flex items-center gap-2 border border-white/20"
+              className="inline-flex items-center justify-center gap-2.5 px-8 h-[50px] rounded-full bg-[#7B8052] text-white font-semibold text-[16px] hover:bg-[#555B38] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/20 shrink-0"
             >
               <span>Request Consultation</span>
-              <ArrowRight className="w-3.5 h-3.5 text-white" />
+              <ArrowRight className="w-4 h-4 text-white" />
             </Link>
             
             <a
               href="#treatments"
-              className="px-6 py-2.5 sm:px-7 sm:py-3 rounded-full bg-[#FAF8F2] text-[#29291F] font-semibold text-[12px] sm:text-[13px] uppercase tracking-[0.08em] hover:bg-white transition-all border border-[#A5A786]/50 shadow-card hover:shadow-elevated"
+              className="inline-flex items-center justify-center px-8 h-[50px] rounded-full bg-[#FAF8F2] text-[#29291F] font-semibold text-[16px] hover:bg-white transition-all border border-[#A5A786]/50 shadow-card hover:shadow-elevated active:scale-98 shrink-0"
             >
               Explore Treatments
             </a>
