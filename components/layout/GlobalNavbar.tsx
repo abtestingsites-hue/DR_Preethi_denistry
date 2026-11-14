@@ -7,16 +7,19 @@ import { ArrowRight, Menu, X } from "lucide-react";
 
 export const GlobalNavbar: React.FC = () => {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
-      // Transition to warm cream backdrop when scrolled down
-      if (window.scrollY > 250) {
-        setIsScrolled(true);
+      // Threshold: Hero section height (~80vh to 100vh)
+      const heroThreshold = window.innerHeight * 0.75;
+      if (window.scrollY > heroThreshold) {
+        setIsScrolledPastHero(true);
       } else {
-        setIsScrolled(false);
+        setIsScrolledPastHero(false);
       }
     };
 
@@ -34,22 +37,25 @@ export const GlobalNavbar: React.FC = () => {
     { name: "TESTIMONIALS", href: "/#testimonials" },
   ];
 
-  const isHomePage = pathname === "/";
-  const useDarkTheme = !isHomePage || isScrolled;
+  // If on homepage and in hero section, hide logo and Book Visit button
+  const showLogoAndBookVisit = !isHomePage || isScrolledPastHero;
+  const useDarkTheme = !isHomePage || isScrolledPastHero;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         useDarkTheme
           ? "bg-[#F5F0E6]/95 backdrop-blur-md border-b border-[#A5A786]/30 shadow-sm h-[84px] md:h-[88px] flex items-center"
-          : "bg-gradient-to-b from-[#29291F]/85 via-[#29291F]/40 to-transparent h-[84px] md:h-[88px] flex items-center"
+          : "bg-transparent h-[84px] md:h-[88px] flex items-center"
       }`}
     >
       {/* Edge-aligned full width container with left corner logo */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
         
-        {/* Left: Clinic Logo moved directly to the left corner + Vertical Divider */}
-        <div className="flex items-center gap-5 xl:gap-8 shrink-0">
+        {/* Left: Clinic Logo - Hidden on Hero section of homepage, fades in smoothly when scrolled past */}
+        <div className={`flex items-center gap-5 xl:gap-8 shrink-0 transition-opacity duration-300 ${
+          showLogoAndBookVisit ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}>
           <Link href="/" className="flex items-center group">
             <img
               src="/clinic-logo-dark.png"
@@ -92,11 +98,15 @@ export const GlobalNavbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Right: Book Visit CTA (Height 46-48px, horizontal padding 24-28px, 13px font) */}
+        {/* Right: Book Visit CTA - Hidden on Hero section of homepage, fades in when scrolled past */}
         <div className="flex items-center gap-3">
           <Link
             href="/booking"
-            className="hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 h-[46px] md:h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15"
+            className={`hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 h-[46px] md:h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15 ${
+              showLogoAndBookVisit
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
           >
             <span>Book Visit</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

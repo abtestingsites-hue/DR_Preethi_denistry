@@ -1,15 +1,52 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CalendarCheck } from "lucide-react";
 import { clinicInfo } from "@/data/clinicInfo";
 
 export const FloatingActionButtons: React.FC = () => {
+  const pathname = usePathname();
+  const [isVisible, setIsVisible] = useState(false);
+
+  const isHomePage = pathname === "/";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // If not on homepage, always visible
+      if (!isHomePage) {
+        setIsVisible(true);
+        return;
+      }
+
+      // On homepage, hide while in Hero section, reveal when scrolled to other sections
+      const heroThreshold = window.innerHeight * 0.75;
+      if (window.scrollY > heroThreshold) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHomePage]);
+
   const defaultWhatsAppUrl = `https://wa.me/${clinicInfo.whatsappNumber}?text=${encodeURIComponent(
     "Hello Dr. Preethi's Dentistry,\n\nI would like to enquire about a dental consultation.\n\nPlease let me know the availability.\n\nThank you."
   )}`;
 
   return (
-    <aside aria-label="Quick Actions" className="fixed bottom-7 right-7 z-40 flex flex-col items-end gap-3.5 pointer-events-none select-none">
+    <aside 
+      aria-label="Quick Actions" 
+      className={`fixed bottom-7 right-7 z-40 flex flex-col items-end gap-3.5 select-none transition-all duration-300 ${
+        isVisible 
+          ? "opacity-100 translate-y-0 pointer-events-auto" 
+          : "opacity-0 translate-y-4 pointer-events-none"
+      }`}
+    >
       
       {/* 1. Request Consultation Floating Button - Pure Architectural Icon Button */}
       <Link
