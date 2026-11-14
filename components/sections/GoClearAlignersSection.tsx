@@ -3,20 +3,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { 
-  Check, 
   ArrowRight, 
   Sparkles, 
   EyeOff, 
   Heart, 
-  Smartphone, 
   Award, 
-  CreditCard, 
-  UserCheck 
+  CreditCard 
 } from "lucide-react";
 
 export const GoClearAlignersSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<number>(0);
-
   // Short & Sweet 4 core benefits
   const keyBenefits = [
     {
@@ -41,17 +36,6 @@ export const GoClearAlignersSection: React.FC = () => {
     },
   ];
 
-  // Quick treatable cases pill tags
-  const treatablePills = [
-    "Crowded Teeth",
-    "Gapped Teeth",
-    "Overbite",
-    "Underbite",
-    "Crossbite",
-    "Deep Bite",
-    "Mid-line Shift"
-  ];
-
   return (
     <section id="goclear" className="relative bg-[#F5F0E6] py-16 md:py-24 border-b border-[#A5A786]/30 overflow-hidden">
       
@@ -61,34 +45,34 @@ export const GoClearAlignersSection: React.FC = () => {
         <div className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full bg-[#A5A786]/20 blur-3xl" />
       </div>
 
-      <div className="w-full px-4 sm:px-8 lg:px-12 relative z-10 space-y-12">
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 relative z-10 space-y-12">
         
         {/* Section Header: Focused, Crisp & Elegant */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#7B8052]/15 border border-[#7B8052]/30 text-[#7B8052] text-xs font-bold uppercase tracking-widest shadow-sm">
+        <div className="text-center max-w-3xl mx-auto space-y-3.5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7B8052]/15 border border-[#7B8052]/30 text-[#7B8052] text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] shadow-sm">
             <Sparkles className="w-4 h-4 text-[#7B8052]" />
             <span>AFFORDABLE ORTHODONTIC EXCELLENCE</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#29291F] tracking-tight leading-tight">
+          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] font-serif font-bold text-[#29291F] tracking-tight leading-[1.12]">
             GoClear Clear Aligners
-            <span className="block font-serif italic font-normal text-[#7B8052] text-2xl sm:text-3xl md:text-4xl mt-1">
+            <span className="block font-serif italic font-normal text-[#7B8052] text-[24px] sm:text-[28px] md:text-[32px] mt-1.5">
               Straight Teeth, Clear Confidence — Custom-Crafted Under Specialist Care
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-[#29291F]/80 leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-[16px] sm:text-[17px] text-[#29291F]/80 leading-[1.6] font-light max-w-2xl mx-auto">
             Experience discrete orthodontic alignment with GoClear aligners—our high-precision clear aligner system with custom 3D staging, zero food restrictions, and flexible plans from just <strong>₹2,500/month</strong>.
           </p>
         </div>
 
-        {/* Full-Screen Balanced Showcase Card (Alphanumeric Depth & Shadows) */}
-        <div className="w-full bg-[#FAF8F2] rounded-3xl border border-[#A5A786]/40 shadow-elevated p-6 sm:p-10 lg:p-12 overflow-hidden">
+        {/* Full-Screen Balanced Showcase Card (Golden Ratio ~ 41.7% / 58.3%) */}
+        <div className="w-full bg-[#FAF8F2] rounded-[24px] border border-[#A5A786]/40 shadow-elevated p-6 sm:p-10 lg:p-12 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* Left 5 Cols: Authentic Aligner Case & Tray Reference Imagery */}
+            {/* Left 5 Cols (38-42%): Authentic Aligner Case & Tray Reference Imagery */}
             <div className="lg:col-span-5 relative flex justify-center">
-              <div className="relative rounded-2xl overflow-hidden border-2 border-[#7B8052]/30 shadow-card bg-gradient-to-br from-[#0F4C81] to-[#1E3A8A] aspect-square max-h-[420px] w-full flex items-center justify-center p-6 group">
+              <div className="relative rounded-[20px] overflow-hidden border border-[#7B8052]/30 shadow-card bg-gradient-to-br from-[#0F4C81] to-[#1E3A8A] aspect-square max-h-[400px] w-full flex items-center justify-center p-6 group">
                 <img
                   src="/goclear-case-tray.png"
                   alt="GoClear Clear Aligner Arch Tray and Sleek Travel Case"
@@ -96,7 +80,7 @@ export const GoClearAlignersSection: React.FC = () => {
                 />
                 
                 {/* Price Ribbon */}
-                <div className="absolute top-4 left-4 bg-[#7B8052] text-white px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md">
+                <div className="absolute top-4 left-4 bg-[#7B8052] text-white px-3.5 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider shadow-md">
                   From ₹2,500/Month
                 </div>
 
@@ -111,37 +95,37 @@ export const GoClearAlignersSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Right 7 Cols: Short, Sweet & High-Impact Benefits */}
+            {/* Right 7 Cols (58-62%): Short, Sweet & High-Impact Benefits */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="text-[11px] uppercase tracking-widest font-extrabold text-[#7B8052] block">
+                <span className="text-[12px] uppercase tracking-widest font-extrabold text-[#7B8052] block">
                   THE GOCLEAR ADVANTAGE
                 </span>
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#29291F] mt-1">
-                  Why Choose GoClear Over Braces?
+                <h3 className="text-[24px] sm:text-[28px] font-serif font-bold text-[#29291F] mt-1">
+                  Why Choose GoClear Over Traditional Braces?
                 </h3>
-                <p className="text-xs sm:text-sm text-[#29291F]/75 leading-relaxed mt-1 font-light">
+                <p className="text-[14px] sm:text-[15px] text-[#29291F]/75 leading-[1.5] mt-1.5 font-light">
                   Engineered for busy professionals, teenagers, and adults who desire an invisible smile transformation without the burden of metal brackets.
                 </p>
               </div>
 
               {/* 4 Crisp Benefit Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {keyBenefits.map((b, idx) => {
                   const Icon = b.icon;
                   return (
                     <div
                       key={idx}
-                      className="p-4 rounded-2xl bg-[#F5F0E6] border border-[#A5A786]/40 shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all flex items-start gap-3.5"
+                      className="p-4 rounded-[16px] bg-[#F5F0E6] border border-[#A5A786]/35 shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all flex items-start gap-3.5"
                     >
                       <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-[#FAF8F2] flex items-center justify-center shrink-0 shadow-sm mt-0.5">
                         <Icon className="w-5 h-5 text-[#FAF8F2]" />
                       </div>
                       <div>
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-[#29291F]">
+                        <h4 className="text-[14px] font-bold text-[#29291F] leading-snug">
                           {b.title}
                         </h4>
-                        <p className="text-[11px] text-[#29291F]/75 leading-relaxed mt-1">
+                        <p className="text-[12px] text-[#29291F]/75 leading-relaxed mt-1 font-light">
                           {b.desc}
                         </p>
                       </div>
@@ -150,37 +134,21 @@ export const GoClearAlignersSection: React.FC = () => {
                 })}
               </div>
 
-              {/* Treatable Cases Tags */}
-              <div className="pt-1 space-y-2">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#29291F]/70 block">
-                  Treatable Conditions:
-                </span>
-                <div className="flex flex-wrap gap-2">
-                  {treatablePills.map((pill, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 rounded-full bg-[#FAF8F2] border border-[#A5A786]/50 text-[11px] font-semibold text-[#7B8052] shadow-subtle"
-                    >
-                      ✓ {pill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Actions Row */}
-              <div className="pt-3 flex flex-wrap items-center gap-4">
+              {/* Bottom Actions */}
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href="/booking?treatment=GoClear%20Aligners"
-                  className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#7B8052] text-white text-xs uppercase tracking-wider font-bold hover:bg-[#555B38] transition-all shadow-md group"
+                  className="inline-flex items-center gap-2 px-6 h-[46px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated"
                 >
                   <span>Request GoClear Assessment</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-white transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
+
                 <a
                   href="tel:07812871829"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#A5A786]/50 text-[#29291F] text-xs uppercase tracking-wider font-semibold hover:bg-[#FAF8F2] transition-all shadow-sm"
+                  className="inline-flex items-center justify-center px-6 h-[46px] rounded-full bg-[#F5F0E6] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#E0DACB] transition-colors border border-[#A5A786]/40"
                 >
-                  <span>Call 078128 71829</span>
+                  Call 078128 71829
                 </a>
               </div>
 

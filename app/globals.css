@@ -9,15 +9,30 @@
   --color-warm-cream: #F5F0E6;       /* Primary background */
   --color-olive: #7B8052;            /* Primary highlight, buttons, active nav, icons */
   --color-deep-olive: #555B38;       /* Hover states, dark button hover */
+  --color-olive-hover: #686D42;      /* Refined button hover */
   --color-dark-charcoal: #29291F;    /* Headings and body text */
   --color-soft-cream: #FAF8F2;       /* Secondary surfaces, alternate section cards */
   --color-muted-olive: #A5A786;      /* Decorative lines, subtle borders */
   --color-pure-white: #FFFFFF;       /* Pure white accents */
+  --color-accent-lime: #9EA657;      /* Accent architectural lines & indicators */
+  --color-italic-gold: #C5CE7C;      /* Editorial italic accents */
 
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  --container-width: 1280px;
+  --container-width: 1440px;
+
+  /* Spacing System */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
 }
 
 *,

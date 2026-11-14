@@ -14,15 +14,15 @@ export const ServicesGallerySection: React.FC = () => {
     <section id="treatments" className="relative bg-[#F5F0E6]">
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
-      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-b border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-b border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
-          <div className="max-w-3xl space-y-2 text-center md:text-left">
-            <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
-              CLINICAL SPECIALITIES · ADVANCED ORTHODONTIC & DENTAL TREATMENTS
+          <div className="max-w-2xl space-y-2 text-center md:text-left">
+            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#FAF8F2]">
+              CLINICAL SPECIALITIES · ADVANCED ORTHODONTIC &amp; DENTAL TREATMENTS
             </h2>
-            <p className="text-sm sm:text-base text-white/95 font-light leading-relaxed">
-              From precision Invisalign® & GoClear aligners to needle-free anesthesia, dental implants, and gentle restorative treatments in Saibaba Colony, Coimbatore.
+            <p className="text-[15px] sm:text-[16px] text-white/95 font-light leading-[1.5]">
+              From precision Invisalign® &amp; GoClear aligners to needle-free anesthesia, dental implants, and gentle restorative treatments in Saibaba Colony, Coimbatore.
             </p>
           </div>
 
@@ -30,9 +30,9 @@ export const ServicesGallerySection: React.FC = () => {
             <div className="hidden lg:block w-[1px] h-12 bg-white/30" />
             <Link
               href="/treatments"
-              className="inline-flex items-center gap-3 text-xs uppercase tracking-wider font-bold text-white hover:text-[#FAF8F2] transition-colors group"
+              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-semibold text-white hover:text-[#FAF8F2] transition-colors group"
             >
-              <span>TREATMENTS</span>
+              <span>ALL TREATMENTS</span>
               <div className="w-8 h-8 rounded-full border border-white flex items-center justify-center transition-transform group-hover:translate-x-1">
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
@@ -43,36 +43,36 @@ export const ServicesGallerySection: React.FC = () => {
       </div>
 
       {/* Promoted Innovation Banner: Direct Callout to Needle-Free Technology */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 pt-8">
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 pt-8 pb-3">
         <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF8F2] border-2 border-[#7B8052] shadow-card flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3.5">
             <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0 shadow-sm">
-              <span className="text-lg font-bold">✨</span>
+              <span className="text-base font-bold">✨</span>
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="px-2.5 py-0.5 rounded bg-[#7B8052]/15 text-[10px] font-extrabold uppercase tracking-widest text-[#7B8052]">
+                <span className="px-2.5 py-0.5 rounded bg-[#7B8052]/15 text-[11px] font-extrabold uppercase tracking-widest text-[#7B8052]">
                   FEATURED SPECIALITY
                 </span>
-                <span className="text-xs font-bold text-[#29291F]">100% Needle-Free Dental Injections</span>
+                <span className="text-[13px] font-bold text-[#29291F]">100% Needle-Free Dental Injections</span>
               </div>
-              <p className="text-xs text-[#29291F]/70 mt-0.5">
-                Eliminate dental fear with advanced jet injectors & computer-regulated digital anesthesia.
+              <p className="text-[12px] sm:text-[13px] text-[#29291F]/70 mt-0.5 font-normal">
+                Eliminate dental fear with advanced jet injectors &amp; computer-regulated digital anesthesia.
               </p>
             </div>
           </div>
           <a
             href="#needle-free"
-            className="shrink-0 px-5 py-2.5 rounded-full bg-[#7B8052] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#555B38] transition-colors shadow-sm"
+            className="shrink-0 px-5 h-[42px] inline-flex items-center justify-center rounded-full bg-[#7B8052] text-white font-semibold text-[13px] uppercase tracking-[0.06em] hover:bg-[#686D42] transition-colors shadow-sm"
           >
             Explore Needle-Free Care →
           </a>
         </div>
       </div>
 
-      {/* Grid Gallery Style: Full-Width Architectural Grid with Elevated Shadows */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-8 md:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
+      {/* Grid Gallery Style: 4:3 Aspect Ratio, 24px Gap, 18px Radius */}
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
           {treatments.map((treatment) => {
             const isHovered = hoveredId === treatment.id;
             return (
@@ -80,7 +80,7 @@ export const ServicesGallerySection: React.FC = () => {
                 key={treatment.id}
                 onMouseEnter={() => setHoveredId(treatment.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group relative overflow-hidden bg-[#29291F] h-[230px] sm:h-[250px] md:h-[270px] lg:h-[280px] rounded-2xl cursor-pointer shadow-card hover:shadow-elevated transition-all duration-300 border border-[#A5A786]/30"
+                className="group relative overflow-hidden bg-[#29291F] aspect-[4/3] rounded-[18px] cursor-pointer shadow-card hover:shadow-elevated transition-all duration-300 border border-[#A5A786]/35"
               >
                 {/* Background Image filling the tile edge-to-edge */}
                 <img
@@ -90,57 +90,57 @@ export const ServicesGallerySection: React.FC = () => {
                 />
 
                 {/* Subtle base gradient so photo looks vibrant */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent transition-opacity duration-300" />
 
                 {/* Default Visible Category Tag */}
-                <div className="absolute top-3 left-3 z-10">
-                  <span className="px-2.5 py-1 rounded bg-[#FAF8F2]/90 backdrop-blur-md text-[10px] uppercase font-bold tracking-wider text-[#7B8052] shadow-sm">
+                <div className="absolute top-3.5 left-3.5 z-10">
+                  <span className="px-2.5 py-1 rounded bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] uppercase font-bold tracking-wider text-[#7B8052] shadow-sm">
                     {treatment.category}
                   </span>
                 </div>
 
                 {/* Default visible title in subtle typography */}
-                <div className={`absolute bottom-3 left-4 right-4 z-10 transition-all duration-300 ${
+                <div className={`absolute bottom-3.5 left-4 right-4 z-10 transition-all duration-300 ${
                   isHovered ? "opacity-0 translate-y-2 pointer-events-none" : "opacity-100 translate-y-0"
                 }`}>
-                  <h4 className="text-base sm:text-lg font-serif font-bold text-white drop-shadow-md leading-tight">
+                  <h4 className="text-[18px] sm:text-[20px] font-serif font-bold text-white drop-shadow-md leading-tight">
                     {treatment.title}
                   </h4>
                 </div>
 
-                {/* Hover Reveal Overlay (matches The Medium studio hover effect) */}
+                {/* Hover Reveal Overlay */}
                 <div
-                  className={`absolute inset-0 p-6 sm:p-8 flex flex-col justify-end text-white transition-all duration-300 ${
+                  className={`absolute inset-0 p-5 sm:p-6 flex flex-col justify-end text-white transition-all duration-300 ${
                     isHovered
                       ? "bg-[#29291F]/90 opacity-100 backdrop-blur-[2px]"
                       : "bg-transparent opacity-0 pointer-events-none"
                   }`}
                 >
-                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#A5A786] mb-1">
+                  <span className="text-[11px] uppercase font-bold tracking-widest text-[#A5A786] mb-1">
                     Speciality Treatment
                   </span>
 
-                  <h4 className="text-xl sm:text-2xl font-serif font-bold tracking-tight text-[#FAF8F2] leading-snug">
+                  <h4 className="text-[20px] sm:text-[22px] font-serif font-bold tracking-tight text-[#FAF8F2] leading-snug">
                     {treatment.title}
                   </h4>
                   
-                  <p className="text-xs text-[#FAF8F2]/85 line-clamp-3 mt-2 leading-relaxed font-light">
+                  <p className="text-[13px] text-[#FAF8F2]/85 line-clamp-3 mt-1.5 leading-[1.5] font-light">
                     {treatment.shortDescription}
                   </p>
 
                   {/* Know More CTA Button on Hover */}
-                  <div className="pt-4 flex items-center justify-between border-t border-[#A5A786]/30 mt-4">
+                  <div className="pt-3 flex items-center justify-between border-t border-[#A5A786]/30 mt-3">
                     <Link
                       href={`/treatments#${treatment.id}`}
-                      className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#FAF8F2] hover:text-[#A5A786] transition-colors group/cta"
+                      className="inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-wider text-[#FAF8F2] hover:text-[#A5A786] transition-colors group/cta"
                     >
                       <span>Know More</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover/cta:translate-x-1" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group/cta:translate-x-1" />
                     </Link>
 
                     <Link
                       href={`/booking?treatment=${encodeURIComponent(treatment.title)}`}
-                      className="px-3.5 py-1 rounded-full bg-[#7B8052] text-[10px] uppercase font-bold tracking-wider text-white hover:bg-[#555B38] transition-colors"
+                      className="px-3.5 py-1.5 rounded-full bg-[#7B8052] text-white text-[11px] font-bold uppercase tracking-wider hover:bg-[#686D42] transition-colors shadow-sm"
                     >
                       Book Visit
                     </Link>

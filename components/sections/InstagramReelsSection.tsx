@@ -61,11 +61,11 @@ export const InstagramReelsSection: React.FC = () => {
     <section id="reels" className="relative bg-[#F5F0E6]">
       
       {/* Top Olive Ribbon Banner seamlessly incorporating Instagram ID & followers */}
-      <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
-          <div className="space-y-1.5 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-xs uppercase tracking-wider font-bold text-[#FAF8F2]/90">
+          <div className="space-y-2 text-center md:text-left">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#FAF8F2]/90">
               <span className="bg-[#555B38] px-3 py-1 rounded-full border border-white/20">
                 CLINICAL VIDEO LIBRARY
               </span>
@@ -85,7 +85,7 @@ export const InstagramReelsSection: React.FC = () => {
               <span className="text-[#FAF8F2]/80">50K+ Monthly Reach · Coimbatore</span>
             </div>
 
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
               WATCH OUR CLINICAL INSIGHTS
             </h2>
           </div>
@@ -93,7 +93,7 @@ export const InstagramReelsSection: React.FC = () => {
           <div className="shrink-0 flex items-center gap-4">
             <Link
               href="/clinical-insights"
-              className="inline-flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-[#FAF8F2] text-[#29291F] text-xs uppercase tracking-wider font-bold hover:bg-white transition-all shadow-md group"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#FAF8F2] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-md group"
             >
               <span>Explore All Videos</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover:translate-x-1" />
@@ -103,13 +103,13 @@ export const InstagramReelsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Autoplaying Reels Feeds Grid: Architectural 9:16 Ratio with Center Anchor */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-10 sm:py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 w-full">
+      {/* Autoplaying Reels Feeds Grid: 4 cols on desktop xl, 3 on lg, 2 on sm, 1 on mobile */}
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-10 sm:py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full">
           {reels.map((reel, index) => (
             <div
               key={reel.id}
-              className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-[#29291F] border border-[#A5A786]/40 shadow-card group"
+              className="relative aspect-[9/16] rounded-[18px] overflow-hidden bg-[#29291F] border border-[#A5A786]/40 shadow-card hover:shadow-elevated transition-all duration-300 group"
             >
               {/* Autoplay Video Loop */}
               <video
@@ -126,38 +126,37 @@ export const InstagramReelsSection: React.FC = () => {
               />
 
               {/* Top Reel Header Overlay */}
-              <div className="absolute top-4 inset-x-4 flex items-center justify-between z-10">
-                <span className="px-2.5 py-1 rounded-full bg-[#FAF8F2]/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-wider text-[#7B8052] border border-[#A5A786]/30">
+              <div className="absolute top-3.5 inset-x-3.5 flex items-center justify-between z-10">
+                <span className="px-2.5 py-1 rounded-full bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-[#7B8052] border border-[#A5A786]/30 shadow-sm">
                   {reel.category}
                 </span>
 
-                <span className="w-7 h-7 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
+                <span className="w-7 h-7 rounded-full bg-black/45 backdrop-blur-md flex items-center justify-center text-white">
                   <Play className="w-3.5 h-3.5 fill-white" />
                 </span>
               </div>
 
-              {/* Bottom In-Video Control Overlay: Caption + Direct In-Video Sound Toggle */}
+              {/* Bottom In-Video Control Overlay: Caption + Sound Toggle */}
               <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/95 via-black/60 to-transparent text-white z-10 space-y-2">
-                <p className="text-xs font-semibold leading-snug line-clamp-2 text-[#FAF8F2]">
+                <h4 className="text-[14px] font-serif font-bold text-white leading-snug drop-shadow-md">
                   {reel.title}
-                </p>
+                </h4>
 
-                <div className="flex items-center justify-between pt-2 border-t border-white/20 text-[10px]">
-                  {/* In-Video Sound Toggle Button */}
+                <div className="flex items-center justify-between pt-1 text-[11px] text-white/80 border-t border-white/20">
                   <button
                     onClick={toggleMute}
-                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 hover:bg-[#7B8052] backdrop-blur-md transition-colors text-white font-semibold"
-                    aria-label={isMuted ? "Unmute audio" : "Mute audio"}
+                    className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm transition-colors text-[11px] font-medium"
+                    aria-label="Toggle mute"
                   >
                     {isMuted ? (
                       <>
-                        <VolumeX className="w-3.5 h-3.5 text-white/90" />
+                        <VolumeX className="w-3.5 h-3.5" />
                         <span>Unmute</span>
                       </>
                     ) : (
                       <>
-                        <Volume2 className="w-3.5 h-3.5 text-green-300" />
-                        <span>Mute</span>
+                        <Volume2 className="w-3.5 h-3.5 text-[#C5CE7C]" />
+                        <span>Playing Audio</span>
                       </>
                     )}
                   </button>
@@ -166,7 +165,7 @@ export const InstagramReelsSection: React.FC = () => {
                     href={clinicInfo.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white flex items-center gap-1 font-bold text-[#A5A786]"
+                    className="hover:underline flex items-center gap-1 text-[11px] font-medium"
                   >
                     <span>View Reel</span>
                     <ArrowRight className="w-3 h-3" />
@@ -177,7 +176,6 @@ export const InstagramReelsSection: React.FC = () => {
           ))}
         </div>
       </div>
-
     </section>
   );
 };
