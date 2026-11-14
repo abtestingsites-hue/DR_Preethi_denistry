@@ -155,46 +155,21 @@ export const MediumCtaBanner: React.FC = () => {
           </div>
 
           {/* Right Column: Google Maps & Location Card */}
-          <div className="lg:col-span-5 bg-[#FAF8F2] p-6 sm:p-7 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-4">
+          <div className="lg:col-span-5 bg-[#FAF8F2] p-5 sm:p-6 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-3">
             <div>
-              <span className="text-[10.5px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-3 py-1 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-3 py-1 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 CLINIC DETAILS
               </span>
-              <h3 className="text-[20px] sm:text-[23px] font-serif font-bold text-[#29291F] mt-2">
+              <h3 className="text-[18px] sm:text-[20px] font-serif font-bold text-[#29291F] mt-1.5">
                 Visit Dr. Preethi&apos;s Dentistry
               </h3>
-              <p className="text-[12px] text-[#29291F]/70 mt-1 leading-relaxed">
+              <p className="text-[11.5px] text-[#29291F]/70 mt-0.5 leading-relaxed">
                 {clinicInfo.fullAddress}
               </p>
             </div>
 
             {/* Google Map Iframe with matching proportion and subtle border */}
-            <div className="rounded-[16px] overflow-hidden border border-[#A5A786]/35 aspect-[16/11] w-full shadow-subtle relative">
-              <iframe
-                title="Dr. Preethi's Dentistry Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9423697!3d11.0167232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859068037b587%3A0xd6fe6b1bcfd194c5!2sDr.Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-            <div>
-              <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
-                CLINIC DETAILS
-              </span>
-              <h3 className="text-[22px] sm:text-[24px] font-serif font-bold text-[#29291F] mt-2">
-                Visit Dr. Preethi&apos;s Dentistry
-              </h3>
-              <p className="text-[13px] text-[#29291F]/70 mt-1 leading-relaxed">
-                {clinicInfo.fullAddress}
-              </p>
-            </div>
-
-            {/* Google Map Iframe with subtle styling */}
-            <div className="rounded-[18px] overflow-hidden border border-[#A5A786]/30 aspect-[4/3] w-full shadow-subtle">
+            <div className="rounded-[14px] overflow-hidden border border-[#A5A786]/35 aspect-[16/10] w-full shadow-subtle relative">
               <iframe
                 title="Dr. Preethi's Dentistry Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9423697!3d11.0167232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859068037b587%3A0xd6fe6b1bcfd194c5!2sDr.Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -207,7 +182,7 @@ export const MediumCtaBanner: React.FC = () => {
               />
             </div>
 
-            <div className="pt-2 flex items-center justify-between text-[12px] font-semibold text-[#7B8052]">
+            <div className="pt-1 flex items-center justify-between text-[11px] font-semibold text-[#7B8052]">
               <a
                 href={`https://wa.me/${clinicInfo.whatsappNumber}`}
                 target="_blank"
