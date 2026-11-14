@@ -15,17 +15,22 @@ export const MediumPartnershipTestimonials: React.FC = () => {
       const rect = containerRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       
-      const totalScrollableDistance = rect.height - windowHeight;
-      if (totalScrollableDistance <= 0) return;
-
-      const currentScrollProgress = -rect.top / totalScrollableDistance;
-      const clampedProgress = Math.min(Math.max(currentScrollProgress, 0), 1);
+      // When section enters from bottom to leaving from top
+      const startOffset = windowHeight;
+      const endOffset = -rect.height;
+      const totalRange = startOffset - endOffset;
+      const currentPos = startOffset - rect.top;
+      
+      const progress = Math.min(Math.max(currentPos / totalRange, 0), 1);
 
       const maxHorizontalScroll = scrollTrackRef.current.scrollWidth - scrollTrackRef.current.clientWidth;
-      scrollTrackRef.current.scrollLeft = clampedProgress * maxHorizontalScroll;
+      if (maxHorizontalScroll > 0) {
+        scrollTrackRef.current.scrollLeft = progress * maxHorizontalScroll;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

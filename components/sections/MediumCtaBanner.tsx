@@ -77,10 +77,10 @@ export const MediumCtaBanner: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <form onSubmit={handleSubmit} className="space-y-3.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                      <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                      <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F] block mb-1">
                         Full Name *
                       </label>
                       <input
@@ -89,11 +89,11 @@ export const MediumCtaBanner: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Ramesh Kumar"
-                        className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] placeholder:text-[#29291F]/40 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                       />
                     </div>
                     <div>
-                      <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                      <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F] block mb-1">
                         Phone Number *
                       </label>
                       <input
@@ -102,19 +102,19 @@ export const MediumCtaBanner: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] placeholder:text-[#29291F]/40 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                    <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F] block mb-1">
                       Treatment Interested In
                     </label>
                     <select
                       value={formData.treatment}
                       onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                      className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                     >
                       <option>Invisalign &amp; Clear Aligners</option>
                       <option>GoClear Aligners</option>
@@ -128,7 +128,7 @@ export const MediumCtaBanner: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                    <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F] block mb-1">
                       Notes or Preferred Time
                     </label>
                     <textarea
@@ -136,23 +136,51 @@ export const MediumCtaBanner: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Any specific dental concerns or preferred timing..."
-                      className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] placeholder:text-[#29291F]/40 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full py-3 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#686D42] transition-all shadow-md"
-                  >
-                    Request Appointment →
-                  </button>
+                  <div className="pt-1">
+                    <button
+                      type="submit"
+                      className="w-full py-3 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#686D42] transition-all shadow-md flex items-center justify-center gap-2 group"
+                    >
+                      <span>Request Appointment</span>
+                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                    </button>
+                  </div>
                 </form>
               )}
             </div>
           </div>
 
           {/* Right Column: Google Maps & Location Card */}
-          <div className="lg:col-span-5 bg-[#FAF8F2] p-5 sm:p-6 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-4">
+          <div className="lg:col-span-5 bg-[#FAF8F2] p-6 sm:p-7 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-4">
+            <div>
+              <span className="text-[10.5px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-3 py-1 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
+                CLINIC DETAILS
+              </span>
+              <h3 className="text-[20px] sm:text-[23px] font-serif font-bold text-[#29291F] mt-2">
+                Visit Dr. Preethi&apos;s Dentistry
+              </h3>
+              <p className="text-[12px] text-[#29291F]/70 mt-1 leading-relaxed">
+                {clinicInfo.fullAddress}
+              </p>
+            </div>
+
+            {/* Google Map Iframe with matching proportion and subtle border */}
+            <div className="rounded-[16px] overflow-hidden border border-[#A5A786]/35 aspect-[16/11] w-full shadow-subtle relative">
+              <iframe
+                title="Dr. Preethi's Dentistry Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9423697!3d11.0167232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859068037b587%3A0xd6fe6b1bcfd194c5!2sDr.Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
             <div>
               <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 CLINIC DETAILS

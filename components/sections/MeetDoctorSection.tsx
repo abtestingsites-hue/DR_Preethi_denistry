@@ -49,28 +49,6 @@ export const MeetDoctorSection: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Dental & Orthodontic Specialist Emblem: Glowing circular badge with dental tooth/sparkles aesthetic */}
-            <div className="absolute -bottom-3.5 -right-2.5 z-20">
-              <div 
-                aria-label="Orthodontic & Invisalign Specialist Badge"
-                className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-[#7B8052] to-[#555B38] border-4 border-[#FAF8F2] flex flex-col items-center justify-center text-[#FAF8F2] shadow-[0_12px_30px_rgba(41,41,31,0.22)] transition-transform hover:scale-105 cursor-default group"
-                title="Certified Specialist · Orthodontist & Invisalign® Provider"
-              >
-                {/* Custom Tooth / Orthodontic Sparkle Silhouette */}
-                <div className="relative flex items-center justify-center">
-                  <svg 
-                    className="w-6 h-6 text-[#FAF8F2] fill-current" 
-                    viewBox="0 0 24 24" 
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 2C8.686 2 6 4.686 6 8c0 2.22 1.206 4.156 3 5.197V19a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-3h-2v-2.172C9.256 13.414 8 11.854 8 10c0-2.209 1.791-4 4-4s4 1.791 4 4c0 1.854-1.256 3.414-3 3.828V16h-2v3a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2v-5.803C16.794 12.156 18 10.22 18 8c0-3.314-2.686-6-6-6z" opacity="0.3"/>
-                    <path d="M7 7.5C7 5.015 9.239 3 12 3s5 2.015 5 4.5c0 2.14-1.01 4.16-1.8 6.5-.47 1.4-1.2 3.8-1.7 6.5-.2.9-1.2.9-1.4 0-.3-1.6-.7-3.1-1.1-4.5-.4-1.4-.7-2.7-1-4-.5-1.9-1-3.6-1-4.5z" stroke="currentColor" strokeWidth="1.6" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  <Sparkles className="w-3.5 h-3.5 text-[#E3D9C6] absolute -top-1 -right-1" />
-                </div>
-                <span className="text-[8px] font-bold uppercase tracking-wider text-[#FAF8F2]/90 mt-0.5">Specialist</span>
-              </div>
-            </div>
           </div>
 
           {/* About Doctor Details (7 Cols) */}
