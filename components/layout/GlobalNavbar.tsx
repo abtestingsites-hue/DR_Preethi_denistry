@@ -26,11 +26,11 @@ export const GlobalNavbar: React.FC = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "Needle-Free", href: "/#needle-free" },
     { name: "Treatments", href: "/#treatments" },
+    { name: "GoClear", href: "/#goclear" },
     { name: "Clinical Insights", href: "/#reels" },
-    { name: "Clinic Gallery", href: "/#clinic-gallery" },
     { name: "Meet Doctor", href: "/#doctor" },
-    { name: "Testimonials", href: "/#testimonials" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -43,10 +43,10 @@ export const GlobalNavbar: React.FC = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-8 lg:px-12 ${
         useDarkTheme
           ? "bg-[#F5F0E6]/95 backdrop-blur-md border-b border-[#A5A786]/30 shadow-md py-3.5"
-          : "bg-transparent pt-5 pb-2"
+          : "bg-gradient-to-b from-[#29291F]/70 via-[#29291F]/30 to-transparent pt-5 pb-3"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between">
+      <div className="w-full max-w-[1450px] mx-auto flex items-center justify-between">
         
         {/* Left: Official Dr. Preethi's Dentistry & Invisalign Provider Logo */}
         <Link href="/" className="flex items-center gap-3 group shrink-0">
@@ -62,7 +62,7 @@ export const GlobalNavbar: React.FC = () => {
         </Link>
 
         {/* Center: Desktop Navbar as Free Floating links */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-7">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
@@ -76,7 +76,7 @@ export const GlobalNavbar: React.FC = () => {
                       : "text-[#29291F] hover:text-[#7B8052]"
                     : isActive
                       ? "text-white font-bold"
-                      : "text-[#D1D5DB] hover:text-white"
+                      : "text-white/85 hover:text-white"
                 }`}
               >
                 {link.name}

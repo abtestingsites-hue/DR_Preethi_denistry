@@ -5,29 +5,48 @@ import Link from "next/link";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 export const EditorialHero: React.FC = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
+  const [isRevealed, setIsRevealed] = useState(false);
 
   useEffect(() => {
+    // Reveal triggers on:
+    // 1. Mouse movement anywhere over the page
+    // 2. Touch screen tap or touch movement on mobile
+    // 3. Wheel or keyboard scroll
+    const handleTrigger = () => {
+      setIsRevealed(true);
+    };
+
     const handleScroll = () => {
-      // Toggle reveal of hero content when scrolling down; hide when returning to top
-      if (window.scrollY > 30) {
-        setHasScrolled(true);
-      } else {
-        setHasScrolled(false);
+      if (window.scrollY > 20) {
+        setIsRevealed(true);
+      } else if (window.scrollY === 0) {
+        // Return to clean pristine state when at very top
+        // Optional: keeps it visible once touched or resets on top
       }
     };
 
+    window.addEventListener("mousemove", handleTrigger, { once: true, passive: true });
+    window.addEventListener("touchstart", handleTrigger, { once: true, passive: true });
+    window.addEventListener("pointerdown", handleTrigger, { once: true, passive: true });
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("mousemove", handleTrigger);
+      window.removeEventListener("touchstart", handleTrigger);
+      window.removeEventListener("pointerdown", handleTrigger);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
-  const triggerScroll = () => {
-    window.scrollTo({ top: 120, behavior: "smooth" });
-    setHasScrolled(true);
+  const triggerReveal = () => {
+    setIsRevealed(true);
   };
 
   return (
-    <section className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#F5F0E6] pt-24 pb-16">
+    <section 
+      onClick={triggerReveal}
+      className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#F5F0E6] pt-24 pb-16 cursor-default"
+    >
       
       {/* Background authentic clinic interior with Warm Cream & Olive color grade */}
       <div className="absolute inset-0 z-0">
@@ -40,21 +59,21 @@ export const EditorialHero: React.FC = () => {
         <div className="absolute inset-0 bg-[#29291F]/50 backdrop-blur-[1px]" />
       </div>
 
-      {/* Prompt cue before first scroll: Minimalist architectural bouncing down arrow (no pill text) */}
-      {!hasScrolled && (
+      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow */}
+      {!isRevealed && (
         <button
-          onClick={triggerScroll}
-          aria-label="Scroll down to explore"
+          onClick={triggerReveal}
+          aria-label="Explore clinic"
           className="absolute bottom-10 z-20 flex flex-col items-center justify-center w-12 h-12 rounded-full bg-[#7B8052]/80 hover:bg-[#7B8052] text-white border border-white/30 backdrop-blur-sm transition-all animate-bounce cursor-pointer shadow-float group"
         >
           <ChevronDown className="w-6 h-6 text-[#FAF8F2] group-hover:scale-110 transition-transform" />
         </button>
       )}
 
-      {/* Center Hero Content: Pops up dynamically on first scroll */}
+      {/* Center Hero Content: Elegantly surfaces upon touch, cursor motion, or scroll */}
       <div
         className={`relative z-10 max-w-[1300px] mx-auto px-6 text-center text-white space-y-6 transition-all duration-700 ease-out ${
-          hasScrolled
+          isRevealed
             ? "opacity-100 scale-100 translate-y-0"
             : "opacity-0 scale-95 translate-y-8 pointer-events-none"
         }`}
@@ -137,7 +156,7 @@ export const EditorialHero: React.FC = () => {
                 dominantBaseline="middle"
                 textAnchor="middle"
                 className={`font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-[url(#pencilShadePattern)] pointer-events-none ${
-                  hasScrolled ? "animate-pencil-shading" : "opacity-0"
+                  isRevealed ? "animate-pencil-shading" : "opacity-0"
                 }`}
                 style={{
                   fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
@@ -154,7 +173,7 @@ export const EditorialHero: React.FC = () => {
                 dominantBaseline="middle"
                 textAnchor="middle"
                 className={`font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-transparent stroke-white pointer-events-none ${
-                  hasScrolled ? "animate-draw-outline" : "opacity-0"
+                  isRevealed ? "animate-draw-outline" : "opacity-0"
                 }`}
                 style={{
                   fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",

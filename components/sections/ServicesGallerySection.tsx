@@ -22,7 +22,7 @@ export const ServicesGallerySection: React.FC = () => {
               CLINICAL SPECIALITIES · ADVANCED ORTHODONTIC & DENTAL TREATMENTS
             </h2>
             <p className="text-sm sm:text-base text-white/95 font-light leading-relaxed">
-              From precision Invisalign® clear aligners to cosmetic smile makeovers, dental implants, and gentle restorative treatments in Saibaba Colony, Coimbatore.
+              From precision Invisalign® & GoClear aligners to needle-free anesthesia, dental implants, and gentle restorative treatments in Saibaba Colony, Coimbatore.
             </p>
           </div>
 
@@ -39,6 +39,34 @@ export const ServicesGallerySection: React.FC = () => {
             </Link>
           </div>
 
+        </div>
+      </div>
+
+      {/* Promoted Innovation Banner: Direct Callout to Needle-Free Technology */}
+      <div className="w-full px-4 sm:px-8 lg:px-12 pt-6">
+        <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF8F2] border-2 border-[#7B8052] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0 shadow-sm">
+              <span className="text-lg font-bold">✨</span>
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="px-2.5 py-0.5 rounded bg-[#7B8052]/15 text-[10px] font-extrabold uppercase tracking-widest text-[#7B8052]">
+                  FEATURED SPECIALITY
+                </span>
+                <span className="text-xs font-bold text-[#29291F]">100% Needle-Free Dental Injections</span>
+              </div>
+              <p className="text-xs text-[#29291F]/70 mt-0.5">
+                Eliminate dental fear with advanced jet injectors & computer-regulated digital anesthesia.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#needle-free"
+            className="shrink-0 px-5 py-2 rounded-full bg-[#7B8052] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#555B38] transition-colors shadow-sm"
+          >
+            Explore Needle-Free Care →
+          </a>
         </div>
       </div>
 
