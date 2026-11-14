@@ -20,9 +20,9 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
-          <div className="max-w-3xl space-y-2">
+          <div className="max-w-3xl space-y-2 text-center md:text-left">
             <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
               OUR CLINICAL ENVIRONMENT · INSIDE DR. PREETHI'S DENTISTRY
             </h2>
@@ -47,9 +47,9 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
         </div>
       </div>
 
-      {/* Gallery Grid - Full-width alignment with controlled, compact card height */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-10 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
+      {/* Gallery Grid - Golden Ratio Centered Layout */}
+      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 py-10 sm:py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {images.map((item, index) => {
             const isHovered = hoveredId === item.id;
             return (

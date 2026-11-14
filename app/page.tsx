@@ -23,11 +23,11 @@ export default function HomePage() {
       {/* 3. Treatments: Advanced Orthodontic & Dental Care with Promoted Speciality Highlight */}
       <ServicesGallerySection />
 
-      {/* 4. GoClear Clear Aligners: The Clinic's Custom Aligner Brand with Case Studies & Comparisons */}
-      <GoClearAlignersSection />
-
-      {/* 5. Clinical Insights: Video Library with Instagram Reels */}
+      {/* 4. Clinical Insights: Video Library with Instagram Reels */}
       <InstagramReelsSection />
+
+      {/* 5. GoClear Clear Aligners: Positioned strategically BEFORE the Clinic Environment Gallery */}
+      <GoClearAlignersSection />
 
       {/* 6. Clinic Environment Gallery */}
       <ClinicGallerySection />

@@ -25,13 +25,12 @@ export const GlobalNavbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Needle-Free", href: "/#needle-free" },
-    { name: "Treatments", href: "/#treatments" },
-    { name: "GoClear", href: "/#goclear" },
-    { name: "Clinical Insights", href: "/#reels" },
-    { name: "Meet Doctor", href: "/#doctor" },
-    { name: "Contact", href: "/contact" },
+    { name: "HOME", href: "/" },
+    { name: "TREATMENTS", href: "/#treatments" },
+    { name: "INVISALIGN", href: "/treatments/invisalign-clear-aligners" },
+    { name: "CLINICAL GALLERY", href: "/#clinic-gallery" },
+    { name: "MEET OUR DOCTOR", href: "/#doctor" },
+    { name: "TESTIMONIALS", href: "/#testimonials" },
   ];
 
   const isHomePage = pathname === "/";

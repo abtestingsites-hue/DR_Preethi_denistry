@@ -45,37 +45,38 @@ export const EditorialHero: React.FC = () => {
   return (
     <section 
       onClick={triggerReveal}
-      className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#F5F0E6] pt-24 pb-16 cursor-default"
+      className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#29291F] pt-20 pb-16 cursor-default"
     >
       
-      {/* Background authentic clinic interior with Warm Cream & Olive color grade */}
-      <div className="absolute inset-0 z-0">
+      {/* Background authentic clinic interior with balanced architectural framing (Center-anchored) */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="/Clinic.png"
           alt="Dr. Preethi's Dentistry Reception Lounge"
-          className="w-full h-full object-cover filter brightness-[0.82] contrast-[1.04]"
+          className="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.06]"
         />
-        {/* Warm Overlay in Warm Charcoal tones */}
-        <div className="absolute inset-0 bg-[#29291F]/50 backdrop-blur-[1px]" />
+        {/* Architectural Vignette: Ensures mathematical center focus with Rule-of-Thirds balance */}
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#29291F]/40 to-[#29291F]/70" />
+        <div className="absolute inset-0 bg-[#29291F]/45 backdrop-blur-[0.5px]" />
       </div>
 
-      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow */}
+      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow centered on Rule of Thirds lower third */}
       {!isRevealed && (
         <button
           onClick={triggerReveal}
           aria-label="Explore clinic"
-          className="absolute bottom-10 z-20 flex flex-col items-center justify-center w-12 h-12 rounded-full bg-[#7B8052]/80 hover:bg-[#7B8052] text-white border border-white/30 backdrop-blur-sm transition-all animate-bounce cursor-pointer shadow-float group"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center w-12 h-12 rounded-full bg-[#7B8052]/90 hover:bg-[#7B8052] text-white border border-white/30 backdrop-blur-sm transition-all animate-bounce cursor-pointer shadow-float group"
         >
           <ChevronDown className="w-6 h-6 text-[#FAF8F2] group-hover:scale-110 transition-transform" />
         </button>
       )}
 
-      {/* Center Hero Content: Elegantly surfaces upon touch, cursor motion, or scroll */}
+      {/* Center Hero Content: Strictly aligned to Golden Ratio vertical center (5/8 of viewport height) */}
       <div
-        className={`relative z-10 max-w-[1300px] mx-auto px-6 text-center text-white space-y-6 transition-all duration-700 ease-out ${
+        className={`relative z-10 w-full max-w-[1200px] mx-auto px-6 text-center text-white space-y-6 flex flex-col items-center justify-center transition-all duration-700 ease-out ${
           isRevealed
             ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-95 translate-y-8 pointer-events-none"
+            : "opacity-0 scale-95 translate-y-6 pointer-events-none"
         }`}
       >
         

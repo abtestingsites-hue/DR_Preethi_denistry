@@ -62,7 +62,7 @@ export const InstagramReelsSection: React.FC = () => {
       
       {/* Top Olive Ribbon Banner seamlessly incorporating Instagram ID & followers */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-1.5 text-center md:text-left">
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-xs uppercase tracking-wider font-bold text-[#FAF8F2]/90">
@@ -103,9 +103,9 @@ export const InstagramReelsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Autoplaying Reels Feeds Grid with in-video bottom audio toggle - Authentic 9:16 Ratio */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+      {/* Autoplaying Reels Feeds Grid: Architectural 9:16 Ratio with Center Anchor */}
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-10 sm:py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 w-full">
           {reels.map((reel, index) => (
             <div
               key={reel.id}

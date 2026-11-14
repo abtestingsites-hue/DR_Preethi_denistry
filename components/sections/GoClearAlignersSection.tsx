@@ -43,10 +43,10 @@ export const GoClearAlignersSection: React.FC = () => {
         <div className="absolute bottom-10 right-0 w-96 h-96 rounded-full bg-[#A5A786]/20 blur-3xl" />
       </div>
 
-      <div className="w-full max-w-[1450px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 space-y-16">
+      <div className="w-full max-w-[1300px] mx-auto px-4 sm:px-8 lg:px-12 relative z-10 space-y-16">
         
         {/* Section Header: The Clinic's Custom Clear Aligner Brand */}
-        <div className="text-center max-w-4xl mx-auto space-y-4">
+        <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#7B8052]/15 border border-[#7B8052]/30 text-[#7B8052] text-xs font-bold uppercase tracking-widest">
             <Sparkles className="w-4 h-4 text-[#7B8052]" />
             <span>AFFORDABLE ORTHODONTIC EXCELLENCE</span>
@@ -59,22 +59,22 @@ export const GoClearAlignersSection: React.FC = () => {
             </span>
           </h2>
 
-          <p className="text-sm sm:text-base text-[#29291F]/80 leading-relaxed font-light max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-[#29291F]/80 leading-relaxed font-light max-w-2xl mx-auto">
             Alongside Invisalign®, Dr. Preethi's Dentistry provides <strong>GoClear Aligners</strong>—our high-precision, in-house aligner system offering Coimbatore patients invisible orthodontic alignment with flexible plans starting from just ₹2,500/month.
           </p>
         </div>
 
-        {/* Highlight Banner Card with Authentic Clinic Photography */}
+        {/* Highlight Banner Card: Proportioned in Golden Ratio (5:8) with Architectural Clean Grid */}
         <div className="bg-[#FAF8F2] rounded-3xl border border-[#A5A786]/40 shadow-card p-6 sm:p-10 lg:p-12 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            {/* Left 5 Cols: Product Photography Display */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden border border-[#A5A786]/50 shadow-elevated bg-[#29291F] aspect-[4/5] max-h-[460px] mx-auto">
+            {/* Left 5 Cols: Product Photography Display with Clean Framed Fit */}
+            <div className="lg:col-span-5 relative flex justify-center">
+              <div className="relative rounded-2xl overflow-hidden border border-[#A5A786]/50 shadow-elevated bg-[#29291F] aspect-[4/5] max-h-[440px] w-full max-w-sm">
                 <img
                   src="/goclear-box.jpg"
                   alt="Dr. Preethi Presenting GoClear Aligners Box"
-                  className="w-full h-full object-cover filter brightness-[0.98] contrast-[1.02]"
+                  className="w-full h-full object-cover object-center filter brightness-[0.98] contrast-[1.02]"
                 />
                 
                 {/* Price Ribbon */}

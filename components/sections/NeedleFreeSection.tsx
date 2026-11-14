@@ -77,30 +77,30 @@ export const NeedleFreeSection: React.FC = () => {
         {/* 2-Column Split: Clinical Showcase & Technology Deep-Dive */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column (5 Cols): Clinical Photograph with Interactive Badge */}
+          {/* Left Column (5 Cols): Clinical Device Photograph with Architectural Framing */}
           <div className="lg:col-span-5 relative">
-            <div className="relative rounded-3xl overflow-hidden border-2 border-[#7B8052]/40 shadow-elevated bg-[#29291F] aspect-[4/5] max-h-[520px] mx-auto">
+            <div className="relative rounded-3xl overflow-hidden border-2 border-[#7B8052]/40 shadow-elevated bg-[#29291F] aspect-[4/3] sm:aspect-[16/11] max-h-[460px] mx-auto group">
               <img
-                src="/needle-free-dr-preethi.jpg"
-                alt="Dr. Preethi Subramanian Explaining Needle-Free Dental Technology"
-                className="w-full h-full object-cover filter brightness-[0.98] contrast-[1.02]"
+                src="/needle-free-device.jpg"
+                alt="Needle-Free Dental Jet Injector Device resting on surgical clinic tray"
+                className="w-full h-full object-cover filter brightness-[1.0] contrast-[1.02] transition-transform duration-700 group-hover:scale-105"
               />
               
               {/* Subtle Gradient Vignette */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
               {/* Bottom Caption Pill */}
-              <div className="absolute bottom-5 inset-x-5 p-4 rounded-2xl bg-[#FAF8F2]/95 backdrop-blur-md border border-[#A5A786]/40 shadow-md">
+              <div className="absolute bottom-4 inset-x-4 p-4 rounded-2xl bg-[#FAF8F2]/95 backdrop-blur-md border border-[#A5A786]/40 shadow-md">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#7B8052] text-[#FAF8F2] flex items-center justify-center shrink-0 shadow-sm">
                     <ShieldCheck className="w-5 h-5 text-[#FAF8F2]" />
                   </div>
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-[#7B8052]">
-                      100% Needle-Less Comfort
+                      Micro-Jet Fluid Anesthesia System
                     </h4>
                     <p className="text-xs text-[#29291F]/75 font-medium leading-tight">
-                      Designed for patients with dental anxiety & needle phobia.
+                      Sub-100ms painless tissue dispersion — zero hypodermic puncture.
                     </p>
                   </div>
                 </div>
@@ -108,9 +108,9 @@ export const NeedleFreeSection: React.FC = () => {
             </div>
 
             {/* Floating Metric Badge */}
-            <div className="absolute -top-4 -right-2 sm:-right-4 bg-[#7B8052] text-[#FAF8F2] px-4 py-2.5 rounded-2xl shadow-elevated border-2 border-white/80 text-center">
-              <span className="text-xl font-bold font-serif block leading-none">0</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider opacity-90">Needles Used</span>
+            <div className="absolute -top-3 -right-2 sm:-right-3 bg-[#7B8052] text-[#FAF8F2] px-3.5 py-2 rounded-2xl shadow-elevated border-2 border-white/80 text-center">
+              <span className="text-lg font-bold font-serif block leading-none">0</span>
+              <span className="text-[9px] uppercase font-bold tracking-wider opacity-90">Needles Used</span>
             </div>
           </div>
 

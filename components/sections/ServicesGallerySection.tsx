@@ -15,9 +15,9 @@ export const ServicesGallerySection: React.FC = () => {
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-b border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
-          <div className="max-w-3xl space-y-2">
+          <div className="max-w-3xl space-y-2 text-center md:text-left">
             <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
               CLINICAL SPECIALITIES · ADVANCED ORTHODONTIC & DENTAL TREATMENTS
             </h2>
@@ -43,7 +43,7 @@ export const ServicesGallerySection: React.FC = () => {
       </div>
 
       {/* Promoted Innovation Banner: Direct Callout to Needle-Free Technology */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 pt-6">
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 pt-8">
         <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF8F2] border-2 border-[#7B8052] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0 shadow-sm">
@@ -63,16 +63,16 @@ export const ServicesGallerySection: React.FC = () => {
           </div>
           <a
             href="#needle-free"
-            className="shrink-0 px-5 py-2 rounded-full bg-[#7B8052] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#555B38] transition-colors shadow-sm"
+            className="shrink-0 px-5 py-2.5 rounded-full bg-[#7B8052] text-white font-bold text-xs uppercase tracking-wider hover:bg-[#555B38] transition-colors shadow-sm"
           >
             Explore Needle-Free Care →
           </a>
         </div>
       </div>
 
-      {/* Grid Gallery Style: Full-width alignment with controlled, compact card height */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-8 md:py-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 w-full">
+      {/* Grid Gallery Style: Golden Ratio Grid with Balanced Proportions */}
+      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-8 md:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
           {treatments.map((treatment) => {
             const isHovered = hoveredId === treatment.id;
             return (

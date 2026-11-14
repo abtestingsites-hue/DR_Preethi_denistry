@@ -9,9 +9,9 @@ export const MeetDoctorSection: React.FC = () => {
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           
-          <div className="max-w-3xl space-y-2">
+          <div className="max-w-3xl space-y-2 text-center md:text-left">
             <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
               CLINICAL LEADERSHIP · MEET OUR DOCTOR
             </h2>
@@ -36,8 +36,8 @@ export const MeetDoctorSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Doctor Profile Layout */}
-      <div className="max-w-[1300px] mx-auto px-6 sm:px-12 py-12 sm:py-16">
+      {/* Main Doctor Profile Layout: Rule of Thirds Proportion (5 Cols Photo / 7 Cols Clinical Narrative) */}
+      <div className="w-full max-w-[1300px] mx-auto px-6 sm:px-10 py-14 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Doctor Portrait Image */}

@@ -42,12 +42,14 @@ export const MediumPartnershipTestimonials: React.FC = () => {
       
       {/* Top Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-8 px-6 sm:px-12 text-center shadow-sm border-y border-[#555B38]/30 mb-12">
-        <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider">
-          OUR GOAL IS TO CREATE <span className="font-extrabold text-[#FAF8F2] underline decoration-white/40 underline-offset-4">CONFIDENT SMILES</span> & LASTING RELATIONSHIPS.
-        </h2>
+        <div className="max-w-[1400px] mx-auto">
+          <h2 className="text-xs sm:text-sm font-bold uppercase tracking-wider">
+            OUR GOAL IS TO CREATE <span className="font-extrabold text-[#FAF8F2] underline decoration-white/40 underline-offset-4">CONFIDENT SMILES</span> & LASTING RELATIONSHIPS.
+          </h2>
+        </div>
       </div>
 
-      <div className="w-full px-6 sm:px-12 lg:px-16 mb-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-12 mb-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
         <div>
           <span className="text-xs uppercase tracking-wider font-bold text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/50">
             5.0 ⭐ VERIFIED PATIENT STORIES
