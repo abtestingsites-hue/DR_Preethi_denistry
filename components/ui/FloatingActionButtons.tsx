@@ -9,16 +9,16 @@ export const FloatingActionButtons: React.FC = () => {
   )}`;
 
   return (
-    <aside aria-label="Quick Actions" className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none select-none">
+    <aside aria-label="Quick Actions" className="fixed bottom-7 right-7 z-40 flex flex-col items-end gap-3.5 pointer-events-none select-none">
       
       {/* 1. Request Consultation Floating Button - Pure Architectural Icon Button */}
       <Link
         href="/booking"
         aria-label="Request Dental Consultation"
         title="Request Consultation"
-        className="pointer-events-auto flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#7B8052] border-2 border-[#FAF8F2] text-[#FAF8F2] shadow-elevated hover:bg-[#555B38] transition-all duration-300 hover:scale-110 active:scale-95 group"
+        className="pointer-events-auto flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#7B8052] border-2 border-[#FAF8F2] text-[#FAF8F2] shadow-elevated hover:bg-[#555B38] transition-all duration-300 hover:scale-110 active:scale-95 group"
       >
-        <CalendarCheck className="w-6 h-6 text-[#FAF8F2] group-hover:scale-105 transition-transform" />
+        <CalendarCheck className="w-5 h-5 text-[#FAF8F2] group-hover:scale-105 transition-transform" />
       </Link>
 
       {/* 2. Official WhatsApp Logo Floating Button - Pure Icon Button with Authentic Official SVG */}
@@ -28,12 +28,12 @@ export const FloatingActionButtons: React.FC = () => {
         rel="noopener noreferrer"
         aria-label="Chat with Dr. Preethi's Dentistry on WhatsApp"
         title="Chat on WhatsApp"
-        className="pointer-events-auto flex items-center justify-center w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] border-2 border-[#FAF8F2] text-white shadow-elevated hover:bg-[#20BD5A] transition-all duration-300 hover:scale-110 active:scale-95 group"
+        className="pointer-events-auto flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#25D366] border-2 border-[#FAF8F2] text-white shadow-elevated hover:bg-[#20BD5A] transition-all duration-300 hover:scale-110 active:scale-95 group"
       >
         <svg
           viewBox="0 0 24 24"
-          width="28"
-          height="28"
+          width="26"
+          height="26"
           fill="currentColor"
           className="text-white drop-shadow-sm group-hover:scale-105 transition-transform"
         >
