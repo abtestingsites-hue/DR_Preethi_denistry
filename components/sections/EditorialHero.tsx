@@ -24,39 +24,39 @@ export const EditorialHero: React.FC = () => {
       {/* Grid Container matching reference composition */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 flex justify-end">
         
-        {/* Content Box: Perfectly aligned with reference layout */}
-        <div className="w-full md:w-[620px] lg:w-[680px] max-w-[680px] flex flex-col text-left pr-2 lg:pr-8">
+        {/* Content Box: Shifted ~35-40px slightly left (lg:mr-8 xl:mr-10) for perfect balance */}
+        <div className="w-full md:w-[580px] lg:w-[620px] max-w-[620px] flex flex-col text-left lg:mr-8 xl:mr-10">
           
           {/* Eyebrow Label with Architectural Lines flanking DR. PREETHI'S DENTISTRY */}
-          <div className="flex items-center gap-3.5 mb-6">
-            <span className="w-12 sm:w-16 h-[2px] bg-[#9EA657] shrink-0" />
+          <div className="flex items-center gap-3.5 mb-5">
+            <span className="w-10 sm:w-14 h-[2px] bg-[#9EA657] shrink-0" />
             <span className="text-[12px] sm:text-[13px] uppercase font-semibold tracking-[0.22em] text-[#FAF8F2] drop-shadow-sm font-sans">
               DR. PREETHI&apos;S DENTISTRY
             </span>
-            <span className="w-12 sm:w-16 h-[2px] bg-[#9EA657] shrink-0" />
+            <span className="w-10 sm:w-14 h-[2px] bg-[#9EA657] shrink-0" />
           </div>
 
-          {/* Main Heading: Matches reference typography exactly */}
-          <h1 className="text-[44px] sm:text-[56px] md:text-[68px] lg:text-[76px] font-serif font-bold text-white leading-[1.02] tracking-tight drop-shadow-md mb-6">
-            Care Designed{" "}
-            <span className="font-serif italic font-normal text-[#C5CE7C] block sm:inline">
+          {/* Main Heading: Reduced by ~8-10% (68px max desktop) with deliberate 2-line break */}
+          <h1 className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[68px] font-serif font-bold text-white leading-[1.05] tracking-tight drop-shadow-md mb-5">
+            <span className="block">Care Designed</span>
+            <span className="font-serif italic font-normal text-[#C5CE7C] block">
               Around Your Smile
             </span>
           </h1>
 
-          {/* Supporting Description */}
-          <p className="text-[18px] sm:text-[20px] lg:text-[22px] text-[#FAF8F2]/95 font-light leading-[1.45] drop-shadow-sm mb-7 max-w-[560px]">
+          {/* Supporting Description: Maintained at max-width ~520px for comfortable reading */}
+          <p className="text-[17px] sm:text-[19px] lg:text-[20px] text-[#FAF8F2]/95 font-light leading-[1.48] drop-shadow-sm mb-6 max-w-[520px]">
             Advanced Orthodontic &amp; Invisalign® Care in a Comfortable, Personalized Environment.
           </p>
 
           {/* Bold lime-olive architectural underline bar matching reference */}
-          <div className="w-full max-w-[460px] h-[3px] bg-[#9EA657] mb-7" />
+          <div className="w-full max-w-[420px] h-[3px] bg-[#9EA657] mb-7" />
 
-          {/* Action Buttons: Request Consultation (olive) & Explore Treatments (warm cream) */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-4">
+          {/* CTA Buttons: Keep on one row with consistent 16-20px gap */}
+          <div className="flex flex-row items-center gap-4 sm:gap-5">
             <Link
               href="/booking"
-              className="inline-flex items-center justify-center gap-2.5 px-8 h-[48px] rounded-full bg-[#7B8052] text-white font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#686D42] transition-all shadow-md hover:shadow-lg active:scale-98 border border-white/20 shrink-0"
+              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] rounded-full bg-[#7B8052] text-white font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#686D42] transition-all shadow-md hover:shadow-lg active:scale-98 border border-white/20 shrink-0"
             >
               <span>Request Consultation</span>
               <ArrowRight className="w-4 h-4 text-white" />
@@ -64,7 +64,7 @@ export const EditorialHero: React.FC = () => {
             
             <a
               href="#treatments"
-              className="inline-flex items-center justify-center px-8 h-[48px] rounded-full bg-[#FAF8F2] text-[#29291F] font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-white transition-all border border-[#A5A786]/50 shadow-md hover:shadow-lg active:scale-98 shrink-0"
+              className="inline-flex items-center justify-center px-7 sm:px-8 h-[48px] rounded-full bg-[#FAF8F2] text-[#29291F] font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-white transition-all border border-[#A5A786]/50 shadow-md hover:shadow-lg active:scale-98 shrink-0"
             >
               Explore Treatments
             </a>

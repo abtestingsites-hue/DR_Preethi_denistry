@@ -45,16 +45,16 @@ export const GlobalNavbar: React.FC = () => {
           : "bg-gradient-to-b from-[#29291F]/85 via-[#29291F]/40 to-transparent py-4 sm:py-5"
       }`}
     >
-      {/* 5-6% Horizontal Margins across viewports (px-5 sm:px-8 lg:px-[5.5vw]) */}
-      <div className="w-full max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-[5.5vw] flex items-center justify-between">
+      {/* 5-6% Horizontal Margins across viewports (px-5 sm:px-8 lg:px-[5vw]) with balanced distribution */}
+      <div className="w-full max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-[5vw] flex items-center justify-between">
         
-        {/* Left: Clinic Logo + Vertical Divider matching reference image */}
-        <div className="flex items-center gap-6 xl:gap-8 shrink-0">
+        {/* Left: Clinic Logo + Vertical Divider matching reference image with balanced spacing */}
+        <div className="flex items-center gap-7 xl:gap-9 shrink-0">
           <Link href="/" className="flex items-center group">
             <img
               src="/clinic-logo-dark.png"
               alt="Dr. Preethi's Dentistry - Invisalign Provider"
-              className={`w-[170px] sm:w-[195px] lg:w-[220px] h-auto object-contain transition-all duration-300 ${
+              className={`w-[170px] sm:w-[190px] lg:w-[210px] h-auto object-contain transition-all duration-300 ${
                 useDarkTheme
                   ? "filter brightness-100 opacity-100"
                   : "filter brightness-0 invert opacity-95 drop-shadow-sm"
@@ -62,11 +62,11 @@ export const GlobalNavbar: React.FC = () => {
             />
           </Link>
           {/* Subtle vertical divider line from reference */}
-          <div className="hidden lg:block w-[1px] h-8 bg-white/20" />
+          <div className="hidden lg:block w-[1px] h-7 bg-white/20" />
         </div>
 
-        {/* Center: Desktop Navigation - matches reference active underline and styling */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
+        {/* Center: Desktop Navigation - balanced spacing (gap-7 xl:gap-9) */}
+        <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
           {navLinks.map((link) => {
             const isActive = link.name === "HOME" ? isHomePage : pathname === link.href;
             return (
@@ -96,7 +96,7 @@ export const GlobalNavbar: React.FC = () => {
         <div className="flex items-center gap-3">
           <Link
             href="/booking"
-            className="hidden sm:inline-flex items-center justify-center gap-2 px-6 h-[48px] rounded-full bg-[#7B8052] text-white text-[14px] uppercase tracking-[0.08em] font-semibold hover:bg-[#555B38] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15"
+            className="hidden sm:inline-flex items-center justify-center gap-2 px-6 h-[46px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#555B38] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15"
           >
             <span>Book Visit</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
