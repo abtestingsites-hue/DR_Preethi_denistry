@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { 
   ArrowRight, 
@@ -37,31 +37,52 @@ export const GoClearAlignersSection: React.FC = () => {
   ];
 
   return (
-    <section id="goclear" className="relative bg-[#F5F0E6] py-16 md:py-24 border-b border-[#A5A786]/30 overflow-hidden">
+    <section id="goclear" className="relative bg-[#F5F0E6]">
       
-      {/* Background Soft Glows */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[#7B8052]/10 blur-3xl" />
-        <div className="absolute bottom-10 right-1/4 w-96 h-96 rounded-full bg-[#A5A786]/20 blur-3xl" />
-      </div>
+      {/* Top Olive Ribbon Banner matching WATCH OUR CLINICAL INSIGHTS style */}
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          <div className="space-y-2 text-center md:text-left">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#FAF8F2]/90">
+              <span className="bg-[#555B38] px-3 py-1 rounded-full border border-white/20">
+                AFFORDABLE ORTHODONTIC EXCELLENCE
+              </span>
+              <span>·</span>
+              <span className="text-white/95">FROM ₹2,500/MONTH</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="text-white/90">Custom 3D Digital Fabrication</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="text-[#FAF8F2]/80">Saibaba Colony, Coimbatore</span>
+            </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 relative z-10 space-y-12">
-        
-        {/* Section Header: Focused, Crisp & Elegant */}
-        <div className="text-center max-w-3xl mx-auto space-y-3.5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7B8052]/15 border border-[#7B8052]/30 text-[#7B8052] text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] shadow-sm">
-            <Sparkles className="w-4 h-4 text-[#7B8052]" />
-            <span>AFFORDABLE ORTHODONTIC EXCELLENCE</span>
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
+              GOCLEAR CLEAR ALIGNERS
+            </h2>
           </div>
 
-          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] font-serif font-bold text-[#29291F] tracking-tight leading-[1.12]">
-            GoClear Clear Aligners
-            <span className="block font-serif italic font-normal text-[#7B8052] text-[24px] sm:text-[28px] md:text-[32px] mt-1.5">
-              Straight Teeth, Clear Confidence — Custom-Crafted Under Specialist Care
-            </span>
-          </h2>
+          <div className="shrink-0 flex items-center gap-4">
+            <Link
+              href="/booking?treatment=GoClear%20Aligners"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#FAF8F2] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-md group"
+            >
+              <span>Request Assessment</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
 
-          <p className="text-[16px] sm:text-[17px] text-[#29291F]/80 leading-[1.6] font-light max-w-2xl mx-auto">
+        </div>
+      </div>
+
+      {/* Main Content Area */}
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-12 sm:py-16 relative z-10 space-y-10">
+        
+        {/* Supporting Narrative */}
+        <div className="max-w-3xl space-y-2 text-left">
+          <p className="text-[17px] sm:text-[19px] font-serif italic text-[#7B8052]">
+            Straight Teeth, Clear Confidence — Custom-Crafted Under Specialist Care
+          </p>
+          <p className="text-[15px] sm:text-[16px] text-[#29291F]/80 leading-[1.6] font-light">
             Experience discrete orthodontic alignment with GoClear aligners—our high-precision clear aligner system with custom 3D staging, zero food restrictions, and flexible plans from just <strong>₹2,500/month</strong>.
           </p>
         </div>

@@ -45,31 +45,52 @@ export const NeedleFreeSection: React.FC = () => {
   ];
 
   return (
-    <section id="needle-free" className="relative bg-[#FAF8F2] py-16 md:py-24 border-b border-[#A5A786]/30 overflow-hidden">
+    <section id="needle-free" className="relative bg-[#FAF8F2]">
       
-      {/* Background Architectural Accent Lines */}
-      <div className="absolute inset-0 pointer-events-none opacity-25">
-        <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-[#7B8052]/10 blur-3xl" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-[#A5A786]/15 blur-3xl" />
-      </div>
+      {/* Top Olive Ribbon Banner matching WATCH OUR CLINICAL INSIGHTS style */}
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-6 sm:px-10 lg:px-14 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+        <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          
+          <div className="space-y-2 text-center md:text-left">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#FAF8F2]/90">
+              <span className="bg-[#555B38] px-3 py-1 rounded-full border border-white/20">
+                CLINIC SPECIALITY INNOVATION
+              </span>
+              <span>·</span>
+              <span className="text-white/95">OUR EXPERTISE</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="text-white/90">100% Injection Fear-Free</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="text-[#FAF8F2]/80">Saibaba Colony, Coimbatore</span>
+            </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 relative z-10 space-y-12 md:space-y-16">
-        
-        {/* Section Header: Clinical Excellence & Painless Innovation */}
-        <div className="text-center max-w-3xl mx-auto space-y-3.5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7B8052]/10 border border-[#7B8052]/25 text-[#7B8052] text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em]">
-            <Sparkles className="w-4 h-4 text-[#7B8052]" />
-            <span>CLINIC SPECIALITY INNOVATION · OUR EXPERTISE</span>
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
+              NEEDLE-FREE DENTAL CARE
+            </h2>
           </div>
 
-          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] font-serif font-bold text-[#29291F] tracking-tight leading-[1.12]">
-            Needle-Free Dental Care
-            <span className="block font-serif italic font-normal text-[#7B8052] text-[24px] sm:text-[28px] md:text-[32px] mt-1.5">
-              Gentle Anesthesia Delivered Without the Fear of Injections
-            </span>
-          </h2>
+          <div className="shrink-0 flex items-center gap-4">
+            <Link
+              href="/booking?treatment=Needle-Free%20Treatment"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#FAF8F2] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-md group"
+            >
+              <span>Explore Needle-Free</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
 
-          <p className="text-[16px] sm:text-[17px] text-[#29291F]/80 leading-[1.6] font-light max-w-2xl mx-auto">
+        </div>
+      </div>
+
+      {/* Main Content Area */}
+      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 py-12 sm:py-16 relative z-10 space-y-12">
+        
+        {/* Supporting Narrative */}
+        <div className="max-w-3xl space-y-2 text-left">
+          <p className="text-[17px] sm:text-[19px] font-serif italic text-[#7B8052]">
+            Gentle Anesthesia Delivered Without the Fear of Hypodermic Injections
+          </p>
+          <p className="text-[15px] sm:text-[16px] text-[#29291F]/80 leading-[1.6] font-light">
             At Dr. Preethi&apos;s Dentistry, we have engineered out the primary cause of dental anxiety. By employing high-velocity jet injectors, computer-guided digital anesthesia, and medical-grade topicals, our patients experience complete numbness and restorative comfort without a single hypodermic needle.
           </p>
         </div>
@@ -79,7 +100,7 @@ export const NeedleFreeSection: React.FC = () => {
           
           {/* Left Column (5 Cols ~ 38.2%): Clinical Device Photograph */}
           <div className="lg:col-span-5 relative">
-            <div className="rounded-2xl overflow-hidden border border-[#A5A786]/40 shadow-card bg-[#29291F] aspect-[4/3] relative group">
+            <div className="rounded-[20px] overflow-hidden border border-[#A5A786]/40 shadow-card bg-[#29291F] aspect-[4/3] relative group">
               <img
                 src="/needle-free-device.jpg"
                 alt="Clinical Needle-Free Jet Anesthesia Injector on Sterile Tray"
@@ -115,7 +136,7 @@ export const NeedleFreeSection: React.FC = () => {
               const current = technologies.find((t) => t.id === activeTab) || technologies[0];
               const Icon = current.icon;
               return (
-                <div className="bg-[#F5F0E6] p-6 sm:p-7 rounded-2xl border border-[#A5A786]/40 shadow-subtle space-y-4">
+                <div className="bg-[#F5F0E6] p-6 sm:p-7 rounded-[18px] border border-[#A5A786]/40 shadow-subtle space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0">
                       <Icon className="w-5 h-5 text-white" />

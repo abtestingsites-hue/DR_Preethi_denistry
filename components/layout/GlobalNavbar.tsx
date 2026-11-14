@@ -45,11 +45,11 @@ export const GlobalNavbar: React.FC = () => {
           : "bg-gradient-to-b from-[#29291F]/85 via-[#29291F]/40 to-transparent h-[84px] md:h-[88px] flex items-center"
       }`}
     >
-      {/* Maximum 1440px container with 48-64px padding (px-6 sm:px-10 lg:px-14 xl:px-16) */}
-      <div className="w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-16 flex items-center justify-between">
+      {/* Edge-aligned full width container with left corner logo */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 flex items-center justify-between">
         
-        {/* Left: Clinic Logo + Vertical Divider (210-230px logo width) */}
-        <div className="flex items-center gap-6 xl:gap-8 shrink-0">
+        {/* Left: Clinic Logo moved directly to the left corner + Vertical Divider */}
+        <div className="flex items-center gap-5 xl:gap-8 shrink-0">
           <Link href="/" className="flex items-center group">
             <img
               src="/clinic-logo-dark.png"
