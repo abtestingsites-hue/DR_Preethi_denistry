@@ -48,40 +48,44 @@ export const GlobalNavbar: React.FC = () => {
       {/* 5-6% Horizontal Margins across viewports (px-5 sm:px-8 lg:px-[5.5vw]) */}
       <div className="w-full max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-[5.5vw] flex items-center justify-between">
         
-        {/* Left: Clinic Logo - Controlled ~190-210px width on desktop */}
-        <Link href="/" className="flex items-center group shrink-0">
-          <img
-            src="/clinic-logo-dark.png"
-            alt="Dr. Preethi's Dentistry - Invisalign Provider"
-            className={`w-[170px] sm:w-[190px] lg:w-[210px] h-auto object-contain transition-all duration-300 group-hover:opacity-90 ${
-              useDarkTheme
-                ? "filter brightness-100 opacity-100"
-                : "filter brightness-0 invert opacity-95 drop-shadow-sm"
-            }`}
-          />
-        </Link>
+        {/* Left: Clinic Logo + Vertical Divider matching reference image */}
+        <div className="flex items-center gap-6 xl:gap-8 shrink-0">
+          <Link href="/" className="flex items-center group">
+            <img
+              src="/clinic-logo-dark.png"
+              alt="Dr. Preethi's Dentistry - Invisalign Provider"
+              className={`w-[170px] sm:w-[195px] lg:w-[220px] h-auto object-contain transition-all duration-300 ${
+                useDarkTheme
+                  ? "filter brightness-100 opacity-100"
+                  : "filter brightness-0 invert opacity-95 drop-shadow-sm"
+              }`}
+            />
+          </Link>
+          {/* Subtle vertical divider line from reference */}
+          <div className="hidden lg:block w-[1px] h-8 bg-white/20" />
+        </div>
 
         {/* Center: Desktop Navigation - matches reference active underline and styling */}
-        <nav className="hidden lg:flex items-center gap-7 xl:gap-8">
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) => {
             const isActive = link.name === "HOME" ? isHomePage : pathname === link.href;
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`relative text-[13px] xl:text-[14px] tracking-[0.08em] font-medium transition-colors duration-200 py-1 ${
+                className={`relative text-[12px] xl:text-[13px] tracking-[0.1em] uppercase font-medium transition-colors duration-200 py-1 ${
                   useDarkTheme
                     ? isActive
                       ? "text-[#7B8052] font-semibold"
                       : "text-[#29291F] hover:text-[#7B8052]"
                     : isActive
                       ? "text-white font-semibold"
-                      : "text-white/90 hover:text-white"
+                      : "text-white/85 hover:text-white"
                 }`}
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#959B6B] rounded-full" />
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-[#9EA657] rounded-full" />
                 )}
               </Link>
             );
