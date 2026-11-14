@@ -45,7 +45,7 @@ export const EditorialHero: React.FC = () => {
   return (
     <section 
       onClick={triggerReveal}
-      className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#29291F] pt-20 pb-16 cursor-default"
+      className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#29291F] pt-20 pb-16 cursor-default select-none"
     >
       
       {/* Background authentic clinic interior with balanced architectural framing (Center-anchored) */}
@@ -55,12 +55,11 @@ export const EditorialHero: React.FC = () => {
           alt="Dr. Preethi's Dentistry Reception Lounge"
           className="w-full h-full object-cover object-center filter brightness-[0.78] contrast-[1.06]"
         />
-        {/* Architectural Vignette: Ensures mathematical center focus with Rule-of-Thirds balance */}
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#29291F]/40 to-[#29291F]/70" />
+        {/* Architectural Vignette */}
         <div className="absolute inset-0 bg-[#29291F]/45 backdrop-blur-[0.5px]" />
       </div>
 
-      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow centered on Rule of Thirds lower third */}
+      {/* Prompt cue before interaction: Minimalist architectural bouncing down arrow centered on lower third line */}
       {!isRevealed && (
         <button
           onClick={triggerReveal}
@@ -73,7 +72,7 @@ export const EditorialHero: React.FC = () => {
 
       {/* Center Hero Content: Strictly aligned to Golden Ratio vertical center (5/8 of viewport height) */}
       <div
-        className={`relative z-10 w-full max-w-[1200px] mx-auto px-6 text-center text-white space-y-6 flex flex-col items-center justify-center transition-all duration-700 ease-out ${
+        className={`relative z-10 w-full max-w-[1200px] mx-auto px-6 text-center text-white space-y-4 flex flex-col items-center justify-center transition-all duration-700 ease-out ${
           isRevealed
             ? "opacity-100 scale-100 translate-y-0"
             : "opacity-0 scale-95 translate-y-6 pointer-events-none"
@@ -89,8 +88,8 @@ export const EditorialHero: React.FC = () => {
           
           <div className="w-full flex justify-center">
             <svg
-              viewBox="0 0 1100 180"
-              className="w-full max-w-[1050px] h-auto overflow-visible select-none"
+              viewBox="0 0 1100 160"
+              className="w-full max-w-[950px] h-auto overflow-visible select-none"
               aria-label="DR. PREETHI'S DENTISTRY"
             >
               <defs>
@@ -131,9 +130,9 @@ export const EditorialHero: React.FC = () => {
               {/* Architectural drafting guidelines matching The Medium studio UI */}
               <line
                 x1="80"
-                y1="35"
+                y1="30"
                 x2="1020"
-                y2="35"
+                y2="30"
                 stroke="#FAF8F2"
                 strokeWidth="1"
                 strokeDasharray="4 6"
@@ -141,9 +140,9 @@ export const EditorialHero: React.FC = () => {
               />
               <line
                 x1="80"
-                y1="135"
+                y1="130"
                 x2="1020"
-                y2="135"
+                y2="130"
                 stroke="#FAF8F2"
                 strokeWidth="1"
                 strokeDasharray="4 6"
@@ -156,7 +155,7 @@ export const EditorialHero: React.FC = () => {
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className={`font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-[url(#pencilShadePattern)] pointer-events-none ${
+                className={`font-serif font-bold text-[62px] sm:text-[78px] md:text-[88px] tracking-[0.14em] fill-[url(#pencilShadePattern)] pointer-events-none ${
                   isRevealed ? "animate-pencil-shading" : "opacity-0"
                 }`}
                 style={{
@@ -173,7 +172,7 @@ export const EditorialHero: React.FC = () => {
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className={`font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-transparent stroke-white pointer-events-none ${
+                className={`font-serif font-bold text-[62px] sm:text-[78px] md:text-[88px] tracking-[0.14em] fill-transparent stroke-white pointer-events-none ${
                   isRevealed ? "animate-draw-outline" : "opacity-0"
                 }`}
                 style={{
@@ -190,28 +189,28 @@ export const EditorialHero: React.FC = () => {
           </div>
 
           {/* Requested Tagline: CARE DESIGNED AROUND YOUR SMILE */}
-          <div className="mt-2 mb-2">
-            <span className="text-base sm:text-lg md:text-xl font-serif italic tracking-[0.25em] uppercase text-[#FAF8F2] font-bold drop-shadow-lg">
+          <div className="mt-1 mb-1">
+            <span className="text-sm sm:text-base md:text-lg font-serif italic tracking-[0.25em] uppercase text-[#FAF8F2] font-bold drop-shadow-md">
               CARE DESIGNED AROUND YOUR SMILE
             </span>
           </div>
 
           {/* Elegant Olive divider line */}
-          <div className="w-full max-w-sm h-[2px] bg-[#A5A786] my-2" />
+          <div className="w-full max-w-xs h-[1.5px] bg-[#A5A786] my-1" />
         </div>
 
-        {/* Action Buttons in Olive & Soft Cream */}
-        <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+        {/* Action Buttons in Olive & Soft Cream with Balanced Proportions */}
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
           <Link
             href="/booking"
-            className="px-8 py-3.5 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#555B38] transition-all shadow-float hover:scale-105 flex items-center gap-3 border border-white/20"
+            className="px-7 py-3 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#555B38] transition-all shadow-card hover:shadow-elevated hover:scale-105 flex items-center gap-2.5 border border-white/20"
           >
             <span>Request Consultation</span>
             <ArrowRight className="w-4 h-4 text-white" />
           </Link>
           <a
             href="#treatments"
-            className="px-8 py-3.5 rounded-full bg-[#FAF8F2]/90 text-[#29291F] font-semibold text-xs uppercase tracking-wider hover:bg-white transition-all border border-[#A5A786]/50 shadow-sm"
+            className="px-7 py-3 rounded-full bg-[#FAF8F2]/95 text-[#29291F] font-semibold text-xs uppercase tracking-wider hover:bg-white transition-all border border-[#A5A786]/50 shadow-card hover:shadow-elevated"
           >
             Explore Treatments
           </a>

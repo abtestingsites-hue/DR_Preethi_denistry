@@ -43,8 +43,8 @@ export const ServicesGallerySection: React.FC = () => {
       </div>
 
       {/* Promoted Innovation Banner: Direct Callout to Needle-Free Technology */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 pt-8">
-        <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF8F2] border-2 border-[#7B8052] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-full px-4 sm:px-8 lg:px-12 pt-8">
+        <div className="p-4 sm:p-5 rounded-2xl bg-[#FAF8F2] border-2 border-[#7B8052] shadow-card flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0 shadow-sm">
               <span className="text-lg font-bold">✨</span>
@@ -70,8 +70,8 @@ export const ServicesGallerySection: React.FC = () => {
         </div>
       </div>
 
-      {/* Grid Gallery Style: Golden Ratio Grid with Balanced Proportions */}
-      <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 py-8 md:py-12">
+      {/* Grid Gallery Style: Full-Width Architectural Grid with Elevated Shadows */}
+      <div className="w-full px-4 sm:px-8 lg:px-12 py-8 md:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
           {treatments.map((treatment) => {
             const isHovered = hoveredId === treatment.id;
@@ -80,7 +80,7 @@ export const ServicesGallerySection: React.FC = () => {
                 key={treatment.id}
                 onMouseEnter={() => setHoveredId(treatment.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group relative overflow-hidden bg-[#29291F] h-[220px] sm:h-[240px] md:h-[260px] lg:h-[270px] rounded-xl cursor-pointer shadow-sm transition-all duration-300"
+                className="group relative overflow-hidden bg-[#29291F] h-[230px] sm:h-[250px] md:h-[270px] lg:h-[280px] rounded-2xl cursor-pointer shadow-card hover:shadow-elevated transition-all duration-300 border border-[#A5A786]/30"
               >
                 {/* Background Image filling the tile edge-to-edge */}
                 <img

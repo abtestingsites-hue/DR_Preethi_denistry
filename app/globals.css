@@ -28,6 +28,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
   background-color: var(--color-warm-cream);
   color: var(--color-dark-charcoal);
   -webkit-font-smoothing: antialiased;
@@ -50,6 +51,8 @@ img {
 section {
   position: relative;
   width: 100%;
+  scroll-snap-align: start;
+  scroll-margin-top: 75px;
 }
 
 ::selection {

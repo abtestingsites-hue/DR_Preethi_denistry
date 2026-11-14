@@ -20,7 +20,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
       <div className="bg-[#7B8052] text-white py-10 px-6 sm:px-12 border-y border-[#555B38]/30 relative z-10 shadow-sm">
-        <div className="w-full max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="w-full px-4 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-8">
           
           <div className="max-w-3xl space-y-2 text-center md:text-left">
             <h2 className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#FAF8F2]">
@@ -47,9 +47,9 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
         </div>
       </div>
 
-      {/* Gallery Grid - Golden Ratio Centered Layout */}
-      <div className="w-full max-w-[1400px] mx-auto px-6 sm:px-10 py-10 sm:py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      {/* Gallery Grid - Full-Width Layout with Depth & Shadow Separation */}
+      <div className="w-full px-4 sm:px-8 lg:px-12 py-10 sm:py-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
           {images.map((item, index) => {
             const isHovered = hoveredId === item.id;
             return (
@@ -58,7 +58,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setActiveLightboxIndex(index)}
-                className="group relative overflow-hidden rounded-2xl bg-[#FAF8F2] border border-[#A5A786]/60 h-[220px] sm:h-[240px] md:h-[260px] lg:h-[270px] cursor-pointer shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl bg-[#FAF8F2] border border-[#A5A786]/50 h-[230px] sm:h-[250px] md:h-[270px] lg:h-[280px] cursor-pointer shadow-card hover:shadow-elevated hover:border-[#7B8052] transition-all duration-500"
               >
                 <img
                   src={item.imageUrl}
