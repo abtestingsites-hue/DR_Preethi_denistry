@@ -103,13 +103,13 @@ export const InstagramReelsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Autoplaying Reels Feeds Grid with in-video bottom audio toggle - 16:9 Aspect Ratio */}
+      {/* Autoplaying Reels Feeds Grid with in-video bottom audio toggle - Authentic 9:16 Ratio */}
       <div className="w-full px-4 sm:px-8 lg:px-12 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
           {reels.map((reel, index) => (
             <div
               key={reel.id}
-              className="relative aspect-video rounded-2xl overflow-hidden bg-[#29291F] border border-[#A5A786]/40 shadow-card group"
+              className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-[#29291F] border border-[#A5A786]/40 shadow-card group"
             >
               {/* Autoplay Video Loop */}
               <video
