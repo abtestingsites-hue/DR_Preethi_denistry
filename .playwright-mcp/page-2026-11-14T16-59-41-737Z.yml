@@ -1,0 +1,131 @@
+- generic [active] [ref=f32e1]:
+  - banner [ref=f32e2]:
+    - generic [ref=f32e3]:
+      - link [ref=f32e5] [cursor=pointer]:
+        - /url: /
+        - img "Dr. Preethi's Dentistry - Invisalign Provider" [ref=f32e6]
+      - navigation [ref=f32e8]:
+        - link "HOME" [ref=f32e9] [cursor=pointer]:
+          - /url: /
+        - link "TREATMENTS" [ref=f32e10] [cursor=pointer]:
+          - /url: /#treatments
+        - link "INVISALIGN®" [ref=f32e11] [cursor=pointer]:
+          - /url: /treatments/invisalign-clear-aligners
+        - link "CLINICAL GALLERY" [ref=f32e13] [cursor=pointer]:
+          - /url: /#clinic-gallery
+        - link "MEET OUR DOCTOR" [ref=f32e14] [cursor=pointer]:
+          - /url: /#doctor
+        - link "TESTIMONIALS" [ref=f32e15] [cursor=pointer]:
+          - /url: /#testimonials
+      - link "Book Visit" [ref=f32e17] [cursor=pointer]:
+        - /url: /booking
+  - main [ref=f32e21]:
+    - generic [ref=f32e22]:
+      - generic [ref=f32e24]:
+        - generic [ref=f32e25]:
+          - generic [ref=f32e26]:
+            - generic [ref=f32e27]: CERTIFIED INVISALIGN® PROVIDER
+            - generic [ref=f32e28]: ·
+            - generic [ref=f32e29]: CUSTOM DIGITAL ALIGNMENT
+            - generic [ref=f32e30]: ·
+            - generic [ref=f32e31]: SmartTrack® Technology
+            - generic [ref=f32e32]: ·
+            - generic [ref=f32e33]: Saibaba Colony, Coimbatore
+          - heading "INVISALIGN® CLEAR ALIGNERS" [level=1] [ref=f32e34]
+        - link "Book Invisalign Visit" [ref=f32e36] [cursor=pointer]:
+          - /url: /booking?treatment=Invisalign%20Clear%20Aligners
+      - generic [ref=f32e40]:
+        - generic [ref=f32e41]:
+          - paragraph [ref=f32e42]: World-Class Clear Aligner Orthodontics Tailored for Discerning Smiles
+          - paragraph [ref=f32e43]: Invisalign® treatment uses a series of custom-made, clear, removable aligners engineered to gradually straighten teeth with clinical precision. With millions of smiles transformed worldwide, it offers superior aesthetics and lifestyle convenience.
+        - generic [ref=f32e45]:
+          - generic [ref=f32e47]:
+            - img "Invisalign Aligners in Sleek Case" [ref=f32e48]
+            - generic [ref=f32e49]: Official Invisalign® Provider
+            - generic [ref=f32e50]:
+              - generic [ref=f32e51]: 3D Digital Intraoral Scans
+              - text: No Messy Dental Impressions · Exact Predictable Alignment
+          - generic [ref=f32e52]:
+            - generic [ref=f32e53]:
+              - generic [ref=f32e54]: THE INVISALIGN ADVANTAGE
+              - heading "Why Invisalign® Under Dr. Preethi Subramanian?" [level=3] [ref=f32e55]
+              - paragraph [ref=f32e56]: Unlike direct-to-consumer mail kits, your Invisalign treatment is supervised chairside by an experienced specialist orthodontist from digital scan to smile completion.
+            - generic [ref=f32e57]:
+              - generic [ref=f32e65]:
+                - heading "Virtually Invisible Aligners" [level=4] [ref=f32e66]
+                - paragraph [ref=f32e67]: Patented SmartTrack® medical-grade multi-layer polymers designed specifically for tooth movement.
+              - generic [ref=f32e72]:
+                - heading "ClinCheck® 3D Simulation" [level=4] [ref=f32e73]
+                - paragraph [ref=f32e74]: Digitally preview your smile transformation and exact tooth movement path before treatment starts.
+              - generic [ref=f32e80]:
+                - heading "Removable & Effortless Hygiene" [level=4] [ref=f32e81]
+                - paragraph [ref=f32e82]: Remove aligners while dining, brushing, or flossing without any food caught in brackets.
+              - generic [ref=f32e87]:
+                - heading "Specialist Orthodontist Care" [level=4] [ref=f32e88]
+                - paragraph [ref=f32e89]: Every case is planned and overseen directly by certified Invisalign Provider Dr. Preethi Subramanian.
+            - generic [ref=f32e90]:
+              - link "Request Invisalign Assessment" [ref=f32e91] [cursor=pointer]:
+                - /url: /booking?treatment=Invisalign%20Clear%20Aligners
+              - link "Call 078128 71829" [ref=f32e95] [cursor=pointer]:
+                - /url: tel:+917812871829
+  - contentinfo [ref=f32e99]:
+    - generic [ref=f32e100]:
+      - generic [ref=f32e101]:
+        - generic [ref=f32e102]:
+          - link [ref=f32e103] [cursor=pointer]:
+            - /url: /
+            - img "Dr. Preethi's Dentistry" [ref=f32e104]
+          - paragraph [ref=f32e105]: Dr. Preethi Subramanian — Orthodontist | Invisalign Provider. Delivering international-standard clinical care, orthodontic precision, and patient-centred dentistry in Coimbatore.
+          - generic [ref=f32e106]:
+            - link "Instagram" [ref=f32e107] [cursor=pointer]:
+              - /url: https://www.instagram.com/dr_preethi_subramanian/
+            - link "WhatsApp" [ref=f32e111] [cursor=pointer]:
+              - /url: https://wa.me/917812871829
+            - link "Phone" [ref=f32e114] [cursor=pointer]:
+              - /url: tel:+917812871829
+        - generic [ref=f32e117]:
+          - heading "CLINIC LOCATION & HOURS" [level=4] [ref=f32e118]
+          - paragraph [ref=f32e119]:
+            - generic [ref=f32e123]: Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road, Saibaba Colony, Coimbatore, Tamil Nadu 641043
+          - paragraph [ref=f32e124]:
+            - generic [ref=f32e127]: "Call: 078128 71829"
+          - paragraph [ref=f32e128]: "Hours: Mon – Sat: 10:00 AM – 08:00 PM | Sun: Prior Appointment"
+        - generic [ref=f32e129]:
+          - heading "QUICK NAVIGATION" [level=4] [ref=f32e130]
+          - generic [ref=f32e131]:
+            - link "HOME" [ref=f32e132] [cursor=pointer]:
+              - /url: /
+            - link "TREATMENTS" [ref=f32e133] [cursor=pointer]:
+              - /url: /#treatments
+            - link "INVISALIGN®" [ref=f32e134] [cursor=pointer]:
+              - /url: /treatments/invisalign-clear-aligners
+            - link "GOCLEAR" [ref=f32e135] [cursor=pointer]:
+              - /url: /#goclear
+            - link "GALLERY" [ref=f32e136] [cursor=pointer]:
+              - /url: /#clinic-gallery
+            - link "OUR DOCTOR" [ref=f32e137] [cursor=pointer]:
+              - /url: /#doctor
+            - link "REVIEWS" [ref=f32e138] [cursor=pointer]:
+              - /url: /#testimonials
+            - link "JOURNAL" [ref=f32e139] [cursor=pointer]:
+              - /url: /#journal
+            - link "FAQ" [ref=f32e140] [cursor=pointer]:
+              - /url: /#faq
+            - link "APPOINTMENT" [ref=f32e141] [cursor=pointer]:
+              - /url: /booking
+      - generic [ref=f32e142]:
+        - paragraph [ref=f32e143]: © 2026 Dr. Preethi's Dentistry. All rights reserved. Saibaba Colony, Coimbatore.
+        - generic [ref=f32e144]:
+          - link "FAQ" [ref=f32e145] [cursor=pointer]:
+            - /url: /#faq
+          - link "Doctor's Journal" [ref=f32e146] [cursor=pointer]:
+            - /url: /blog
+          - link "Privacy Policy" [ref=f32e147] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=f32e148] [cursor=pointer]:
+            - /url: /terms
+  - complementary "Quick Actions":
+    - link "Request Dental Consultation" [ref=f32e149] [cursor=pointer]:
+      - /url: /booking
+    - link "Chat with Dr. Preethi's Dentistry on WhatsApp" [ref=f32e153] [cursor=pointer]:
+      - /url: https://wa.me/917812871829?text=Hello%20Dr.%20Preethi's%20Dentistry%2C%0A%0AI%20would%20like%20to%20enquire%20about%20a%20dental%20consultation.%0A%0APlease%20let%20me%20know%20the%20availability.%0A%0AThank%20you.

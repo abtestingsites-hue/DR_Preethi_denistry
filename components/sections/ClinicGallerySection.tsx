@@ -58,7 +58,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setActiveLightboxIndex(index)}
-                className="group relative overflow-hidden rounded-[18px] bg-[#FAF8F2] border border-[#A5A786]/40 aspect-[4/3] cursor-pointer shadow-elevated hover:shadow-2xl hover:border-[#7B8052] transition-all duration-300"
+                className="group relative overflow-hidden rounded-[18px] bg-[#FAF8F2] border border-[#A5A786]/40 h-[210px] sm:h-[225px] md:h-[240px] cursor-pointer shadow-elevated hover:shadow-2xl hover:border-[#7B8052] transition-all duration-300"
               >
                 <img
                   src={item.imageUrl}

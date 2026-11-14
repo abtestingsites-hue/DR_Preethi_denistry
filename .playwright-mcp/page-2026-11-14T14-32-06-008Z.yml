@@ -1,0 +1,628 @@
+- generic [active] [ref=f21e1]:
+  - banner [ref=f21e2]:
+    - generic [ref=f21e3]:
+      - link [ref=f21e4] [cursor=pointer]:
+        - /url: /
+        - img "Dr. Preethi's Dentistry - Invisalign Provider" [ref=f21e5]
+      - navigation [ref=f21e6]:
+        - link "HOME" [ref=f21e7] [cursor=pointer]:
+          - /url: /
+        - link "TREATMENTS" [ref=f21e8] [cursor=pointer]:
+          - /url: /#treatments
+        - link "INVISALIGN®" [ref=f21e9] [cursor=pointer]:
+          - /url: /treatments/invisalign-clear-aligners
+        - link "CLINICAL GALLERY" [ref=f21e10] [cursor=pointer]:
+          - /url: /#clinic-gallery
+        - link "MEET OUR DOCTOR" [ref=f21e11] [cursor=pointer]:
+          - /url: /#doctor
+        - link "TESTIMONIALS" [ref=f21e12] [cursor=pointer]:
+          - /url: /#testimonials
+      - link "Book Visit" [ref=f21e14] [cursor=pointer]:
+        - /url: /booking
+  - main [ref=f21e18]:
+    - generic [ref=f21e19]:
+      - generic [ref=f21e20]:
+        - img "Dr. Preethi's Dentistry Reception Lounge" [ref=f21e22]
+        - button "Explore clinic" [ref=f21e25] [cursor=pointer]
+        - generic [ref=f21e28]:
+          - generic:
+            - generic: DR. PREETHI'S DENTISTRY
+            - heading "Care Designed Around Your Smile" [level=1]
+            - paragraph: Advanced Orthodontic & Invisalign® Care in a Comfortable, Personalized Environment.
+            - generic:
+              - link "Request Consultation":
+                - /url: /booking
+              - link "Explore Treatments":
+                - /url: "#treatments"
+      - generic [ref=f21e30]:
+        - generic [ref=f21e31]:
+          - generic [ref=f21e32]: CLINIC SPECIALITY INNOVATION · OUR EXPERTISE
+          - heading "Needle-Free Dental Care Gentle Anesthesia Delivered Without the Fear of Injections" [level=2] [ref=f21e36]:
+            - text: Needle-Free Dental Care
+            - generic [ref=f21e37]: Gentle Anesthesia Delivered Without the Fear of Injections
+          - paragraph [ref=f21e38]: At Dr. Preethi's Dentistry, we have engineered out the primary cause of dental anxiety. By employing high-velocity jet injectors, computer-guided digital anesthesia, and medical-grade topicals, our patients experience complete numbness and restorative comfort without a single hypodermic needle.
+        - generic [ref=f21e39]:
+          - generic [ref=f21e40]:
+            - generic [ref=f21e41]:
+              - img "Needle-Free Dental Jet Injector Device resting on surgical clinic tray" [ref=f21e42]
+              - generic [ref=f21e49]:
+                - heading "Micro-Jet Fluid Anesthesia System" [level=4] [ref=f21e50]
+                - paragraph [ref=f21e51]: Sub-100ms painless tissue dispersion — zero hypodermic puncture.
+            - generic [ref=f21e52]:
+              - generic [ref=f21e53]: "0"
+              - text: Needles Used
+          - generic [ref=f21e54]:
+            - generic [ref=f21e55]:
+              - button "High-Velocity Jet" [ref=f21e56] [cursor=pointer]
+              - button "Computer-Controlled Digital" [ref=f21e60] [cursor=pointer]
+              - button "Advanced Pre-Contact" [ref=f21e64] [cursor=pointer]
+            - generic [ref=f21e69]:
+              - generic [ref=f21e71]:
+                - text: Needle-Free Micro-Stream Anesthesia
+                - heading "High-Velocity Jet Injectors" [level=3] [ref=f21e72]
+              - paragraph [ref=f21e76]: Utilises calibrated high-pressure fluid micro-jets to disperse local anesthetic uniformly across oral tissue in milliseconds—completely eliminating the mechanical prick of conventional hypodermic needles.
+              - generic [ref=f21e77]:
+                - generic [ref=f21e78]: Instant absorption (< 100ms)
+                - generic [ref=f21e83]: Zero needle sight or fear
+                - generic [ref=f21e88]: Even distribution across target site
+            - generic [ref=f21e93]:
+              - generic [ref=f21e99]:
+                - heading "No Needle Anxiety" [level=5] [ref=f21e100]
+                - paragraph [ref=f21e101]: Gentle, panic-free procedures for all age groups.
+              - generic [ref=f21e107]:
+                - heading "Immediate Onset" [level=5] [ref=f21e108]
+                - paragraph [ref=f21e109]: Faster anesthesia onset allows shorter chair times.
+              - generic [ref=f21e117]:
+                - heading "Minimal Discomfort" [level=5] [ref=f21e118]
+                - paragraph [ref=f21e119]: Zero lingering soreness at injection sites.
+            - generic [ref=f21e120]:
+              - link "Book Needle-Free Consultation" [ref=f21e121] [cursor=pointer]:
+                - /url: /booking?treatment=Needle-Free%20Treatment
+              - link "View All Specialities" [ref=f21e125] [cursor=pointer]:
+                - /url: "#treatments"
+      - generic [ref=f21e127]:
+        - generic [ref=f21e129]:
+          - generic [ref=f21e130]:
+            - heading "CLINICAL SPECIALITIES · ADVANCED ORTHODONTIC & DENTAL TREATMENTS" [level=2] [ref=f21e131]
+            - paragraph [ref=f21e132]: From precision Invisalign® & GoClear aligners to needle-free anesthesia, dental implants, and gentle restorative treatments in Saibaba Colony, Coimbatore.
+          - link "TREATMENTS" [ref=f21e135] [cursor=pointer]:
+            - /url: /treatments
+        - generic [ref=f21e141]:
+          - generic [ref=f21e142]:
+            - generic [ref=f21e143]: ✨
+            - generic [ref=f21e145]:
+              - generic [ref=f21e146]:
+                - generic [ref=f21e147]: FEATURED SPECIALITY
+                - generic [ref=f21e148]: 100% Needle-Free Dental Injections
+              - paragraph [ref=f21e149]: Eliminate dental fear with advanced jet injectors & computer-regulated digital anesthesia.
+          - link "Explore Needle-Free Care →" [ref=f21e150] [cursor=pointer]:
+            - /url: "#needle-free"
+        - generic [ref=f21e152]:
+          - generic [ref=f21e153] [cursor=pointer]:
+            - img "Invisalign & Clear Aligners" [ref=f21e154]
+            - generic [ref=f21e156]: Orthodontics
+            - heading "Invisalign & Clear Aligners" [level=4] [ref=f21e158]
+            - generic:
+              - generic: Speciality Treatment
+              - heading "Invisalign & Clear Aligners" [level=4]
+              - paragraph: Custom-crafted transparent aligners designed to gently align teeth with minimal lifestyle disruption.
+              - generic:
+                - link "Know More":
+                  - /url: /treatments#invisalign
+                - link "Book Visit":
+                  - /url: /booking?treatment=Invisalign%20%26%20Clear%20Aligners
+          - generic [ref=f21e159] [cursor=pointer]:
+            - img "Orthodontic Treatment" [ref=f21e160]
+            - generic [ref=f21e162]: Orthodontics
+            - heading "Orthodontic Treatment" [level=4] [ref=f21e164]
+            - generic:
+              - generic: Speciality Treatment
+              - heading "Orthodontic Treatment" [level=4]
+              - paragraph: Specialised alignment of teeth and jaws using modern bracket systems and corrective appliances.
+              - generic:
+                - link "Know More":
+                  - /url: /treatments#orthodontics
+                - link "Book Visit":
+                  - /url: /booking?treatment=Orthodontic%20Treatment
+          - generic [ref=f21e165] [cursor=pointer]:
+            - img "Teeth Whitening" [ref=f21e166]
+            - generic [ref=f21e168]: Cosmetic Dentistry
+            - heading "Teeth Whitening" [level=4] [ref=f21e170]
+            - generic:
+              - generic: Speciality Treatment
+              - heading "Teeth Whitening" [level=4]
+              - paragraph: Safe, dentist-supervised bleaching procedures that lighten internal and external enamel stains.
+              - generic:
+                - link "Know More":
+                  - /url: /treatments#teeth-whitening
+                - link "Book Visit":
+                  - /url: /booking?treatment=Teeth%20Whitening
+          - generic [ref=f21e171] [cursor=pointer]:
+            - img "Dental Veneers" [ref=f21e172]
+            - generic [ref=f21e174]: Cosmetic Dentistry
+            - heading "Dental Veneers" [level=4] [ref=f21e176]
+            - generic:
+              - generic: Speciality Treatment
+              - heading "Dental Veneers" [level=4]
+              - paragraph: Custom ceramic coverings bonded to front tooth surfaces to correct chipping, staining, or gaps.
+              - generic:
+                - link "Know More":
+                  - /url: /treatments#dental-veneers
+                - link "Book Visit":
+                  - /url: /booking?treatment=Dental%20Veneers
+          - generic [ref=f21e177] [cursor=pointer]:
+            - img "Dental Implants" [ref=f21e178]
+            - generic [ref=f21e180]: Restorative Dentistry
+            - heading "Dental Implants" [level=4] [ref=f21e182]
+            - generic:
+              - generic: Speciality Treatment
+              - heading "Dental Implants" [level=4]
+              - paragraph: Biocompatible titanium fixtures integrated into the jawbone to support lifelike crowns or bridges.
+              - generic:
+                - link "Know More":
+                  - /url: /treatments#dental-implants
+                - link "Book Visit":
+                  - /url: /booking?treatment=Dental%20Implants
+          - generic [ref=f21e183] [cursor=pointer]:
+            - img "Root Canal Treatment" [ref=f21e184]
+            - generic [ref=f21e186]: Endodontics
+            - heading "Root Canal Treatment" [level=4] [ref=f21e188]
+            - generic:
+              - generic: Speciality Treatment
+              - heading "Root Canal Treatment" [level=4]
+              - paragraph: Removal of infected pulp tissue, thorough disinfection, and hermetic sealing of root canals.
+              - generic:
+                - link "Know More":
+                  - /url: /treatments#root-canal-treatment
+                - link "Book Visit":
+                  - /url: /booking?treatment=Root%20Canal%20Treatment
+      - generic [ref=f21e189]:
+        - generic [ref=f21e191]:
+          - generic [ref=f21e192]:
+            - generic [ref=f21e193]:
+              - generic [ref=f21e194]: CLINICAL VIDEO LIBRARY
+              - generic [ref=f21e195]: ·
+              - link "@dr_preethi_subramanian" [ref=f21e196] [cursor=pointer]:
+                - /url: https://www.instagram.com/dr_preethi_subramanian/
+              - generic [ref=f21e201]: ·
+              - generic [ref=f21e202]: 4.9K+ Followers
+              - generic [ref=f21e203]: ·
+              - generic [ref=f21e204]: 50K+ Monthly Reach · Coimbatore
+            - heading "WATCH OUR CLINICAL INSIGHTS" [level=2] [ref=f21e205]
+          - link "Explore All Videos" [ref=f21e207] [cursor=pointer]:
+            - /url: /clinical-insights
+        - generic [ref=f21e212]:
+          - generic [ref=f21e213]:
+            - generic [ref=f21e215]: Invisalign
+            - generic [ref=f21e220]:
+              - paragraph [ref=f21e221]: Invisalign 3D Digital Scan vs Traditional Impressions
+              - generic [ref=f21e222]:
+                - button "Unmute audio" [ref=f21e223] [cursor=pointer]:
+                  - generic [ref=f21e228]: Unmute
+                - link "View Reel" [ref=f21e229] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dr_preethi_subramanian/
+          - generic [ref=f21e233]:
+            - generic [ref=f21e235]: Smile Care
+            - generic [ref=f21e240]:
+              - paragraph [ref=f21e241]: Creating Confident Smiles with Modern Orthodontics
+              - generic [ref=f21e242]:
+                - button "Unmute audio" [ref=f21e243] [cursor=pointer]:
+                  - generic [ref=f21e248]: Unmute
+                - link "View Reel" [ref=f21e249] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dr_preethi_subramanian/
+          - generic [ref=f21e253]:
+            - generic [ref=f21e255]: Clinic Tour
+            - generic [ref=f21e260]:
+              - paragraph [ref=f21e261]: Inside our Saibaba Colony Sterilisation Bay
+              - generic [ref=f21e262]:
+                - button "Unmute audio" [ref=f21e263] [cursor=pointer]:
+                  - generic [ref=f21e268]: Unmute
+                - link "View Reel" [ref=f21e269] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dr_preethi_subramanian/
+          - generic [ref=f21e273]:
+            - generic [ref=f21e275]: Education
+            - generic [ref=f21e280]:
+              - paragraph [ref=f21e281]: How Clear Aligners Gently Shift Misaligned Teeth
+              - generic [ref=f21e282]:
+                - button "Unmute audio" [ref=f21e283] [cursor=pointer]:
+                  - generic [ref=f21e288]: Unmute
+                - link "View Reel" [ref=f21e289] [cursor=pointer]:
+                  - /url: https://www.instagram.com/dr_preethi_subramanian/
+      - generic [ref=f21e294]:
+        - generic [ref=f21e295]:
+          - generic [ref=f21e296]: AFFORDABLE ORTHODONTIC EXCELLENCE
+          - heading "GoClear Clear Aligners Straight Teeth, Clear Confidence — Custom-Crafted Under Specialist Care" [level=2] [ref=f21e300]:
+            - text: GoClear Clear Aligners
+            - generic [ref=f21e301]: Straight Teeth, Clear Confidence — Custom-Crafted Under Specialist Care
+          - paragraph [ref=f21e302]:
+            - text: Experience discrete orthodontic alignment with GoClear aligners—our high-precision clear aligner system with custom 3D staging, zero food restrictions, and flexible plans from just
+            - strong [ref=f21e303]: ₹2,500/month
+            - text: .
+        - generic [ref=f21e305]:
+          - generic [ref=f21e307]:
+            - img "GoClear Clear Aligner Arch Tray and Sleek Travel Case" [ref=f21e308]
+            - generic [ref=f21e309]: From ₹2,500/Month
+            - generic [ref=f21e310]:
+              - generic [ref=f21e311]: Certified Medical-Grade Polymer
+              - text: 100% Removable · Transparent · Pain-Free
+          - generic [ref=f21e312]:
+            - generic [ref=f21e313]:
+              - generic [ref=f21e314]: THE GOCLEAR ADVANTAGE
+              - heading "Why Choose GoClear Over Braces?" [level=3] [ref=f21e315]
+              - paragraph [ref=f21e316]: Engineered for busy professionals, teenagers, and adults who desire an invisible smile transformation without the burden of metal brackets.
+            - generic [ref=f21e317]:
+              - generic [ref=f21e325]:
+                - heading "Nearly Invisible" [level=4] [ref=f21e326]
+                - paragraph [ref=f21e327]: Ultra-clear medical polymers undetectable during everyday speech and smiling.
+              - generic [ref=f21e332]:
+                - heading "Maximum Comfort" [level=4] [ref=f21e333]
+                - paragraph [ref=f21e334]: Laser-trimmed smooth borders with zero sharp metal brackets or gum irritation.
+              - generic [ref=f21e340]:
+                - heading "100% Removable" [level=4] [ref=f21e341]
+                - paragraph [ref=f21e342]: Eat freely with zero diet restrictions and maintain effortless oral hygiene.
+              - generic [ref=f21e347]:
+                - heading "Affordable & Supervised" [level=4] [ref=f21e348]
+                - paragraph [ref=f21e349]: Flexible plans from ₹2,500/month directly planned by Dr. Preethi Subramanian.
+            - generic [ref=f21e350]:
+              - generic [ref=f21e351]: "Treatable Conditions:"
+              - generic [ref=f21e352]:
+                - generic [ref=f21e353]: ✓ Crowded Teeth
+                - generic [ref=f21e354]: ✓ Gapped Teeth
+                - generic [ref=f21e355]: ✓ Overbite
+                - generic [ref=f21e356]: ✓ Underbite
+                - generic [ref=f21e357]: ✓ Crossbite
+                - generic [ref=f21e358]: ✓ Deep Bite
+                - generic [ref=f21e359]: ✓ Mid-line Shift
+            - generic [ref=f21e360]:
+              - link "Request GoClear Assessment" [ref=f21e361] [cursor=pointer]:
+                - /url: /booking?treatment=GoClear%20Aligners
+              - link "Call 078128 71829" [ref=f21e365] [cursor=pointer]:
+                - /url: tel:07812871829
+      - generic [ref=f21e367]:
+        - generic [ref=f21e369]:
+          - generic [ref=f21e370]:
+            - heading "OUR CLINICAL ENVIRONMENT · INSIDE DR. PREETHI'S DENTISTRY" [level=2] [ref=f21e371]
+            - paragraph [ref=f21e372]: Experience a modern, serene orthodontic practice featuring advanced Class-B sterilisation, digital 3D intraoral diagnostics, and tranquil treatment suites.
+          - link "EXPLORE GALLERY" [ref=f21e375] [cursor=pointer]:
+            - /url: /gallery
+        - generic [ref=f21e381]:
+          - generic [ref=f21e382] [cursor=pointer]:
+            - img "Reception & Consultation Lounge" [ref=f21e383]
+            - generic [ref=f21e384]: Clinic Interior
+            - heading "Reception & Consultation Lounge" [level=4] [ref=f21e386]
+            - generic:
+              - generic: Clinic Environment
+              - heading "Reception & Consultation Lounge" [level=4]
+              - paragraph: Serene, welcoming reception ambiance designed with natural warmth and minimalist aesthetics.
+              - generic: Click to view full photo
+          - generic [ref=f21e387] [cursor=pointer]:
+            - img "Signature Orthodontic Operatory Suite" [ref=f21e388]
+            - generic [ref=f21e389]: Treatment Rooms
+            - heading "Signature Orthodontic Operatory Suite" [level=4] [ref=f21e391]
+            - generic:
+              - generic: Clinic Environment
+              - heading "Signature Orthodontic Operatory Suite" [level=4]
+              - paragraph: Modern clinical suite with circular architectural ambient illumination and ergonomic dental unit.
+              - generic: Click to view full photo
+          - generic [ref=f21e392] [cursor=pointer]:
+            - img "Precision Clear Aligner Case & Arch Tray" [ref=f21e393]
+            - generic [ref=f21e394]: Invisalign
+            - heading "Precision Clear Aligner Case & Arch Tray" [level=4] [ref=f21e396]
+            - generic:
+              - generic: Clinic Environment
+              - heading "Precision Clear Aligner Case & Arch Tray" [level=4]
+              - paragraph: Authentic custom clear aligner in ergonomic travel case for discreet orthodontic alignment.
+              - generic: Click to view full photo
+          - generic [ref=f21e397] [cursor=pointer]:
+            - img "Primary Treatment Operatory & Glass Corridor" [ref=f21e398]
+            - generic [ref=f21e399]: Treatment Rooms
+            - heading "Primary Treatment Operatory & Glass Corridor" [level=4] [ref=f21e401]
+            - generic:
+              - generic: Clinic Environment
+              - heading "Primary Treatment Operatory & Glass Corridor" [level=4]
+              - paragraph: State-of-the-art dental operatory unit equipped with high-comfort ergonomic chair and lighting.
+              - generic: Click to view full photo
+          - generic [ref=f21e402] [cursor=pointer]:
+            - img "Ultrasonic Prophylaxis & Operatory Station" [ref=f21e403]
+            - generic [ref=f21e404]: Dental Equipment
+            - heading "Ultrasonic Prophylaxis & Operatory Station" [level=4] [ref=f21e406]
+            - generic:
+              - generic: Clinic Environment
+              - heading "Ultrasonic Prophylaxis & Operatory Station" [level=4]
+              - paragraph: Advanced dental armamentarium maintaining rigorous infection control and clinical hygiene.
+              - generic: Click to view full photo
+          - generic [ref=f21e407] [cursor=pointer]:
+            - img "Specialised Endodontic & Restorative Suite" [ref=f21e408]
+            - generic [ref=f21e409]: Treatment Rooms
+            - heading "Specialised Endodontic & Restorative Suite" [level=4] [ref=f21e411]
+            - generic:
+              - generic: Clinic Environment
+              - heading "Specialised Endodontic & Restorative Suite" [level=4]
+              - paragraph: Modern clinical workspace dedicated to precision diagnostics, restorative, and clear aligner procedures.
+              - generic: Click to view full photo
+      - generic [ref=f21e412]:
+        - generic [ref=f21e414]:
+          - generic [ref=f21e415]:
+            - heading "CLINICAL LEADERSHIP · MEET OUR DOCTOR" [level=2] [ref=f21e416]
+            - paragraph [ref=f21e417]: Dr. Preethi Subramanian — Specialist Orthodontist & certified Invisalign Provider dedicated to gentle, predictable, and aesthetic smile transformations in Coimbatore.
+          - link "ABOUT DOCTOR" [ref=f21e420] [cursor=pointer]:
+            - /url: /about
+        - generic [ref=f21e426]:
+          - generic [ref=f21e427]:
+            - img "Dr. Preethi Subramanian" [ref=f21e429]
+            - generic "Certified Specialist Shield" [ref=f21e431]
+          - generic [ref=f21e435]:
+            - generic [ref=f21e436]: SPECIALIST ORTHODONTIST
+            - heading "Dr. Preethi Subramanian" [level=2] [ref=f21e437]
+            - paragraph [ref=f21e438]: Orthodontist | Invisalign Provider · Coimbatore
+            - paragraph [ref=f21e439]: Dr. Preethi Subramanian brings clinical precision, advanced digital treatment planning, and compassionate dental care to children, teens, and adults in Coimbatore. Specialising in Invisalign clear aligners, corrective orthodontics, and smile aesthetics, she believes that every smile transformation should be as comfortable and rewarding as the final result.
+            - generic [ref=f21e440]:
+              - generic [ref=f21e441]:
+                - generic [ref=f21e442]: Clinical Focus
+                - text: Clear Aligners & Orthodontics
+              - generic [ref=f21e443]:
+                - generic [ref=f21e444]: Location
+                - text: Saibaba Colony, Coimbatore
+            - generic [ref=f21e445]:
+              - link "Book Consultation with Dr. Preethi" [ref=f21e446] [cursor=pointer]:
+                - /url: /booking
+              - link "Read Full Profile" [ref=f21e450] [cursor=pointer]:
+                - /url: /about
+      - generic [ref=f21e452]:
+        - heading "OUR GOAL IS TO CREATE CONFIDENT SMILES & LASTING RELATIONSHIPS." [level=2] [ref=f21e455]
+        - generic [ref=f21e456]:
+          - generic [ref=f21e457]:
+            - generic [ref=f21e458]: 5.0 ⭐ VERIFIED PATIENT STORIES
+            - heading "Real Experiences from Our Coimbatore Patients" [level=3] [ref=f21e459]
+            - paragraph [ref=f21e460]: Scroll vertically or swipe horizontally to discover patient journeys
+          - generic [ref=f21e461]:
+            - button "Scroll left" [ref=f21e462] [cursor=pointer]
+            - button "Scroll right" [ref=f21e465] [cursor=pointer]
+        - generic [ref=f21e468]:
+          - generic [ref=f21e469]:
+            - generic [ref=f21e470]:
+              - generic [ref=f21e471]: 5.0 ⭐
+              - paragraph [ref=f21e487]: "\"Dr. Preethi's approach to Invisalign was so transparent and reassuring. Every step of the aligner plan was clearly explained, and the clinic ambiance is remarkably calm and modern.\""
+            - generic [ref=f21e488]:
+              - generic [ref=f21e489]: K
+              - generic [ref=f21e490]:
+                - heading "Kavitha R." [level=4] [ref=f21e491]
+                - paragraph [ref=f21e492]: Invisalign / Clear Aligners
+                - paragraph [ref=f21e493]: Verified Google Review · Verified Review
+          - generic [ref=f21e494]:
+            - generic [ref=f21e495]:
+              - generic [ref=f21e496]: 5.0 ⭐
+              - paragraph [ref=f21e512]: "\"I had been hesitant about orthodontic correction as an adult. Dr. Preethi made the entire consultation feel effortless and comfortable. The attention to clinical hygiene is top tier.\""
+            - generic [ref=f21e513]:
+              - generic [ref=f21e514]: S
+              - generic [ref=f21e515]:
+                - heading "Santhosh Kumar" [level=4] [ref=f21e516]
+                - paragraph [ref=f21e517]: Orthodontics
+                - paragraph [ref=f21e518]: Verified Google Review · Verified Review
+          - generic [ref=f21e519]:
+            - generic [ref=f21e520]:
+              - generic [ref=f21e521]: 5.0 ⭐
+              - paragraph [ref=f21e537]: "\"Very professional and patient-centric clinic in Saibaba Colony. Scaling and tooth restoration were completely painless. Dr. Preethi took time to answer all my questions.\""
+            - generic [ref=f21e538]:
+              - generic [ref=f21e539]: D
+              - generic [ref=f21e540]:
+                - heading "Deepa Natarajan" [level=4] [ref=f21e541]
+                - paragraph [ref=f21e542]: Restorative Dentistry
+                - paragraph [ref=f21e543]: Verified Patient Feedback · Verified Review
+          - generic [ref=f21e544]:
+            - generic [ref=f21e545]:
+              - generic [ref=f21e546]: 5.0 ⭐
+              - paragraph [ref=f21e562]: "\"The clinic environment is immaculate. Exceptional clarity in diagnosis, no hurried consultations, and genuine advice for my family's dental care.\""
+            - generic [ref=f21e563]:
+              - generic [ref=f21e564]: A
+              - generic [ref=f21e565]:
+                - heading "Arun V." [level=4] [ref=f21e566]
+                - paragraph [ref=f21e567]: General Dental Care
+                - paragraph [ref=f21e568]: Verified Google Review · Verified Review
+          - generic [ref=f21e569]:
+            - generic [ref=f21e570]: Google Rating
+            - paragraph [ref=f21e571]: 5.0 ⭐
+            - paragraph [ref=f21e572]: 34+ Verified Patient Reviews on Google Business Profile
+            - link "Read All Reviews" [ref=f21e573] [cursor=pointer]:
+              - /url: /testimonials
+      - generic [ref=f21e578]:
+        - generic [ref=f21e579]:
+          - generic [ref=f21e580]:
+            - generic [ref=f21e581]: CLINICAL JOURNAL & INSIGHTS
+            - heading "DOCTOR'S CLINICAL JOURNAL" [level=2] [ref=f21e582]
+            - paragraph [ref=f21e583]: EVIDENCE-BASED PERSPECTIVES ON ORTHODONTIC ALIGNMENT & DENTAL WELLNESS
+          - link "Explore All Articles" [ref=f21e584] [cursor=pointer]:
+            - /url: /blog
+        - generic [ref=f21e588]:
+          - 'link "The Adult Guide to Invisalign: Discreet Orthodontics in Everyday Life Invisalign 4 min read · 2026-10-18 The Adult Guide to Invisalign: Discreet Orthodontics in Everyday Life Discover why more working professionals and adults are choosing clear aligners to improve their smile alignment without metal brackets. Read Full Journal" [ref=f21e589] [cursor=pointer]':
+            - /url: /blog/adult-guide-to-invisalign-discreet-orthodontics
+            - generic [ref=f21e590]:
+              - generic [ref=f21e591]:
+                - 'img "The Adult Guide to Invisalign: Discreet Orthodontics in Everyday Life" [ref=f21e592]'
+                - generic [ref=f21e593]: Invisalign
+              - generic [ref=f21e594]:
+                - generic [ref=f21e595]:
+                  - generic [ref=f21e596]: 4 min read
+                  - generic [ref=f21e597]: ·
+                  - generic [ref=f21e598]: 2026-10-18
+                - 'heading "The Adult Guide to Invisalign: Discreet Orthodontics in Everyday Life" [level=3] [ref=f21e599]'
+                - paragraph [ref=f21e600]: Discover why more working professionals and adults are choosing clear aligners to improve their smile alignment without metal brackets.
+            - generic [ref=f21e601]: Read Full Journal
+          - 'link "Beyond Brushing: Why Interdental Cleaning is Essential for Gum Health Oral Hygiene 3 min read · 2026-10-28 Beyond Brushing: Why Interdental Cleaning is Essential for Gum Health Toothbrush bristles only reach approximately 60% of tooth surfaces. Here is why interdental brushes and flossing prevent unseen gum inflammation. Read Full Journal" [ref=f21e605] [cursor=pointer]':
+            - /url: /blog/beyond-brushing-why-interdental-cleaning-is-essential
+            - generic [ref=f21e606]:
+              - generic [ref=f21e607]:
+                - 'img "Beyond Brushing: Why Interdental Cleaning is Essential for Gum Health" [ref=f21e608]'
+                - generic [ref=f21e609]: Oral Hygiene
+              - generic [ref=f21e610]:
+                - generic [ref=f21e611]:
+                  - generic [ref=f21e612]: 3 min read
+                  - generic [ref=f21e613]: ·
+                  - generic [ref=f21e614]: 2026-10-28
+                - 'heading "Beyond Brushing: Why Interdental Cleaning is Essential for Gum Health" [level=3] [ref=f21e615]'
+                - paragraph [ref=f21e616]: Toothbrush bristles only reach approximately 60% of tooth surfaces. Here is why interdental brushes and flossing prevent unseen gum inflammation.
+            - generic [ref=f21e617]: Read Full Journal
+          - 'link "Understanding Malocclusion: How Teeth Alignment Affects Chewing & Jaw Health Orthodontics 5 min read · 2026-11-04 Understanding Malocclusion: How Teeth Alignment Affects Chewing & Jaw Health Orthodontics is not only about aesthetics; proper occlusion protects teeth from abnormal wear and promotes balanced temporomandibular joint function. Read Full Journal" [ref=f21e621] [cursor=pointer]':
+            - /url: /blog/understanding-malocclusion-teeth-alignment-chewing-jaw-health
+            - generic [ref=f21e622]:
+              - generic [ref=f21e623]:
+                - 'img "Understanding Malocclusion: How Teeth Alignment Affects Chewing & Jaw Health" [ref=f21e624]'
+                - generic [ref=f21e625]: Orthodontics
+              - generic [ref=f21e626]:
+                - generic [ref=f21e627]:
+                  - generic [ref=f21e628]: 5 min read
+                  - generic [ref=f21e629]: ·
+                  - generic [ref=f21e630]: 2026-11-04
+                - 'heading "Understanding Malocclusion: How Teeth Alignment Affects Chewing & Jaw Health" [level=3] [ref=f21e631]'
+                - paragraph [ref=f21e632]: Orthodontics is not only about aesthetics; proper occlusion protects teeth from abnormal wear and promotes balanced temporomandibular joint function.
+            - generic [ref=f21e633]: Read Full Journal
+      - generic [ref=f21e638]:
+        - generic [ref=f21e639]:
+          - generic [ref=f21e640]:
+            - generic [ref=f21e641]: PATIENT INQUIRIES & GUIDANCE
+            - heading "FREQUENTLY ASKED QUESTIONS" [level=2] [ref=f21e642]
+            - paragraph [ref=f21e643]: CLEAR CLINICAL ANSWERS TO COMMON QUESTIONS ABOUT INVISALIGN & CARE
+          - link "View All FAQs" [ref=f21e644] [cursor=pointer]:
+            - /url: /faq
+        - generic [ref=f21e648]:
+          - generic [ref=f21e649]:
+            - button [expanded] [ref=f21e650] [cursor=pointer]:
+              - generic [ref=f21e651]:
+                - text: Invisalign
+                - heading "How do Invisalign clear aligners work?" [level=3] [ref=f21e652]
+            - generic [ref=f21e655]: Invisalign uses a series of custom-made, clear plastic aligners that apply gentle, controlled force to gradually move teeth into their ideal positions. Each set is worn for 1 to 2 weeks before advancing to the next series under clinical supervision.
+          - button [ref=f21e657] [cursor=pointer]:
+            - generic [ref=f21e658]:
+              - text: Invisalign
+              - heading "Are clear aligners noticeable when speaking or smiling?" [level=3] [ref=f21e659]
+          - button [ref=f21e663] [cursor=pointer]:
+            - generic [ref=f21e664]:
+              - text: Invisalign
+              - heading "How many hours per day do I need to wear my aligners?" [level=3] [ref=f21e665]
+          - button [ref=f21e669] [cursor=pointer]:
+            - generic [ref=f21e670]:
+              - text: Orthodontics
+              - heading "What is the ideal age for an orthodontic consultation?" [level=3] [ref=f21e671]
+          - button [ref=f21e675] [cursor=pointer]:
+            - generic [ref=f21e676]:
+              - text: Treatments
+              - heading "Is professional scaling painful or damaging to tooth enamel?" [level=3] [ref=f21e677]
+          - button [ref=f21e681] [cursor=pointer]:
+            - generic [ref=f21e682]:
+              - text: Appointments
+              - heading "How do I schedule an appointment at Dr. Preethi's Dentistry?" [level=3] [ref=f21e683]
+      - generic [ref=f21e687]:
+        - generic [ref=f21e688]:
+          - generic [ref=f21e689]:
+            - heading "WANT TO BEGIN YOUR SMILE JOURNEY?" [level=2] [ref=f21e690]
+            - paragraph [ref=f21e691]: SCHEDULE YOUR COMPREHENSIVE DENTAL CONSULTATION IN SAIBABA COLONY
+          - link "Call 078128 71829" [ref=f21e692] [cursor=pointer]:
+            - /url: tel:+917812871829
+        - generic [ref=f21e696]:
+          - generic [ref=f21e698]:
+            - generic [ref=f21e699]: DIRECT INQUIRY
+            - heading "Send a Consultation Request" [level=3] [ref=f21e700]
+            - paragraph [ref=f21e701]: Our clinic team will confirm your consultation slot via call or WhatsApp.
+            - generic [ref=f21e702]:
+              - generic [ref=f21e703]:
+                - generic [ref=f21e704]:
+                  - generic [ref=f21e705]: Full Name *
+                  - textbox "e.g. Anand Kumar" [ref=f21e706]
+                - generic [ref=f21e707]:
+                  - generic [ref=f21e708]: Phone Number *
+                  - textbox "e.g. 098765 43210" [ref=f21e709]
+              - generic [ref=f21e710]:
+                - generic [ref=f21e711]: Preferred Treatment
+                - combobox [ref=f21e712]:
+                  - option "Invisalign & Clear Aligners" [selected]
+                  - option "Orthodontic Braces Treatment"
+                  - option "Teeth Whitening"
+                  - option "Dental Veneers & Smile Makeover"
+                  - option "Dental Implants"
+                  - option "Root Canal Treatment"
+                  - option "Comprehensive Oral Examination"
+              - generic [ref=f21e713]:
+                - generic [ref=f21e714]: Message / Questions (Optional)
+                - textbox "Share any specific dental concerns or preferred appointment days..." [ref=f21e715]
+              - button "Request Appointment" [ref=f21e716] [cursor=pointer]
+          - generic [ref=f21e721]:
+            - generic [ref=f21e722]:
+              - generic [ref=f21e723]: CLINIC DETAILS
+              - heading "Visit Dr. Preethi's Dentistry" [level=3] [ref=f21e724]
+            - generic [ref=f21e725]:
+              - generic [ref=f21e730]:
+                - generic [ref=f21e731]: Address
+                - text: Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road, Saibaba Colony, Coimbatore, Tamil Nadu 641043
+              - generic [ref=f21e736]:
+                - generic [ref=f21e737]: Working Hours
+                - generic [ref=f21e738]: "Mon – Sat: 10:00 AM – 08:00 PMSunday: By Prior Appointment"
+              - generic [ref=f21e742]:
+                - generic [ref=f21e743]: Phone
+                - text: 078128 71829
+            - iframe [ref=f21e745]
+            - generic [ref=f21e746]:
+              - link "WhatsApp Desk" [ref=f21e747] [cursor=pointer]:
+                - /url: https://wa.me/917812871829
+              - link "Google Maps Directions" [ref=f21e751] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/?api=1&query=Dr.%20Preethi's%20Dentistry%2C%20Saibaba%20Colony%2C%20Coimbatore
+  - contentinfo [ref=f21e755]:
+    - generic [ref=f21e756]:
+      - generic [ref=f21e757]:
+        - generic [ref=f21e758]:
+          - link [ref=f21e759] [cursor=pointer]:
+            - /url: /
+            - img "Dr. Preethi's Dentistry" [ref=f21e760]
+          - paragraph [ref=f21e761]: Dr. Preethi Subramanian — Orthodontist | Invisalign Provider. Delivering international-standard clinical care, orthodontic precision, and patient-centred dentistry in Coimbatore.
+          - generic [ref=f21e762]:
+            - link "Instagram" [ref=f21e763] [cursor=pointer]:
+              - /url: https://www.instagram.com/dr_preethi_subramanian/
+            - link "WhatsApp" [ref=f21e767] [cursor=pointer]:
+              - /url: https://wa.me/917812871829
+            - link "Phone" [ref=f21e770] [cursor=pointer]:
+              - /url: tel:+917812871829
+        - generic [ref=f21e773]:
+          - heading "CLINIC LOCATION & HOURS" [level=4] [ref=f21e774]
+          - paragraph [ref=f21e775]:
+            - generic [ref=f21e779]: Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road, Saibaba Colony, Coimbatore, Tamil Nadu 641043
+          - paragraph [ref=f21e780]:
+            - generic [ref=f21e783]: "Call: 078128 71829"
+          - paragraph [ref=f21e784]: "Hours: Mon – Sat: 10:00 AM – 08:00 PM | Sun: Prior Appointment"
+        - generic [ref=f21e785]:
+          - heading "QUICK NAVIGATION" [level=4] [ref=f21e786]
+          - generic [ref=f21e787]:
+            - link "HOME" [ref=f21e788] [cursor=pointer]:
+              - /url: /
+            - link "TREATMENTS" [ref=f21e789] [cursor=pointer]:
+              - /url: /#treatments
+            - link "WATCH REELS" [ref=f21e790] [cursor=pointer]:
+              - /url: /#reels
+            - link "GALLERY" [ref=f21e791] [cursor=pointer]:
+              - /url: /#clinic-gallery
+            - link "OUR DOCTOR" [ref=f21e792] [cursor=pointer]:
+              - /url: /#doctor
+            - link "REVIEWS" [ref=f21e793] [cursor=pointer]:
+              - /url: /#testimonials
+            - link "JOURNAL" [ref=f21e794] [cursor=pointer]:
+              - /url: /#journal
+            - link "FAQ" [ref=f21e795] [cursor=pointer]:
+              - /url: /#faq
+            - link "CONTACT" [ref=f21e796] [cursor=pointer]:
+              - /url: /contact
+            - link "APPOINTMENT" [ref=f21e797] [cursor=pointer]:
+              - /url: /booking
+      - generic [ref=f21e798]:
+        - paragraph [ref=f21e799]: © 2026 Dr. Preethi's Dentistry. All rights reserved. Saibaba Colony, Coimbatore.
+        - generic [ref=f21e800]:
+          - link "FAQ" [ref=f21e801] [cursor=pointer]:
+            - /url: /#faq
+          - link "Doctor's Journal" [ref=f21e802] [cursor=pointer]:
+            - /url: /blog
+          - link "Privacy Policy" [ref=f21e803] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=f21e804] [cursor=pointer]:
+            - /url: /terms
+  - complementary "Quick Actions":
+    - link "Request Dental Consultation" [ref=f21e805] [cursor=pointer]:
+      - /url: /booking
+    - link "Chat with Dr. Preethi's Dentistry on WhatsApp" [ref=f21e809] [cursor=pointer]:
+      - /url: https://wa.me/917812871829?text=Hello%20Dr.%20Preethi's%20Dentistry%2C%0A%0AI%20would%20like%20to%20enquire%20about%20a%20dental%20consultation.%0A%0APlease%20let%20me%20know%20the%20availability.%0A%0AThank%20you.

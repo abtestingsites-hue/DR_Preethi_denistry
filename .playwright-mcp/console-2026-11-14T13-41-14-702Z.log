@@ -1,0 +1,48 @@
+[      84ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[     310ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29890
+[     352ms] Error: Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+
+    at getCssError (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\parseCss.js:24:16)
+    at getModuleBuildError (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\webpackModuleError.js:116:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:29:49)
+    at async (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:27:21)
+[     334ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:39
+[     337ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[     337ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[   49918ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[   54046ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[   63042ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/compiled/react-dom/cjs/react-dom.development.js:38560

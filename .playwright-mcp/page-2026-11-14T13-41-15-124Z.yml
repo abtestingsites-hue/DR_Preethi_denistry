@@ -1,0 +1,37 @@
+- generic [active]:
+  - alert [ref=f16e1]
+  - dialog [ref=f16e4]:
+    - generic [ref=f16e5]:
+      - generic [ref=f16e6]:
+        - heading "Build Error" [level=1] [ref=f16e7]
+        - paragraph [ref=f16e8]: Failed to compile
+        - generic [ref=f16e9]:
+          - text: Next.js (14.2.15) is outdated
+          - link "(learn more)" [ref=f16e11] [cursor=pointer]:
+            - /url: https://nextjs.org/docs/messages/version-staleness
+      - generic [ref=f16e12]:
+        - generic [ref=f16e13]:
+          - link "./app/globals.css:59:1" [ref=f16e14] [cursor=pointer]
+          - generic [ref=f16e19]:
+            - generic [ref=f16e20]: "Syntax error: D:\\newdental\\app\\globals.css Unexpected }"
+            - generic [ref=f16e21]: 57 |
+            - generic [ref=f16e22]: position
+            - text: ":"
+            - generic [ref=f16e23]: relative
+            - text: ;
+            - generic [ref=f16e24]: 58 |
+            - generic [ref=f16e25]: width
+            - text: ":"
+            - generic [ref=f16e26]: 100%
+            - text: ; >
+            - generic [ref=f16e27]: 59 |
+            - text: "}"
+            - generic [ref=f16e28]: "|"
+            - text: ^
+            - generic [ref=f16e29]: 60 |
+            - generic [ref=f16e30]: 61 |
+            - text: "::"
+            - generic [ref=f16e31]: selection
+            - text: "{"
+        - contentinfo [ref=f16e32]:
+          - paragraph [ref=f16e33]: This error occurred during the build process and can only be dismissed by fixing the error.

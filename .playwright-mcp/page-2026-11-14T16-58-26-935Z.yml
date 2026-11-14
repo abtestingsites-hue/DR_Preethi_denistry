@@ -1,0 +1,159 @@
+- generic [active] [ref=f31e1]:
+  - banner [ref=f31e2]:
+    - generic [ref=f31e3]:
+      - link [ref=f31e5] [cursor=pointer]:
+        - /url: /
+        - img "Dr. Preethi's Dentistry - Invisalign Provider" [ref=f31e6]
+      - navigation [ref=f31e8]:
+        - link "HOME" [ref=f31e9] [cursor=pointer]:
+          - /url: /
+        - link "TREATMENTS" [ref=f31e10] [cursor=pointer]:
+          - /url: /#treatments
+        - link "INVISALIGN®" [ref=f31e11] [cursor=pointer]:
+          - /url: /treatments/invisalign-clear-aligners
+        - link "CLINICAL GALLERY" [ref=f31e12] [cursor=pointer]:
+          - /url: /#clinic-gallery
+        - link "MEET OUR DOCTOR" [ref=f31e13] [cursor=pointer]:
+          - /url: /#doctor
+        - link "TESTIMONIALS" [ref=f31e14] [cursor=pointer]:
+          - /url: /#testimonials
+      - link "Book Visit" [ref=f31e16] [cursor=pointer]:
+        - /url: /booking
+  - main [ref=f31e20]:
+    - generic [ref=f31e22]:
+      - generic [ref=f31e23]:
+        - generic [ref=f31e24]: Seamless Scheduling
+        - heading "Book Your Dental Consultation" [level=1] [ref=f31e25]
+        - paragraph [ref=f31e26]: Select your preferred treatment, date, and time. Your request is transmitted directly to Dr. Preethi's Dentistry for swift WhatsApp confirmation.
+      - generic [ref=f31e27]:
+        - generic [ref=f31e29]:
+          - generic [ref=f31e30]:
+            - generic [ref=f31e31]: Patient Full Name *
+            - textbox "e.g. Anandhi Sundar" [ref=f31e32]
+          - generic [ref=f31e33]:
+            - generic [ref=f31e34]:
+              - generic [ref=f31e35]: Mobile Number *
+              - textbox "e.g. 98765 43210" [ref=f31e36]
+            - generic [ref=f31e37]:
+              - generic [ref=f31e38]: Email Address (Optional)
+              - textbox "e.g. name@example.com" [ref=f31e39]
+          - generic [ref=f31e40]:
+            - generic [ref=f31e41]: Preferred Treatment *
+            - combobox [ref=f31e42]:
+              - option "Invisalign & Clear Aligners" [selected]
+              - option "Orthodontic Treatment"
+              - option "Teeth Whitening"
+              - option "Dental Veneers"
+              - option "Dental Implants"
+              - option "Root Canal Treatment"
+              - option "Scaling and Cleaning"
+              - option "Dental Fillings"
+              - option "Paediatric Dentistry"
+              - option "Minor Oral Surgery"
+              - option "Prosthodontics"
+              - option "General Dental Care"
+              - option "General Consultation / First Visit"
+          - generic [ref=f31e43]:
+            - generic [ref=f31e44]:
+              - generic [ref=f31e45]: Preferred Date *
+              - textbox [ref=f31e46]
+            - generic [ref=f31e47]:
+              - generic [ref=f31e48]: Preferred Time Window *
+              - combobox [ref=f31e49]:
+                - option "Morning (10:00 AM – 01:00 PM)" [selected]
+                - option "Afternoon (02:00 PM – 05:00 PM)"
+                - option "Evening (05:00 PM – 08:00 PM)"
+          - generic [ref=f31e50]:
+            - generic [ref=f31e51]: Additional Notes / Concerns (Optional)
+            - textbox "Mention any specific dental concerns or questions..." [ref=f31e52]
+          - generic [ref=f31e53]:
+            - button "Request Appointment via WhatsApp" [ref=f31e54] [cursor=pointer]
+            - paragraph [ref=f31e58]: Submitting will open our clinic WhatsApp line with your pre-filled consultation details.
+        - generic [ref=f31e59]:
+          - generic [ref=f31e60]:
+            - generic [ref=f31e65]:
+              - heading "Appointment Guidelines" [level=3] [ref=f31e66]
+              - paragraph [ref=f31e67]: What to expect during your booking
+            - generic [ref=f31e68]:
+              - paragraph [ref=f31e69]:
+                - text: •
+                - strong [ref=f31e70]: "Prompt Confirmation:"
+                - text: Our reception will review your requested time slot and confirm availability via WhatsApp or phone.
+              - paragraph [ref=f31e71]:
+                - text: •
+                - strong [ref=f31e72]: "Invisalign Consultations:"
+                - text: Includes initial bite assessment, orthodontic examination, and digital feasibility review.
+              - paragraph [ref=f31e73]:
+                - text: •
+                - strong [ref=f31e74]: "Transparent Care:"
+                - text: Treatment plans are customized strictly following in-person clinical diagnostics.
+            - generic [ref=f31e75]:
+              - generic [ref=f31e76]:
+                - paragraph [ref=f31e77]: "Reception Line:"
+                - paragraph [ref=f31e78]: 078128 71829
+              - link "Call clinic" [ref=f31e79] [cursor=pointer]:
+                - /url: tel:+917812871829
+          - generic [ref=f31e82]:
+            - img "Clinic Reception Lounge" [ref=f31e83]
+            - generic [ref=f31e84]: Dr. Preethi's Dentistry · Saibaba Colony, Coimbatore
+  - contentinfo [ref=f31e85]:
+    - generic [ref=f31e86]:
+      - generic [ref=f31e87]:
+        - generic [ref=f31e88]:
+          - link [ref=f31e89] [cursor=pointer]:
+            - /url: /
+            - img "Dr. Preethi's Dentistry" [ref=f31e90]
+          - paragraph [ref=f31e91]: Dr. Preethi Subramanian — Orthodontist | Invisalign Provider. Delivering international-standard clinical care, orthodontic precision, and patient-centred dentistry in Coimbatore.
+          - generic [ref=f31e92]:
+            - link "Instagram" [ref=f31e93] [cursor=pointer]:
+              - /url: https://www.instagram.com/dr_preethi_subramanian/
+            - link "WhatsApp" [ref=f31e97] [cursor=pointer]:
+              - /url: https://wa.me/917812871829
+            - link "Phone" [ref=f31e100] [cursor=pointer]:
+              - /url: tel:+917812871829
+        - generic [ref=f31e103]:
+          - heading "CLINIC LOCATION & HOURS" [level=4] [ref=f31e104]
+          - paragraph [ref=f31e105]:
+            - generic [ref=f31e109]: Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road, Saibaba Colony, Coimbatore, Tamil Nadu 641043
+          - paragraph [ref=f31e110]:
+            - generic [ref=f31e113]: "Call: 078128 71829"
+          - paragraph [ref=f31e114]: "Hours: Mon – Sat: 10:00 AM – 08:00 PM | Sun: Prior Appointment"
+        - generic [ref=f31e115]:
+          - heading "QUICK NAVIGATION" [level=4] [ref=f31e116]
+          - generic [ref=f31e117]:
+            - link "HOME" [ref=f31e118] [cursor=pointer]:
+              - /url: /
+            - link "TREATMENTS" [ref=f31e119] [cursor=pointer]:
+              - /url: /#treatments
+            - link "INVISALIGN®" [ref=f31e120] [cursor=pointer]:
+              - /url: /treatments/invisalign-clear-aligners
+            - link "GOCLEAR" [ref=f31e121] [cursor=pointer]:
+              - /url: /#goclear
+            - link "GALLERY" [ref=f31e122] [cursor=pointer]:
+              - /url: /#clinic-gallery
+            - link "OUR DOCTOR" [ref=f31e123] [cursor=pointer]:
+              - /url: /#doctor
+            - link "REVIEWS" [ref=f31e124] [cursor=pointer]:
+              - /url: /#testimonials
+            - link "JOURNAL" [ref=f31e125] [cursor=pointer]:
+              - /url: /#journal
+            - link "FAQ" [ref=f31e126] [cursor=pointer]:
+              - /url: /#faq
+            - link "APPOINTMENT" [ref=f31e127] [cursor=pointer]:
+              - /url: /booking
+      - generic [ref=f31e128]:
+        - paragraph [ref=f31e129]: © 2026 Dr. Preethi's Dentistry. All rights reserved. Saibaba Colony, Coimbatore.
+        - generic [ref=f31e130]:
+          - link "FAQ" [ref=f31e131] [cursor=pointer]:
+            - /url: /#faq
+          - link "Doctor's Journal" [ref=f31e132] [cursor=pointer]:
+            - /url: /blog
+          - link "Privacy Policy" [ref=f31e133] [cursor=pointer]:
+            - /url: /privacy
+          - link "Terms of Service" [ref=f31e134] [cursor=pointer]:
+            - /url: /terms
+  - complementary "Quick Actions":
+    - link "Request Dental Consultation" [ref=f31e135] [cursor=pointer]:
+      - /url: /booking
+    - link "Chat with Dr. Preethi's Dentistry on WhatsApp" [ref=f31e139] [cursor=pointer]:
+      - /url: https://wa.me/917812871829?text=Hello%20Dr.%20Preethi's%20Dentistry%2C%0A%0AI%20would%20like%20to%20enquire%20about%20a%20dental%20consultation.%0A%0APlease%20let%20me%20know%20the%20availability.%0A%0AThank%20you.

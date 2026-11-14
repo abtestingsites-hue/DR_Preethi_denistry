@@ -46,41 +46,41 @@ export const MediumCtaBanner: React.FC = () => {
       </div>
 
       {/* Form and Location Two-Column Card with Full Width Alignment & 3D Depth Shadows */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-10 sm:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch w-full">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch w-full">
           
           {/* Left Column: Interactive Consultation Contact Form */}
-          <div className="lg:col-span-7 bg-[#F5F0E6] p-8 sm:p-10 rounded-[24px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-[#F5F0E6] p-6 sm:p-7 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between">
             <div>
-              <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
+              <span className="text-[10.5px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-3 py-1 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 DIRECT INQUIRY
               </span>
-              <h3 className="text-[24px] sm:text-[28px] font-serif font-bold text-[#29291F] mt-3">
+              <h3 className="text-[20px] sm:text-[23px] font-serif font-bold text-[#29291F] mt-2">
                 Send a Consultation Request
               </h3>
-              <p className="text-[13px] text-[#29291F]/70 mt-1 mb-6">
+              <p className="text-[12px] text-[#29291F]/70 mt-0.5 mb-4">
                 Our clinic team will confirm your consultation slot via call or WhatsApp.
               </p>
 
               {submitted ? (
-                <div className="p-8 rounded-2xl bg-[#7B8052]/10 border border-[#7B8052] text-center space-y-3 animate-fade-in">
-                  <CheckCircle className="w-12 h-12 text-[#7B8052] mx-auto" />
-                  <h4 className="text-xl font-serif font-bold text-[#29291F]">Thank You, {formData.name || "Patient"}!</h4>
-                  <p className="text-sm text-[#29291F]/80">
+                <div className="p-6 rounded-2xl bg-[#7B8052]/10 border border-[#7B8052] text-center space-y-2 animate-fade-in">
+                  <CheckCircle className="w-10 h-10 text-[#7B8052] mx-auto" />
+                  <h4 className="text-lg font-serif font-bold text-[#29291F]">Thank You, {formData.name || "Patient"}!</h4>
+                  <p className="text-xs text-[#29291F]/80">
                     Your consultation request has been received. Our reception desk will contact you at {formData.phone || "your phone"} shortly.
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="text-xs font-bold uppercase tracking-wider text-[#7B8052] hover:underline pt-2 block mx-auto"
+                    className="text-[11px] font-bold uppercase tracking-wider text-[#7B8052] hover:underline pt-1 block mx-auto"
                   >
                     Submit Another Inquiry
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="text-[11px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                      <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
                         Full Name *
                       </label>
                       <input
@@ -89,11 +89,11 @@ export const MediumCtaBanner: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Ramesh Kumar"
-                        className="w-full px-4 py-3 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-sm focus:outline-none focus:border-[#7B8052]"
+                        className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
                       />
                     </div>
                     <div>
-                      <label className="text-[11px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                      <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
                         Phone Number *
                       </label>
                       <input
@@ -102,19 +102,19 @@ export const MediumCtaBanner: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-4 py-3 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-sm focus:outline-none focus:border-[#7B8052]"
+                        className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                    <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
                       Treatment Interested In
                     </label>
                     <select
                       value={formData.treatment}
                       onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-sm focus:outline-none focus:border-[#7B8052]"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
                     >
                       <option>Invisalign &amp; Clear Aligners</option>
                       <option>GoClear Aligners</option>
@@ -128,21 +128,21 @@ export const MediumCtaBanner: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="text-[11px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
+                    <label className="text-[10.5px] uppercase font-bold tracking-wider text-[#29291F]/80 block mb-1">
                       Notes or Preferred Time
                     </label>
                     <textarea
-                      rows={3}
+                      rows={2}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Any specific dental concerns or preferred timing..."
-                      className="w-full px-4 py-3 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-sm focus:outline-none focus:border-[#7B8052]"
+                      className="w-full px-3.5 py-2 rounded-xl bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs sm:text-[13px] focus:outline-none focus:border-[#7B8052]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-full bg-[#7B8052] text-white font-semibold text-[13px] uppercase tracking-[0.08em] hover:bg-[#686D42] transition-all shadow-md"
+                    className="w-full py-3 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#686D42] transition-all shadow-md"
                   >
                     Request Appointment →
                   </button>
@@ -152,7 +152,7 @@ export const MediumCtaBanner: React.FC = () => {
           </div>
 
           {/* Right Column: Google Maps & Location Card */}
-          <div className="lg:col-span-5 bg-[#FAF8F2] p-6 sm:p-8 rounded-[24px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-6">
+          <div className="lg:col-span-5 bg-[#FAF8F2] p-5 sm:p-6 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-4">
             <div>
               <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 CLINIC DETAILS
@@ -189,7 +189,7 @@ export const MediumCtaBanner: React.FC = () => {
                 <span>WhatsApp Desk</span>
               </a>
               <a
-                href={clinicInfo.googleMapsLink}
+                href={clinicInfo.googleMapsDirectionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline flex items-center gap-1.5 text-[#29291F]"

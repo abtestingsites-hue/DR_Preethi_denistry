@@ -1,12 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const EditorialHero: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <section 
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className="relative min-h-screen flex items-center overflow-hidden bg-[#29291F] pt-20 pb-12 cursor-default select-none"
     >
       
@@ -18,14 +22,18 @@ export const EditorialHero: React.FC = () => {
           className="w-full h-full object-cover object-[center_35%] filter brightness-[0.94] contrast-[1.01]"
         />
         {/* Soft natural ambient gradient from reference image */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#29291F]/15 to-[#29291F]/55" />
+        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-[#29291F]/15 to-[#29291F]/55 transition-opacity duration-500 ${
+          isHovered ? "opacity-100" : "opacity-0"
+        }`} />
       </div>
 
       {/* Grid Container matching reference composition */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12 flex justify-end">
         
-        {/* Content Box: Shifted ~35-40px slightly left (lg:mr-8 xl:mr-10) for perfect balance */}
-        <div className="w-full md:w-[580px] lg:w-[620px] max-w-[620px] flex flex-col text-left lg:mr-8 xl:mr-10">
+        {/* Content Box: Revealed when cursor is on the hero page */}
+        <div className={`w-full md:w-[580px] lg:w-[620px] max-w-[620px] flex flex-col text-left lg:mr-8 xl:mr-10 transition-all duration-500 ease-out ${
+          isHovered ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"
+        }`}>
           
           {/* Eyebrow Label with Architectural Lines flanking DR. PREETHI'S DENTISTRY */}
           <div className="flex items-center gap-3.5 mb-5">

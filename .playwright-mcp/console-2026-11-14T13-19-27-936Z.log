@@ -1,0 +1,323 @@
+[  139468ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[  139909ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[  139935ms] [LOG] [Fast Refresh] done in 26ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:44
+[  140314ms] [LOG] [Fast Refresh] done in 405ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:44
+[ 1033754ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[ 1035111ms] [LOG] [Fast Refresh] done in 1356ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:44
+[ 1073829ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[ 1074701ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[ 1074702ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[ 1082472ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:187
+[ 1083355ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[ 1083355ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:33
+[ 1086511ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[ 1086759ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[ 1086987ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/?_rsc=r3yhw:1
+[ 1087861ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[ 1089636ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29890
+[ 1089955ms] Error: Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+
+    at getCssError (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\parseCss.js:24:16)
+    at getModuleBuildError (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\webpackModuleError.js:116:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:29:49)
+    at async (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:27:21)
+[ 1089978ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:39
+[ 1089987ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1089987ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1092732ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[ 1093139ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1093139ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1094320ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/:1
+[ 1095964ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ webpack-internal:///./node_modules/react-dom/cjs/react-dom.development.js:29890
+[ 1096046ms] Error: Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+
+    at getCssError (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\parseCss.js:24:16)
+    at getModuleBuildError (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\webpackModuleError.js:116:43)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:29:49)
+    at async (file://D:\newdental\node_modules\next\dist\build\webpack\plugins\wellknown-errors-plugin\index.js:27:21)
+[ 1096152ms] [LOG] [HMR] connected @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:39
+[ 1096173ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1096174ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1104684ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[ 1106553ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1106554ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1180960ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[ 1184012ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1184012ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1216654ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[ 1218276ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1218277ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1297934ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:222
+[ 1298463ms] [ERROR] ./app/globals.css:59:1
+Syntax error: D:\newdental\app\globals.css Unexpected }
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection { @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63
+[ 1298463ms] [ERROR] ./app/globals.css
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+-- inner error --
+Syntax error: D:\newdental\app\globals.css Unexpected } (59:1)
+
+  57 |   position: relative;
+  58 |   width: 100%;
+> 59 | }
+     | ^
+  60 | 
+  61 | ::selection {
+Generated code for D:\newdental\node_modules\next\dist\build\webpack\loaders\css-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[2]!D:\newdental\node_modules\next\dist\build\webpack\loaders\postcss-loader\src\index.js??ruleSet[1].rules[14].oneOf[12].use[3]!D:\newdental\app\globals.css
+
+Import trace for requested module:
+./app/globals.css @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/helpers/hydration-error-info.js:63

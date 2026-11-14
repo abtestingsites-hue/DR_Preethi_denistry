@@ -97,21 +97,21 @@ export const MediumPartnershipTestimonials: React.FC = () => {
                     ))}
                   </div>
                   <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#7B8052]/10 px-2.5 py-0.5 rounded-full">
-                    {review.treatment}
+                    {review.treatmentCategory || "Orthodontics"}
                   </span>
                 </div>
 
                 <p className="text-[14px] sm:text-[15px] text-[#29291F]/85 leading-[1.6] font-light italic">
-                  &ldquo;{review.comment}&rdquo;
+                  &ldquo;{review.review}&rdquo;
                 </p>
               </div>
 
               <div className="pt-4 border-t border-[#A5A786]/25 mt-4 flex items-center justify-between">
                 <div>
                   <h4 className="text-[14px] font-bold text-[#29291F] font-serif">
-                    {review.name}
+                    {review.patientDisplayName}
                   </h4>
-                  <span className="text-[11px] text-[#29291F]/60">Verified Patient</span>
+                  <span className="text-[11px] text-[#29291F]/60">{review.source || "Verified Patient"}</span>
                 </div>
                 <Quote className="w-6 h-6 text-[#7B8052]/30" />
               </div>
