@@ -42,9 +42,9 @@ export const ServicesGallerySection: React.FC = () => {
         </div>
       </div>
 
-      {/* Grid Gallery Style: flush rectangular cards, 3 columns, full screen layout */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-8 bg-[#F5F0E6]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 w-full">
+      {/* Grid Gallery Style: Elegant, balanced proportioned cards */}
+      <div className="max-w-[1350px] mx-auto px-4 sm:px-8 py-8 md:py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 w-full">
           {treatments.map((treatment) => {
             const isHovered = hoveredId === treatment.id;
             return (
@@ -52,7 +52,7 @@ export const ServicesGallerySection: React.FC = () => {
                 key={treatment.id}
                 onMouseEnter={() => setHoveredId(treatment.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                className="group relative overflow-hidden bg-[#29291F] aspect-[16/11] cursor-pointer shadow-sm transition-all duration-300"
+                className="group relative overflow-hidden bg-[#29291F] aspect-[16/10] max-h-[300px] rounded-xl cursor-pointer shadow-sm transition-all duration-300"
               >
                 {/* Background Image filling the tile edge-to-edge */}
                 <img

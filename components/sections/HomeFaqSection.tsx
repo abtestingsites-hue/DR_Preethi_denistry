@@ -15,8 +15,8 @@ export const HomeFaqSection: React.FC = () => {
   const displayedFaqs = faqData.slice(0, 6);
 
   return (
-    <section id="faq" className="py-20 md:py-24 bg-[#FAF8F2] border-t border-[#A5A786]/30">
-      <div className="w-full px-6 sm:px-12 lg:px-16">
+    <section id="faq" className="py-16 md:py-20 bg-[#FAF8F2] border-t border-[#A5A786]/30">
+      <div className="max-w-[1300px] mx-auto px-6 sm:px-10">
         
         {/* Header Styled in Centered Banner Style */}
         <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-6 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col items-center justify-center text-center gap-4 mb-12">

@@ -103,9 +103,9 @@ export const InstagramReelsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Autoplaying Reels Feeds Grid with in-video bottom audio toggle - Full Screen layout */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Autoplaying Reels Feeds Grid with in-video bottom audio toggle */}
+      <div className="max-w-[1300px] mx-auto px-6 sm:px-12 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {reels.map((reel, index) => (
             <div
               key={reel.id}

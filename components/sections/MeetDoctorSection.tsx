@@ -36,12 +36,12 @@ export const MeetDoctorSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Doctor Profile Layout - Full Screen Width */}
-      <div className="w-full px-6 sm:px-12 lg:px-16 py-16 sm:py-24">
+      {/* Main Doctor Profile Layout */}
+      <div className="max-w-[1300px] mx-auto px-6 sm:px-12 py-12 sm:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
           {/* Doctor Portrait Image */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative max-w-md mx-auto w-full">
             <div className="rounded-3xl overflow-hidden bg-[#FAF8F2] border border-[#A5A786]/50 shadow-card aspect-[4/5] relative">
               <img
                 src="/Doctor.png"
@@ -49,14 +49,14 @@ export const MeetDoctorSection: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Authentic Shield Emblem: Refined standalone shield badge */}
-            <div className="absolute -bottom-5 -right-3 sm:-right-4 z-20">
+            {/* Authentic Shield Emblem: Refined standalone shield badge overlapping corner */}
+            <div className="absolute -bottom-4 -right-3 z-20">
               <div 
                 aria-label="Certified Specialist Shield"
-                className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#7B8052] border-4 border-[#FAF8F2] flex items-center justify-center text-[#FAF8F2] shadow-elevated transition-transform hover:scale-110 cursor-default"
+                className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-[#7B8052] border-4 border-[#FAF8F2] flex items-center justify-center text-[#FAF8F2] shadow-elevated transition-transform hover:scale-110 cursor-default"
                 title="Certified Specialist · Orthodontist & Invisalign® Provider"
               >
-                <ShieldCheck className="w-9 h-9 sm:w-11 sm:h-11 text-[#FAF8F2]" />
+                <ShieldCheck className="w-8 h-8 sm:w-9 sm:h-9 text-[#FAF8F2]" />
               </div>
             </div>
           </div>

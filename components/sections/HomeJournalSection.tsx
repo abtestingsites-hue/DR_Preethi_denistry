@@ -9,8 +9,8 @@ export const HomeJournalSection: React.FC = () => {
   const articles = blogsData.slice(0, 3);
 
   return (
-    <section id="journal" className="py-20 md:py-24 bg-[#F5F0E6] border-t border-[#A5A786]/30">
-      <div className="w-full px-6 sm:px-12 lg:px-16">
+    <section id="journal" className="py-16 md:py-20 bg-[#F5F0E6] border-t border-[#A5A786]/30">
+      <div className="max-w-[1300px] mx-auto px-6 sm:px-10">
         
         {/* Header Styled in Centered Banner Style */}
         <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-6 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col items-center justify-center text-center gap-4 mb-12">

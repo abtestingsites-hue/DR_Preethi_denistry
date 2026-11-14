@@ -20,8 +20,8 @@ export const MediumCtaBanner: React.FC = () => {
   };
 
   return (
-    <section id="contact-section" className="bg-[#FAF8F2] text-[#29291F] py-16 sm:py-24 px-6 sm:px-12 lg:px-16 border-t border-[#A5A786]/30">
-      <div className="w-full space-y-12">
+    <section id="contact-section" className="bg-[#FAF8F2] text-[#29291F] py-14 sm:py-20 px-6 sm:px-10 border-t border-[#A5A786]/30">
+      <div className="max-w-[1300px] mx-auto space-y-10">
         
         {/* Banner Top Header with clean, plain centered architectural styling */}
         <div className="bg-[#7B8052] text-[#FAF8F2] py-8 px-6 sm:px-12 rounded-3xl border border-[#555B38]/30 shadow-sm flex flex-col items-center justify-center text-center gap-4">

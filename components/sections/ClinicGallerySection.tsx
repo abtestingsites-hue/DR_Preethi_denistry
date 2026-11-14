@@ -47,9 +47,9 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
         </div>
       </div>
 
-      {/* Gallery Grid - Full Screen Layout */}
-      <div className="w-full px-4 sm:px-8 lg:px-12 py-14">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Gallery Grid - Balanced Architectural Proportions */}
+      <div className="max-w-[1350px] mx-auto px-6 sm:px-10 py-10 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {images.map((item, index) => {
             const isHovered = hoveredId === item.id;
             return (
@@ -58,7 +58,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setActiveLightboxIndex(index)}
-                className="group relative overflow-hidden rounded-2xl bg-[#FAF8F2] border border-[#A5A786]/60 aspect-[4/3] cursor-pointer shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all duration-500"
+                className="group relative overflow-hidden rounded-2xl bg-[#FAF8F2] border border-[#A5A786]/60 aspect-[16/11] max-h-[300px] cursor-pointer shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all duration-500"
               >
                 <img
                   src={item.imageUrl}
