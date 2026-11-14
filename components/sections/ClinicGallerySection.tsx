@@ -72,27 +72,33 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                   </span>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4 z-10 transition-opacity duration-300">
+                {/* Default visible title at resting state (hidden when hovered to prevent collapsing/overlap) */}
+                <div className={`absolute bottom-4 left-4 right-4 z-10 transition-all duration-300 ${
+                  isHovered ? "opacity-0 translate-y-2 pointer-events-none" : "opacity-100 translate-y-0"
+                }`}>
                   <h4 className="text-base sm:text-lg font-serif font-bold text-white drop-shadow-md">
                     {item.title}
                   </h4>
                 </div>
 
-                {/* Hover Reveal Overlay */}
+                {/* Hover Reveal Overlay with clean spacing and no text overlap */}
                 <div
                   className={`absolute inset-0 p-6 flex flex-col justify-end text-white transition-all duration-300 ${
                     isHovered
-                      ? "bg-[#29291F]/85 opacity-100 backdrop-blur-[2px]"
+                      ? "bg-[#29291F]/90 opacity-100 backdrop-blur-[2px]"
                       : "bg-transparent opacity-0 pointer-events-none"
                   }`}
                 >
-                  <h4 className="text-xl font-serif font-bold tracking-tight text-white">
+                  <span className="text-[10px] uppercase font-bold tracking-widest text-[#A5A786] mb-1">
+                    Clinic Environment
+                  </span>
+                  <h4 className="text-lg sm:text-xl font-serif font-bold tracking-tight text-white leading-snug">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-[#FAF8F2]/80 mt-1 line-clamp-2">
+                  <p className="text-xs text-[#FAF8F2]/85 mt-1.5 line-clamp-2 leading-relaxed">
                     {item.description}
                   </p>
-                  <span className="text-[11px] uppercase font-bold tracking-wider text-[#A5A786] mt-3">
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-3 py-1 rounded-full inline-block mt-3 w-fit shadow-sm">
                     Click to view full photo
                   </span>
                 </div>

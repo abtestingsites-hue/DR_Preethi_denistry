@@ -1,12 +1,31 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 export const EditorialHero: React.FC = () => {
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Reveal the hero content on first scroll
+      if (window.scrollY > 20) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const triggerScroll = () => {
+    window.scrollTo({ top: 120, behavior: "smooth" });
+    setHasScrolled(true);
+  };
+
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#F5F0E6] pt-28 pb-20">
+    <section className="relative min-h-[96vh] flex items-center justify-center overflow-hidden bg-[#F5F0E6] pt-24 pb-16">
       
       {/* Background authentic clinic interior with Warm Cream & Olive color grade */}
       <div className="absolute inset-0 z-0">
@@ -19,16 +38,29 @@ export const EditorialHero: React.FC = () => {
         <div className="absolute inset-0 bg-[#29291F]/50 backdrop-blur-[1px]" />
       </div>
 
-      {/* Center Studio Content */}
-      <div className="relative z-10 max-w-[1300px] mx-auto px-6 text-center text-white space-y-6">
-        
-        {/* Small subtitle tag */}
-        <div className="inline-block">
-          <p className="text-xs sm:text-sm uppercase tracking-wider text-[#FAF8F2] font-semibold bg-[#7B8052]/85 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">
-            WELCOME TO OUR CLINIC
-          </p>
-        </div>
+      {/* Prompt cue before first scroll (Navbar and clean image remain visible) */}
+      {!hasScrolled && (
+        <button
+          onClick={triggerScroll}
+          aria-label="Scroll to enter"
+          className="absolute bottom-10 z-20 flex flex-col items-center gap-2 text-white/80 hover:text-white transition-all animate-bounce cursor-pointer group"
+        >
+          <span className="text-[11px] uppercase tracking-[0.25em] font-semibold text-[#FAF8F2] bg-[#7B8052]/80 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">
+            Scroll to Explore
+          </span>
+          <ChevronDown className="w-5 h-5 text-[#FAF8F2]" />
+        </button>
+      )}
 
+      {/* Center Hero Content: Pops up dynamically on first scroll */}
+      <div
+        className={`relative z-10 max-w-[1300px] mx-auto px-6 text-center text-white space-y-6 transition-all duration-700 ease-out ${
+          hasScrolled
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 translate-y-8 pointer-events-none"
+        }`}
+      >
+        
         {/* The Medium Studio Style:
             Step 1: First writes the outline of the letters stroke by stroke
             Step 2: Then pencil crosshatch shading sketches inside the letters
@@ -105,7 +137,9 @@ export const EditorialHero: React.FC = () => {
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-[url(#pencilShadePattern)] animate-pencil-shading pointer-events-none"
+                className={`font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-[url(#pencilShadePattern)] pointer-events-none ${
+                  hasScrolled ? "animate-pencil-shading" : "opacity-0"
+                }`}
                 style={{
                   fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
                   filter: "url(#pencilSketchShadow)",
@@ -120,7 +154,9 @@ export const EditorialHero: React.FC = () => {
                 y="55%"
                 dominantBaseline="middle"
                 textAnchor="middle"
-                className="font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-transparent stroke-white animate-draw-outline pointer-events-none"
+                className={`font-serif font-bold text-[68px] sm:text-[88px] md:text-[98px] tracking-[0.12em] fill-transparent stroke-white pointer-events-none ${
+                  hasScrolled ? "animate-draw-outline" : "opacity-0"
+                }`}
                 style={{
                   fontFamily: "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
                   strokeWidth: "2.2px",

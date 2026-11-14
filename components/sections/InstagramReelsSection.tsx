@@ -80,7 +80,9 @@ export const InstagramReelsSection: React.FC = () => {
                 <span>@dr_preethi_subramanian</span>
               </a>
               <span className="hidden sm:inline">·</span>
-              <span className="text-white/80">4,904 Followers · Coimbatore</span>
+              <span className="text-white/90">4.9K+ Followers</span>
+              <span className="hidden sm:inline">·</span>
+              <span className="text-[#FAF8F2]/80">50K+ Monthly Reach · Coimbatore</span>
             </div>
 
             <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">

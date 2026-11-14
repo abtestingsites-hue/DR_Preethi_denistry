@@ -49,20 +49,31 @@ export const MeetDoctorSection: React.FC = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Stamp Badge */}
-            <div className="absolute -bottom-6 -right-4 bg-[#FAF8F2] border border-[#A5A786]/50 p-5 rounded-2xl shadow-card max-w-[260px]">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-[#7B8052]" />
-                <span className="text-xs uppercase tracking-wider font-bold text-[#7B8052]">
-                  Orthodontist
+            {/* Authentic Crest/Shield Badge */}
+            <div className="absolute -bottom-8 -right-3 z-20">
+              <div
+                className="w-48 sm:w-56 bg-[#FAF8F2] border-2 border-[#7B8052] p-5 shadow-elevated flex flex-col items-center text-center transition-transform hover:scale-105"
+                style={{
+                  clipPath: "polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)",
+                  paddingBottom: "2.2rem"
+                }}
+              >
+                <div className="w-10 h-10 rounded-full bg-[#7B8052] flex items-center justify-center text-white mb-2 shadow-sm">
+                  <ShieldCheck className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-[10px] uppercase tracking-widest font-extrabold text-[#7B8052] block">
+                  CERTIFIED SPECIALIST
                 </span>
+                <p className="text-base font-serif font-bold text-[#29291F] mt-0.5 leading-tight">
+                  Orthodontist
+                </p>
+                <p className="text-xs font-semibold text-[#7B8052] mt-0.5">
+                  Invisalign® Provider
+                </p>
+                <p className="text-[10px] text-[#29291F]/60 mt-1">
+                  Saibaba Colony, Coimbatore
+                </p>
               </div>
-              <p className="text-sm font-serif font-bold text-[#29291F] mt-1">
-                Invisalign® Provider
-              </p>
-              <p className="text-[11px] text-[#29291F]/70 mt-0.5">
-                Saibaba Colony, Coimbatore
-              </p>
             </div>
           </div>
 
