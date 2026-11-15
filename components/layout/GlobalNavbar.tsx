@@ -4,9 +4,11 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowRight, Menu, X } from "lucide-react";
+import { useBookingModal } from "@/context/BookingModalContext";
 
 export const GlobalNavbar: React.FC = () => {
   const pathname = usePathname();
+  const { openBookingModal } = useBookingModal();
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -98,11 +100,11 @@ export const GlobalNavbar: React.FC = () => {
           })}
         </nav>
 
-        {/* Right: Book Visit CTA - Hidden on Hero section of homepage, fades in when scrolled past */}
+        {/* Right: Book Visit CTA - Opens Booking Modal, Hidden on Hero section of homepage, fades in when scrolled past */}
         <div className="flex items-center gap-3">
-          <Link
-            href="/booking"
-            className={`hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 h-[46px] md:h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15 ${
+          <button
+            onClick={() => openBookingModal()}
+            className={`hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 h-[46px] md:h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15 cursor-pointer ${
               showLogoAndBookVisit
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -110,7 +112,7 @@ export const GlobalNavbar: React.FC = () => {
           >
             <span>Book Visit</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          </button>
 
           {/* Mobile hamburger button */}
           <button
@@ -143,14 +145,16 @@ export const GlobalNavbar: React.FC = () => {
             ))}
           </nav>
           <div className="pt-2">
-            <Link
-              href="/booking"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full h-[48px] rounded-full bg-[#7B8052] text-white text-[14px] uppercase tracking-[0.08em] font-semibold"
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openBookingModal();
+              }}
+              className="flex items-center justify-center gap-2 w-full h-[48px] rounded-full bg-[#7B8052] text-white text-[14px] uppercase tracking-[0.08em] font-semibold cursor-pointer"
             >
               <span>Book Visit</span>
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </button>
           </div>
         </div>
       )}

@@ -312,21 +312,21 @@ function BookingFormInner() {
 export default function BookingPage() {
   return (
     <div className="pt-24 md:pt-28 pb-12 bg-[#F5F0E6] min-h-[calc(100vh-140px)] flex flex-col justify-center">
-      {/* Edge-aligned full width container matching Navbar & Footer */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10">
+      {/* Centered max-w-5xl container matching contact section exactly */}
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
         
         {/* Compact Header matching single page viewport */}
-        <div className="max-w-3xl mb-6">
-          <span className="text-[11px] uppercase tracking-[0.12em] text-[#7B8052] font-bold bg-[#FAF8F2] px-3 py-1 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
+        <div className="max-w-2xl mb-4 sm:mb-5">
+          <span className="text-[10px] uppercase tracking-[0.12em] text-[#7B8052] font-bold bg-[#FAF8F2] px-2.5 py-0.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
             Seamless Scheduling
           </span>
-          <h1 className="text-[26px] sm:text-[34px] font-serif font-bold text-[#29291F] mt-2 tracking-tight leading-tight">
+          <h1 className="text-[22px] sm:text-[28px] font-serif font-bold text-[#29291F] mt-1.5 tracking-tight leading-tight">
             Book Your{" "}
             <span className="italic text-[#7B8052] font-normal">
               Dental Consultation
             </span>
           </h1>
-          <p className="text-[#29291F]/75 text-[13px] sm:text-[14px] mt-1 leading-[1.45] font-light">
+          <p className="text-[#29291F]/75 text-[12px] sm:text-[13px] mt-0.5 leading-[1.4] font-light">
             Select your preferred treatment, date, and time. Your request is transmitted directly to Dr. Preethi&apos;s Dentistry for swift WhatsApp confirmation.
           </p>
         </div>

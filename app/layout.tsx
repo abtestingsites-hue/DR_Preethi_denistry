@@ -4,6 +4,8 @@ import "./globals.css";
 import { GlobalNavbar } from "@/components/layout/GlobalNavbar";
 import { EditorialFooter } from "@/components/layout/EditorialFooter";
 import { FloatingActionButtons } from "@/components/ui/FloatingActionButtons";
+import { BookingModal } from "@/components/ui/BookingModal";
+import { BookingModalProvider } from "@/context/BookingModalContext";
 import { clinicInfo } from "@/data/clinicInfo";
 
 const cormorant = Cormorant_Garamond({
@@ -72,10 +74,13 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-[#F5F0E6] text-[#29291F] antialiased font-sans flex flex-col selection:bg-[#7B8052] selection:text-white">
-        <GlobalNavbar />
-        <main className="flex-1 w-full">{children}</main>
-        <EditorialFooter />
-        <FloatingActionButtons />
+        <BookingModalProvider>
+          <GlobalNavbar />
+          <main className="flex-1 w-full">{children}</main>
+          <EditorialFooter />
+          <FloatingActionButtons />
+          <BookingModal />
+        </BookingModalProvider>
       </body>
     </html>
   );

@@ -4,10 +4,12 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CalendarCheck } from "lucide-react";
+import { useBookingModal } from "@/context/BookingModalContext";
 import { clinicInfo } from "@/data/clinicInfo";
 
 export const FloatingActionButtons: React.FC = () => {
   const pathname = usePathname();
+  const { openBookingModal } = useBookingModal();
   const [isVisible, setIsVisible] = useState(false);
 
   const isHomePage = pathname === "/";
@@ -48,15 +50,15 @@ export const FloatingActionButtons: React.FC = () => {
       }`}
     >
       
-      {/* 1. Request Consultation Floating Button - Pure Architectural Icon Button */}
-      <Link
-        href="/booking"
+      {/* 1. Request Consultation Floating Button - Opens Booking Modal */}
+      <button
+        onClick={() => openBookingModal()}
         aria-label="Request Dental Consultation"
         title="Request Consultation"
-        className="pointer-events-auto flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#7B8052] border-2 border-[#FAF8F2] text-[#FAF8F2] shadow-elevated hover:bg-[#555B38] transition-all duration-300 hover:scale-110 active:scale-95 group"
+        className="pointer-events-auto flex items-center justify-center w-12 h-12 sm:w-13 sm:h-13 rounded-full bg-[#7B8052] border-2 border-[#FAF8F2] text-[#FAF8F2] shadow-elevated hover:bg-[#555B38] transition-all duration-300 hover:scale-110 active:scale-95 group cursor-pointer"
       >
         <CalendarCheck className="w-5 h-5 text-[#FAF8F2] group-hover:scale-105 transition-transform" />
-      </Link>
+      </button>
 
       {/* 2. Official WhatsApp Logo Floating Button - Pure Icon Button with Authentic Official SVG */}
       <a

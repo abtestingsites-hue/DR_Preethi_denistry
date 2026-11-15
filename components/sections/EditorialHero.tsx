@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useBookingModal } from "@/context/BookingModalContext";
 
 export const EditorialHero: React.FC = () => {
+  const { openBookingModal } = useBookingModal();
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -19,12 +21,17 @@ export const EditorialHero: React.FC = () => {
         <img
           src="/Clinic.png"
           alt="Dr. Preethi's Dentistry Reception Lounge"
-          className="w-full h-full object-cover object-[center_35%] filter brightness-[0.94] contrast-[1.01]"
+          className="w-full h-full object-cover object-[center_35%] filter brightness-[1.04] contrast-[1.02]"
         />
-        {/* Soft natural ambient gradient from reference image */}
-        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-[#29291F]/15 to-[#29291F]/55 transition-opacity duration-500 ${
+        {/* Natural ambient lighting: Left side illuminated to highlight clinic branding, right side shaded when content appears */}
+        <div className={`absolute inset-0 transition-opacity duration-500 ${
           isHovered ? "opacity-100" : "opacity-0"
-        }`} />
+        }`}>
+          {/* Subtle light fill on left half to keep Invisalign logo vibrant & bright */}
+          <div className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-white/10 via-transparent to-transparent pointer-events-none" />
+          {/* Deeper rich shade on right side for crisp typography legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#1F2016]/45 to-[#1A1B12]/80 pointer-events-none" />
+        </div>
       </div>
 
       {/* Grid Container matching reference composition */}
@@ -62,13 +69,13 @@ export const EditorialHero: React.FC = () => {
 
           {/* CTA Buttons: Keep on one row with consistent 16-20px gap */}
           <div className="flex flex-row items-center gap-4 sm:gap-5">
-            <Link
-              href="/booking"
-              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] rounded-full bg-[#7B8052] text-white font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#686D42] transition-all shadow-md hover:shadow-lg active:scale-98 border border-white/20 shrink-0"
+            <button
+              onClick={() => openBookingModal("Invisalign & Clear Aligners")}
+              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] rounded-full bg-[#7B8052] text-white font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#686D42] transition-all shadow-md hover:shadow-lg active:scale-98 border border-white/20 shrink-0 cursor-pointer"
             >
               <span>Request Consultation</span>
               <ArrowRight className="w-4 h-4 text-white" />
-            </Link>
+            </button>
             
             <a
               href="#treatments"
