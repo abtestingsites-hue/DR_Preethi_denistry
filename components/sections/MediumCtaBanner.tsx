@@ -45,9 +45,9 @@ export const MediumCtaBanner: React.FC = () => {
         </div>
       </div>
 
-      {/* Form and Location Two-Column Card: Centered Container with Compact Scale */}
-      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch w-full">
+      {/* Form and Location Two-Column Card: Full screen bounds matching Navbar & Footer */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-10 sm:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch w-full">
           
           {/* Left Column: Interactive Consultation Contact Form */}
           <div className="lg:col-span-7 bg-[#F2F5ED] p-5 sm:p-6 rounded-[20px] border border-[#E5E8E1] shadow-elevated flex flex-col justify-between">

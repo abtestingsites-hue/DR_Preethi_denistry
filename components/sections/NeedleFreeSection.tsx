@@ -81,8 +81,8 @@ export const NeedleFreeSection: React.FC = () => {
       {/* Main Content Area - Full width alignment matching Navbar and Footer */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-10 sm:py-14 relative z-10 space-y-8">
         
-        {/* Supporting Narrative */}
-        <div className="max-w-3xl space-y-1.5 text-left">
+        {/* Supporting Narrative - Full width aligned with navbar bounds */}
+        <div className="w-full space-y-1.5 text-left">
           <p className="text-[17px] sm:text-[19px] font-serif italic text-[#7B8052]">
             Gentle Anesthesia Delivered Without the Fear of Hypodermic Injections
           </p>
