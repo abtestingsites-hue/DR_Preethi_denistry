@@ -58,15 +58,15 @@ export const InstagramReelsSection: React.FC = () => {
   };
 
   return (
-    <section id="reels" className="relative bg-[#F2F5ED]">
+    <section id="reels" className="relative bg-white">
       
-      {/* Top Olive Ribbon Banner seamlessly incorporating Instagram ID & followers */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
+      {/* Top Ribbon Banner - Pista Green card styling */}
+      <div className="bg-[#93C572] text-[#1E3014] py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#7EAF5E] relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-2 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#F2F5ED]/90">
-              <span className="bg-[#465239] px-3 py-1 rounded-full border border-white/20">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#1E3014]/90">
+              <span className="bg-[#1E3014] text-white px-3 py-1 rounded-full">
                 CLINICAL VIDEO LIBRARY
               </span>
               <span>·</span>
@@ -74,18 +74,18 @@ export const InstagramReelsSection: React.FC = () => {
                 href={clinicInfo.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1.5 text-white"
+                className="hover:underline flex items-center gap-1.5 text-[#0F1E08] font-bold"
               >
                 <Instagram className="w-3.5 h-3.5" />
                 <span>@dr_preethi_subramanian</span>
               </a>
               <span className="hidden sm:inline">·</span>
-              <span className="text-white/90">4.9K+ Followers</span>
+              <span className="text-[#1E3014] font-medium">4.9K+ Followers</span>
               <span className="hidden sm:inline">·</span>
-              <span className="text-[#F2F5ED]/80">50K+ Monthly Reach · Coimbatore</span>
+              <span className="text-[#1E3014]/80">50K+ Monthly Reach · Coimbatore</span>
             </div>
 
-            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-white">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#0F1E08]">
               WATCH OUR CLINICAL INSIGHTS
             </h2>
           </div>
@@ -93,10 +93,10 @@ export const InstagramReelsSection: React.FC = () => {
           <div className="shrink-0 flex items-center gap-4">
             <Link
               href="/clinical-insights"
-              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-white text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-all shadow-md group border border-[#E5E8E1]"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#465239] transition-all shadow-md group"
             >
               <span>Explore All Videos</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-3.5 h-3.5 text-white transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 

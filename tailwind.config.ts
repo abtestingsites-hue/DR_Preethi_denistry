@@ -16,8 +16,9 @@ const config: Config = {
           primary: "#7B8052", // Olive Green - Primary CTA & Icons
           primaryDark: "#465239", // Deep Olive #465239 - CTA hover & Footer
           highlight: "#8FA36C", // Pista Green - Highlighted text
-          softPista: "#F2F5ED", // Soft Pista - Highlighted sections
-          surface: "#F2F5ED", // Soft Pista - Cards & secondary surfaces
+          pista: "#93C572", // Pista Green
+          softPista: "#EAF2E3", // Soft Pista Green
+          surface: "#FFFFFF", // Cards & primary surfaces
           border: "#E5E8E1", // Subtle border
           muted: "#666666", // Medium Grey - Paragraphs
           typography: "#000000", // Black - Main headings
@@ -26,9 +27,10 @@ const config: Config = {
         clinic: {
           bg: "#FFFFFF",
           white: "#FFFFFF",
-          surface: "#F2F5ED",
-          softPista: "#F2F5ED",
+          surface: "#FFFFFF",
+          softPista: "#EAF2E3",
           highlight: "#8FA36C",
+          pista: "#93C572",
           olive: "#7B8052",
           deepOlive: "#465239",
           black: "#000000",

@@ -41,26 +41,26 @@ export const NeedleFreeSection: React.FC = () => {
   ];
 
   return (
-    <section id="needle-free" className="relative bg-[#F2F5ED]">
+    <section id="needle-free" className="relative bg-white">
       
-      {/* Top Olive Ribbon Banner matching other sections */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
+      {/* Top Ribbon Banner - Pista Green card styling */}
+      <div className="bg-[#93C572] text-[#1E3014] py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#7EAF5E] relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-2 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-white/90">
-              <span className="bg-[#465239] px-3 py-1 rounded-full border border-white/20">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#1E3014]/90">
+              <span className="bg-[#1E3014] text-white px-3 py-1 rounded-full">
                 CLINIC SPECIALITY INNOVATION
               </span>
               <span>·</span>
-              <span className="text-white/95">OUR EXPERTISE</span>
+              <span className="text-[#1E3014] font-bold">OUR EXPERTISE</span>
               <span className="hidden sm:inline">·</span>
-              <span className="text-white/90">100% Injection Fear-Free</span>
+              <span className="text-[#1E3014]/90 font-medium">100% Injection Fear-Free</span>
               <span className="hidden sm:inline">·</span>
-              <span className="text-white/80">Saibaba Colony, Coimbatore</span>
+              <span className="text-[#1E3014]/85">Saibaba Colony, Coimbatore</span>
             </div>
 
-            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-white">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#0F1E08]">
               NEEDLE-FREE DENTAL CARE
             </h2>
           </div>
@@ -68,10 +68,10 @@ export const NeedleFreeSection: React.FC = () => {
           <div className="shrink-0 flex items-center gap-4">
             <Link
               href="/booking?treatment=Needle-Free%20Treatment"
-              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-white text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-all shadow-md group"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#465239] transition-all shadow-md group"
             >
               <span>Explore Needle-Free</span>
-              <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-3.5 h-3.5 text-white transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 

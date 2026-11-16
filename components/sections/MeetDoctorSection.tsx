@@ -7,27 +7,27 @@ export const MeetDoctorSection: React.FC = () => {
   return (
     <section id="doctor" className="relative bg-white">
       
-      {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
+      {/* Top Ribbon Banner - Pista Green card styling */}
+      <div className="bg-[#93C572] text-[#1E3014] py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#7EAF5E] relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="max-w-2xl space-y-2 text-center md:text-left">
-            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#F2F5ED]">
+            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#0F1E08]">
               CLINICAL LEADERSHIP · MEET OUR DOCTOR
             </h2>
-            <p className="text-[15px] sm:text-[16px] text-white/95 font-light leading-[1.5]">
+            <p className="text-[15px] sm:text-[16px] text-[#1E3014]/95 font-medium leading-[1.5]">
               Dr. Preethi Subramanian — Specialist Orthodontist &amp; certified Invisalign Provider dedicated to gentle, predictable, and aesthetic smile transformations in Coimbatore.
             </p>
           </div>
 
           <div className="shrink-0 flex items-center gap-6">
-            <div className="hidden lg:block w-[1px] h-12 bg-white/30" />
+            <div className="hidden lg:block w-[1px] h-12 bg-[#1E3014]/25" />
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-semibold text-white hover:text-[#F2F5ED] transition-colors group"
+              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-bold text-[#0F1E08] hover:text-[#1E3014] transition-colors group"
             >
               <span>ABOUT DOCTOR</span>
-              <div className="w-8 h-8 rounded-full border border-white flex items-center justify-center transition-transform group-hover:translate-x-1">
+              <div className="w-8 h-8 rounded-full border border-[#0F1E08] flex items-center justify-center transition-transform group-hover:translate-x-1">
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </Link>

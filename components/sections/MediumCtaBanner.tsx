@@ -21,14 +21,14 @@ export const MediumCtaBanner: React.FC = () => {
   return (
     <section id="contact-section" className="bg-white text-[#666666]">
       
-      {/* Top Olive Ribbon Banner matching all other sections */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
+      {/* Top Banner - Pista Green card styling */}
+      <div className="bg-[#93C572] text-[#1E3014] py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#7EAF5E] relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#F2F5ED]/90 block">
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-bold text-[#1E3014]/90 block">
               COMPREHENSIVE CONSULTATION &amp; CARE
             </span>
-            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-white">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#0F1E08]">
               WANT TO BEGIN YOUR SMILE JOURNEY?
             </h2>
           </div>
@@ -36,9 +36,9 @@ export const MediumCtaBanner: React.FC = () => {
           <div className="shrink-0 flex items-center gap-4">
             <a
               href={`tel:${clinicInfo.phoneRaw}`}
-              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-white text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-all shadow-md group border border-[#E5E8E1]"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#465239] transition-all shadow-md group"
             >
-              <Phone className="w-4 h-4 text-[#7B8052]" />
+              <Phone className="w-4 h-4 text-white" />
               <span>Call {clinicInfo.phoneDisplay}</span>
             </a>
           </div>
