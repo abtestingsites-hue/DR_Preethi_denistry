@@ -16,14 +16,14 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
   const images = isPage ? galleryImagesData : galleryImagesData.slice(0, 6);
 
   return (
-    <section id="clinic-gallery" className="relative bg-[#F5F0E6]">
+    <section id="clinic-gallery" className="relative bg-[#F2F5ED]">
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="max-w-2xl space-y-2 text-center md:text-left">
-            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#FAF8F2]">
+            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#F2F5ED]">
               OUR CLINICAL ENVIRONMENT · INSIDE DR. PREETHI&apos;S DENTISTRY
             </h2>
             <p className="text-[15px] sm:text-[16px] text-white/95 font-light leading-[1.5]">
@@ -35,7 +35,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
             <div className="hidden lg:block w-[1px] h-12 bg-white/30" />
             <Link
               href="/gallery"
-              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-semibold text-white hover:text-[#FAF8F2] transition-colors group"
+              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-semibold text-white hover:text-[#F2F5ED] transition-colors group"
             >
               <span>EXPLORE GALLERY</span>
               <div className="w-8 h-8 rounded-full border border-white flex items-center justify-center transition-transform group-hover:translate-x-1">
@@ -58,7 +58,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 onMouseEnter={() => setHoveredId(item.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => setActiveLightboxIndex(index)}
-                className="group relative overflow-hidden rounded-[18px] bg-[#FAF8F2] border border-[#A5A786]/40 h-[210px] sm:h-[225px] md:h-[240px] cursor-pointer shadow-elevated hover:shadow-2xl hover:border-[#7B8052] transition-all duration-300"
+                className="group relative overflow-hidden rounded-[18px] bg-white border border-[#E5E8E1] h-[210px] sm:h-[225px] md:h-[240px] cursor-pointer shadow-elevated hover:shadow-2xl hover:border-[#7B8052] transition-all duration-300"
               >
                 <img
                   src={item.imageUrl}
@@ -67,7 +67,7 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 />
 
                 <div className="absolute top-3.5 left-3.5 z-10">
-                  <span className="px-3 py-1 rounded-full bg-[#FAF8F2]/95 backdrop-blur-md text-[11px] uppercase font-bold tracking-wider text-[#7B8052] border border-[#A5A786]/35 shadow-md">
+                  <span className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] uppercase font-bold tracking-wider text-[#7B8052] border border-[#E5E8E1] shadow-md">
                     {item.category}
                   </span>
                 </div>
@@ -85,20 +85,20 @@ export const ClinicGallerySection: React.FC<ClinicGallerySectionProps> = ({ isPa
                 <div
                   className={`absolute inset-0 p-5 sm:p-6 flex flex-col justify-end text-white transition-all duration-300 ${
                     isHovered
-                      ? "bg-[#29291F]/90 opacity-100 backdrop-blur-[2px]"
+                      ? "bg-[#465239]/92 opacity-100 backdrop-blur-[2px]"
                       : "bg-transparent opacity-0 pointer-events-none"
                   }`}
                 >
-                  <span className="text-[11px] uppercase font-bold tracking-widest text-[#A5A786] mb-1">
+                  <span className="text-[11px] uppercase font-bold tracking-widest text-[#8FA36C] mb-1">
                     Clinic Environment
                   </span>
                   <h4 className="text-[19px] sm:text-[21px] font-serif font-bold tracking-tight text-white leading-snug">
                     {item.title}
                   </h4>
-                  <p className="text-[13px] text-[#FAF8F2]/85 mt-1.5 line-clamp-2 leading-[1.5] font-light">
+                  <p className="text-[13px] text-white/90 mt-1.5 line-clamp-2 leading-[1.5] font-light">
                     {item.description}
                   </p>
-                  <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1 rounded-full inline-block mt-3 w-fit shadow-md">
+                  <span className="text-[11px] uppercase font-bold tracking-wider text-[#7B8052] bg-white px-3.5 py-1 rounded-full inline-block mt-3 w-fit shadow-md">
                     Click to view full photo
                   </span>
                 </div>

@@ -36,15 +36,15 @@ export const GoClearAlignersSection: React.FC = () => {
   ];
 
   return (
-    <section id="goclear" className="relative bg-[#F5F0E6]">
+    <section id="goclear" className="relative bg-white">
       
       {/* Top Olive Ribbon Banner matching WATCH OUR CLINICAL INSIGHTS style */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="space-y-2 text-center md:text-left">
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#FAF8F2]/90">
-              <span className="bg-[#555B38] px-3 py-1 rounded-full border border-white/20">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#F2F5ED]/90">
+              <span className="bg-[#465239] px-3 py-1 rounded-full border border-white/20">
                 AFFORDABLE ORTHODONTIC EXCELLENCE
               </span>
               <span>·</span>
@@ -52,10 +52,10 @@ export const GoClearAlignersSection: React.FC = () => {
               <span className="hidden sm:inline">·</span>
               <span className="text-white/90">Custom 3D Digital Fabrication</span>
               <span className="hidden sm:inline">·</span>
-              <span className="text-[#FAF8F2]/80">Saibaba Colony, Coimbatore</span>
+              <span className="text-[#F2F5ED]/80">Saibaba Colony, Coimbatore</span>
             </div>
 
-            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-white">
               GOCLEAR CLEAR ALIGNERS
             </h2>
           </div>
@@ -63,7 +63,7 @@ export const GoClearAlignersSection: React.FC = () => {
           <div className="shrink-0 flex items-center gap-4">
             <Link
               href="/booking?treatment=GoClear%20Aligners"
-              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#FAF8F2] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-md group"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-white text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-all shadow-md group border border-[#E5E8E1]"
             >
               <span>Request Assessment</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#7B8052] transition-transform group-hover:translate-x-1" />
@@ -81,18 +81,18 @@ export const GoClearAlignersSection: React.FC = () => {
           <p className="text-[17px] sm:text-[19px] font-serif italic text-[#7B8052]">
             Straight Teeth, Clear Confidence — Custom-Crafted Under Specialist Care
           </p>
-          <p className="text-[14px] sm:text-[15px] text-[#29291F]/80 leading-[1.6] font-light">
+          <p className="text-[14px] sm:text-[15px] text-[#666666] leading-[1.6] font-light">
             Experience discrete orthodontic alignment with GoClear aligners—our high-precision clear aligner system with custom 3D staging, zero food restrictions, and flexible plans from just <strong>₹2,500/month</strong>.
           </p>
         </div>
 
         {/* Full-Screen Balanced Showcase Card with 3D Depth Shadow */}
-        <div className="w-full bg-[#FAF8F2] rounded-[24px] border border-[#A5A786]/40 shadow-elevated p-6 sm:p-8 lg:p-10 overflow-hidden">
+        <div className="w-full bg-[#F2F5ED] rounded-[24px] border border-[#E5E8E1] shadow-elevated p-6 sm:p-8 lg:p-10 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
             {/* Left 5 Cols: Authentic Aligner Case & Tray Reference Imagery */}
             <div className="lg:col-span-5 relative flex justify-center">
-              <div className="relative rounded-[20px] overflow-hidden border border-[#7B8052]/30 shadow-elevated bg-gradient-to-br from-[#0F4C81] to-[#1E3A8A] aspect-square max-h-[380px] w-full flex items-center justify-center p-6 group">
+              <div className="relative rounded-[20px] overflow-hidden border border-[#E5E8E1] shadow-elevated bg-gradient-to-br from-[#0F4C81] to-[#1E3A8A] aspect-square max-h-[380px] w-full flex items-center justify-center p-6 group">
                 <img
                   src="/goclear-case-tray.png"
                   alt="GoClear Clear Aligner Arch Tray and Sleek Travel Case"
@@ -104,11 +104,11 @@ export const GoClearAlignersSection: React.FC = () => {
                   From ₹2,500/Month
                 </div>
 
-                <div className="absolute bottom-4 inset-x-4 p-3 rounded-xl bg-[#FAF8F2]/95 backdrop-blur-md border border-[#A5A786]/40 text-center shadow-md">
+                <div className="absolute bottom-4 inset-x-4 p-3 rounded-xl bg-white/95 backdrop-blur-md border border-[#E5E8E1] text-center shadow-md">
                   <span className="text-[11px] font-bold text-[#7B8052] uppercase tracking-wider block">
                     Certified Medical-Grade Polymer
                   </span>
-                  <span className="text-[10px] text-[#29291F]/70 font-medium">
+                  <span className="text-[10px] text-[#666666] font-medium">
                     100% Removable · Transparent · Pain-Free
                   </span>
                 </div>
@@ -121,10 +121,10 @@ export const GoClearAlignersSection: React.FC = () => {
                 <span className="text-[12px] uppercase tracking-widest font-extrabold text-[#7B8052] block">
                   THE GOCLEAR ADVANTAGE
                 </span>
-                <h3 className="text-[22px] sm:text-[26px] font-serif font-bold text-[#29291F] mt-1">
+                <h3 className="text-[22px] sm:text-[26px] font-serif font-bold text-black mt-1">
                   Why Choose GoClear Over Traditional Braces?
                 </h3>
-                <p className="text-[14px] text-[#29291F]/75 leading-[1.5] mt-1 font-light">
+                <p className="text-[14px] text-[#666666] leading-[1.5] mt-1 font-light">
                   Engineered for busy professionals, teenagers, and adults who desire an invisible smile transformation without the burden of metal brackets.
                 </p>
               </div>
@@ -136,16 +136,16 @@ export const GoClearAlignersSection: React.FC = () => {
                   return (
                     <div
                       key={idx}
-                      className="p-4 rounded-[16px] bg-[#F5F0E6] border border-[#A5A786]/35 shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all flex items-start gap-3.5"
+                      className="p-4 rounded-[16px] bg-white border border-[#E5E8E1] shadow-subtle hover:shadow-card hover:border-[#7B8052] transition-all flex items-start gap-3.5"
                     >
-                      <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-[#FAF8F2] flex items-center justify-center shrink-0 shadow-sm mt-0.5">
-                        <Icon className="w-5 h-5 text-[#FAF8F2]" />
+                      <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0 shadow-sm mt-0.5">
+                        <Icon className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-[14px] font-bold text-[#29291F] leading-snug">
+                        <h4 className="text-[14px] font-bold text-black leading-snug">
                           {b.title}
                         </h4>
-                        <p className="text-[12px] text-[#29291F]/75 leading-relaxed mt-0.5 font-light">
+                        <p className="text-[12px] text-[#666666] leading-relaxed mt-0.5 font-light">
                           {b.desc}
                         </p>
                       </div>
@@ -158,7 +158,7 @@ export const GoClearAlignersSection: React.FC = () => {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   href="/booking?treatment=GoClear%20Aligners"
-                  className="inline-flex items-center gap-2 px-6 h-[46px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-elevated"
+                  className="inline-flex items-center gap-2 px-6 h-[46px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#465239] transition-all shadow-elevated"
                 >
                   <span>Request GoClear Assessment</span>
                   <ArrowRight className="w-4 h-4" />
@@ -166,7 +166,7 @@ export const GoClearAlignersSection: React.FC = () => {
 
                 <a
                   href="tel:07812871829"
-                  className="inline-flex items-center justify-center px-6 h-[46px] rounded-full bg-[#F5F0E6] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#E0DACB] transition-colors border border-[#A5A786]/40"
+                  className="inline-flex items-center justify-center px-6 h-[46px] rounded-full bg-white text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-colors border border-[#E5E8E1]"
                 >
                   Call 078128 71829
                 </a>

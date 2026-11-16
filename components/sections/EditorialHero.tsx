@@ -44,17 +44,17 @@ export const EditorialHero: React.FC = () => {
           
           {/* Eyebrow Label with Architectural Lines flanking DR. PREETHI'S DENTISTRY */}
           <div className="flex items-center gap-3.5 mb-5">
-            <span className="w-10 sm:w-14 h-[2px] bg-[#9EA657] shrink-0" />
+            <span className="w-10 sm:w-14 h-[2px] bg-[#8FA36C] shrink-0" />
             <span className="text-[12px] sm:text-[13px] uppercase font-semibold tracking-[0.22em] text-[#FAF8F2] drop-shadow-sm font-sans">
               DR. PREETHI&apos;S DENTISTRY
             </span>
-            <span className="w-10 sm:w-14 h-[2px] bg-[#9EA657] shrink-0" />
+            <span className="w-10 sm:w-14 h-[2px] bg-[#8FA36C] shrink-0" />
           </div>
 
           {/* Main Heading: Reduced by ~8-10% (68px max desktop) with deliberate 2-line break */}
           <h1 className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[68px] font-serif font-bold text-white leading-[1.05] tracking-tight drop-shadow-md mb-5">
             <span className="block">Care Designed</span>
-            <span className="font-serif italic font-normal text-[#C5CE7C] block">
+            <span className="font-serif italic font-normal text-[#8FA36C] block">
               Around Your Smile
             </span>
           </h1>
@@ -64,14 +64,14 @@ export const EditorialHero: React.FC = () => {
             Advanced Orthodontic &amp; Invisalign® Care in a Comfortable, Personalized Environment.
           </p>
 
-          {/* Bold lime-olive architectural underline bar matching reference */}
-          <div className="w-full max-w-[420px] h-[3px] bg-[#9EA657] mb-7" />
+          {/* Bold pista green architectural underline bar matching reference */}
+          <div className="w-full max-w-[420px] h-[3px] bg-[#8FA36C] mb-7" />
 
           {/* CTA Buttons: Keep on one row with consistent 16-20px gap */}
           <div className="flex flex-row items-center gap-4 sm:gap-5">
             <button
               onClick={() => openBookingModal("Invisalign & Clear Aligners")}
-              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] rounded-full bg-[#7B8052] text-white font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#686D42] transition-all shadow-md hover:shadow-lg active:scale-98 border border-white/20 shrink-0 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2.5 px-7 sm:px-8 h-[48px] rounded-full bg-[#7B8052] text-white font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#465239] transition-all shadow-md hover:shadow-lg active:scale-98 border border-white/20 shrink-0 cursor-pointer"
             >
               <span>Request Consultation</span>
               <ArrowRight className="w-4 h-4 text-white" />
@@ -79,7 +79,7 @@ export const EditorialHero: React.FC = () => {
             
             <a
               href="#treatments"
-              className="inline-flex items-center justify-center px-7 sm:px-8 h-[48px] rounded-full bg-[#FAF8F2] text-[#29291F] font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-white transition-all border border-[#A5A786]/50 shadow-md hover:shadow-lg active:scale-98 shrink-0"
+              className="inline-flex items-center justify-center px-7 sm:px-8 h-[48px] rounded-full bg-white text-black font-semibold text-[14px] uppercase tracking-[0.05em] hover:bg-[#F2F5ED] transition-all border border-[#E5E8E1] shadow-md hover:shadow-lg active:scale-98 shrink-0"
             >
               Explore Treatments
             </a>

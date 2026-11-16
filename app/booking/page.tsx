@@ -77,14 +77,14 @@ function BookingFormInner() {
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
       
       {/* Left Column (7 Cols ~ 58.3% Golden Ratio): Booking Form */}
-      <div className="lg:col-span-7 bg-[#FAF8F2] p-5 sm:p-6 lg:p-7 rounded-[22px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between">
+      <div className="lg:col-span-7 bg-[#F2F5ED] p-5 sm:p-6 lg:p-7 rounded-[22px] border border-[#E5E8E1] shadow-elevated flex flex-col justify-between">
         {isSubmitted ? (
           <div className="text-center py-10 space-y-4">
-            <div className="w-12 h-12 rounded-full bg-[#F5F0E6] text-[#7B8052] flex items-center justify-center mx-auto border border-[#A5A786]/40">
+            <div className="w-12 h-12 rounded-full bg-white text-[#7B8052] flex items-center justify-center mx-auto border border-[#E5E8E1]">
               <CheckCircle2 className="w-6 h-6 text-[#7B8052]" />
             </div>
-            <h2 className="text-xl sm:text-2xl font-serif font-bold text-[#29291F]">Appointment Request Initiated</h2>
-            <p className="text-xs sm:text-[13px] text-[#29291F]/70 max-w-md mx-auto leading-relaxed font-light">
+            <h2 className="text-xl sm:text-2xl font-serif font-bold text-black">Appointment Request Initiated</h2>
+            <p className="text-xs sm:text-[13px] text-[#666666] max-w-md mx-auto leading-relaxed font-light">
               Thank you, {formData.name}. We are transferring your booking details to Dr. Preethi&apos;s Dentistry reception on WhatsApp.
             </p>
             <div className="pt-2">
@@ -99,7 +99,7 @@ function BookingFormInner() {
                 })}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#7B8052] text-white text-xs font-semibold hover:bg-[#686D42] transition-all shadow-md"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#7B8052] text-white text-xs font-semibold hover:bg-[#465239] transition-all shadow-md"
               >
                 <MessageSquare className="w-3.5 h-3.5 text-white" />
                 <span>Continue on WhatsApp</span>
@@ -111,7 +111,7 @@ function BookingFormInner() {
             
             {/* Full Name */}
             <div>
-              <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+              <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                 Patient Full Name *
               </label>
               <input
@@ -119,8 +119,8 @@ function BookingFormInner() {
                 placeholder="e.g. Anandhi Sundar"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className={`w-full px-3.5 py-2 rounded-lg bg-[#F5F0E6] border text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors ${
-                  errors.name ? "border-red-500" : "border-[#A5A786]/40 focus:border-[#7B8052]"
+                className={`w-full px-3.5 py-2 rounded-lg bg-white border text-xs sm:text-[13px] text-black outline-none transition-colors ${
+                  errors.name ? "border-red-500" : "border-[#E5E8E1] focus:border-[#7B8052]"
                 }`}
               />
               {errors.name && <p className="text-[10px] text-red-500 mt-0.5">{errors.name}</p>}
@@ -129,7 +129,7 @@ function BookingFormInner() {
             {/* Mobile & Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                   Mobile Number *
                 </label>
                 <input
@@ -137,15 +137,15 @@ function BookingFormInner() {
                   placeholder="e.g. 98765 43210"
                   value={formData.mobile}
                   onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
-                  className={`w-full px-3.5 py-2 rounded-lg bg-[#F5F0E6] border text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors ${
-                    errors.mobile ? "border-red-500" : "border-[#A5A786]/40 focus:border-[#7B8052]"
+                  className={`w-full px-3.5 py-2 rounded-lg bg-white border text-xs sm:text-[13px] text-black outline-none transition-colors ${
+                    errors.mobile ? "border-red-500" : "border-[#E5E8E1] focus:border-[#7B8052]"
                   }`}
                 />
                 {errors.mobile && <p className="text-[10px] text-red-500 mt-0.5">{errors.mobile}</p>}
               </div>
 
               <div>
-                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                   Email Address (Optional)
                 </label>
                 <input
@@ -153,8 +153,8 @@ function BookingFormInner() {
                   placeholder="e.g. name@example.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={`w-full px-3.5 py-2 rounded-lg bg-[#F5F0E6] border text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors ${
-                    errors.email ? "border-red-500" : "border-[#A5A786]/40 focus:border-[#7B8052]"
+                  className={`w-full px-3.5 py-2 rounded-lg bg-white border text-xs sm:text-[13px] text-black outline-none transition-colors ${
+                    errors.email ? "border-red-500" : "border-[#E5E8E1] focus:border-[#7B8052]"
                   }`}
                 />
                 {errors.email && <p className="text-[10px] text-red-500 mt-0.5">{errors.email}</p>}
@@ -163,13 +163,13 @@ function BookingFormInner() {
 
             {/* Treatment Select */}
             <div>
-              <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+              <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                 Preferred Treatment *
               </label>
               <select
                 value={formData.treatment}
                 onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                className="w-full px-3.5 py-2 rounded-lg bg-[#F5F0E6] border border-[#A5A786]/40 focus:border-[#7B8052] text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors"
+                className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E5E8E1] focus:border-[#7B8052] text-xs sm:text-[13px] text-black outline-none transition-colors"
               >
                 {treatmentsData.map((t) => (
                   <option key={t.id} value={t.title}>
@@ -183,7 +183,7 @@ function BookingFormInner() {
             {/* Preferred Date & Time */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                   Preferred Date *
                 </label>
                 <input
@@ -191,8 +191,8 @@ function BookingFormInner() {
                   value={formData.preferredDate}
                   min={new Date().toISOString().split("T")[0]}
                   onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                  className={`w-full px-3.5 py-2 rounded-lg bg-[#F5F0E6] border text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors ${
-                    errors.preferredDate ? "border-red-500" : "border-[#A5A786]/40 focus:border-[#7B8052]"
+                  className={`w-full px-3.5 py-2 rounded-lg bg-white border text-xs sm:text-[13px] text-black outline-none transition-colors ${
+                    errors.preferredDate ? "border-red-500" : "border-[#E5E8E1] focus:border-[#7B8052]"
                   }`}
                 />
                 {errors.preferredDate && (
@@ -201,13 +201,13 @@ function BookingFormInner() {
               </div>
 
               <div>
-                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+                <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                   Preferred Time Window *
                 </label>
                 <select
                   value={formData.preferredTime}
                   onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                  className="w-full px-3.5 py-2 rounded-lg bg-[#F5F0E6] border border-[#A5A786]/40 focus:border-[#7B8052] text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors"
+                  className="w-full px-3.5 py-2 rounded-lg bg-white border border-[#E5E8E1] focus:border-[#7B8052] text-xs sm:text-[13px] text-black outline-none transition-colors"
                 >
                   <option value="Morning (10:00 AM – 01:00 PM)">Morning (10:00 AM – 01:00 PM)</option>
                   <option value="Afternoon (02:00 PM – 05:00 PM)">Afternoon (02:00 PM – 05:00 PM)</option>
@@ -218,7 +218,7 @@ function BookingFormInner() {
 
             {/* Additional Message */}
             <div>
-              <label className="block text-[10.5px] font-bold uppercase tracking-wider text-[#29291F] mb-1">
+              <label className="block text-[10.5px] font-bold uppercase tracking-wider text-black mb-1">
                 Additional Notes / Concerns (Optional)
               </label>
               <textarea
@@ -226,7 +226,7 @@ function BookingFormInner() {
                 placeholder="Mention any specific dental concerns or questions..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-3.5 py-1.5 rounded-lg bg-[#F5F0E6] border border-[#A5A786]/40 focus:border-[#7B8052] text-xs sm:text-[13px] text-[#29291F] outline-none transition-colors"
+                className="w-full px-3.5 py-1.5 rounded-lg bg-white border border-[#E5E8E1] focus:border-[#7B8052] text-xs sm:text-[13px] text-black outline-none transition-colors"
               />
             </div>
 
@@ -234,12 +234,12 @@ function BookingFormInner() {
             <div className="pt-0.5">
               <button
                 type="submit"
-                className="w-full py-3 rounded-full bg-[#7B8052] hover:bg-[#686D42] text-white font-semibold text-xs uppercase tracking-[0.08em] transition-all shadow-md flex items-center justify-center gap-2 group"
+                className="w-full py-3 rounded-full bg-[#7B8052] hover:bg-[#465239] text-white font-semibold text-xs uppercase tracking-[0.08em] transition-all shadow-md flex items-center justify-center gap-2 group"
               >
                 <span>Request Appointment via WhatsApp</span>
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 text-white" />
               </button>
-              <p className="text-[10px] text-center text-[#29291F]/60 mt-1.5">
+              <p className="text-[10px] text-center text-[#666666] mt-1.5">
                 Submitting will open our clinic WhatsApp line with your pre-filled consultation details.
               </p>
             </div>
@@ -252,18 +252,18 @@ function BookingFormInner() {
       <div className="lg:col-span-5 flex flex-col justify-between space-y-4">
         
         {/* Guidelines Card */}
-        <div className="p-5 sm:p-6 rounded-[22px] bg-[#FAF8F2] border border-[#A5A786]/40 shadow-elevated space-y-3">
+        <div className="p-5 sm:p-6 rounded-[22px] bg-[#F2F5ED] border border-[#E5E8E1] shadow-elevated space-y-3">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-[#F5F0E6] text-[#7B8052] flex items-center justify-center border border-[#A5A786]/30">
+            <div className="w-8 h-8 rounded-lg bg-white text-[#7B8052] flex items-center justify-center border border-[#E5E8E1]">
               <Shield className="w-4 h-4 text-[#7B8052]" />
             </div>
             <div>
-              <h3 className="text-xs sm:text-[13px] font-serif font-bold text-[#29291F]">Appointment Guidelines</h3>
-              <p className="text-[10.5px] text-[#29291F]/65">What to expect during your booking</p>
+              <h3 className="text-xs sm:text-[13px] font-serif font-bold text-black">Appointment Guidelines</h3>
+              <p className="text-[10.5px] text-[#666666]">What to expect during your booking</p>
             </div>
           </div>
 
-          <div className="space-y-2 text-[11.5px] text-[#29291F]/75 leading-relaxed font-light">
+          <div className="space-y-2 text-[11.5px] text-[#666666] leading-relaxed font-light">
             <p>
               • <strong>Prompt Confirmation:</strong> Our reception will review your requested time slot and confirm availability via WhatsApp or phone.
             </p>
@@ -275,14 +275,14 @@ function BookingFormInner() {
             </p>
           </div>
 
-          <div className="pt-2.5 border-t border-[#A5A786]/25 flex items-center justify-between">
+          <div className="pt-2.5 border-t border-[#E5E8E1] flex items-center justify-between">
             <div>
-              <p className="text-[9.5px] text-[#29291F]/70 uppercase tracking-wider font-bold">Reception Line:</p>
+              <p className="text-[9.5px] text-[#666666] uppercase tracking-wider font-bold">Reception Line:</p>
               <p className="text-[13px] font-bold text-[#7B8052] mt-0.5">{clinicInfo.phoneDisplay}</p>
             </div>
             <a
               href={`tel:${clinicInfo.phoneRaw}`}
-              className="p-2 rounded-full bg-[#7B8052] text-white hover:bg-[#686D42] transition-colors shadow-sm"
+              className="p-2 rounded-full bg-[#7B8052] text-white hover:bg-[#465239] transition-colors shadow-sm"
               aria-label="Call clinic"
             >
               <Phone className="w-3.5 h-3.5" />
@@ -291,7 +291,7 @@ function BookingFormInner() {
         </div>
 
         {/* Visual Reminder Card - Matches Left Column bottom baseline seamlessly */}
-        <div className="rounded-[22px] overflow-hidden bg-[#FAF8F2] border border-[#A5A786]/40 shadow-elevated flex-1 min-h-[140px] relative group">
+        <div className="rounded-[22px] overflow-hidden bg-white border border-[#E5E8E1] shadow-elevated flex-1 min-h-[140px] relative group">
           <img
             src="/Clinic.png"
             alt="Clinic Reception Lounge"
@@ -311,27 +311,27 @@ function BookingFormInner() {
 
 export default function BookingPage() {
   return (
-    <div className="pt-24 md:pt-28 pb-12 bg-[#F5F0E6] min-h-[calc(100vh-140px)] flex flex-col justify-center">
+    <div className="pt-24 md:pt-28 pb-12 bg-white min-h-[calc(100vh-140px)] flex flex-col justify-center">
       {/* Centered max-w-5xl container matching contact section exactly */}
       <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
         
         {/* Compact Header matching single page viewport */}
         <div className="max-w-2xl mb-4 sm:mb-5">
-          <span className="text-[10px] uppercase tracking-[0.12em] text-[#7B8052] font-bold bg-[#FAF8F2] px-2.5 py-0.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
+          <span className="text-[10px] uppercase tracking-[0.12em] text-[#7B8052] font-bold bg-[#F2F5ED] px-2.5 py-0.5 rounded-full inline-block border border-[#E5E8E1] shadow-sm">
             Seamless Scheduling
           </span>
-          <h1 className="text-[22px] sm:text-[28px] font-serif font-bold text-[#29291F] mt-1.5 tracking-tight leading-tight">
+          <h1 className="text-[22px] sm:text-[28px] font-serif font-bold text-black mt-1.5 tracking-tight leading-tight">
             Book Your{" "}
-            <span className="italic text-[#7B8052] font-normal">
+            <span className="italic text-[#8FA36C] font-normal">
               Dental Consultation
             </span>
           </h1>
-          <p className="text-[#29291F]/75 text-[12px] sm:text-[13px] mt-0.5 leading-[1.4] font-light">
+          <p className="text-[#666666] text-[12px] sm:text-[13px] mt-0.5 leading-[1.4] font-light">
             Select your preferred treatment, date, and time. Your request is transmitted directly to Dr. Preethi&apos;s Dentistry for swift WhatsApp confirmation.
           </p>
         </div>
 
-        <Suspense fallback={<div className="p-8 text-center text-xs text-[#29291F]/60">Loading booking form...</div>}>
+        <Suspense fallback={<div className="p-8 text-center text-xs text-[#666666]">Loading booking form...</div>}>
           <BookingFormInner />
         </Suspense>
 

@@ -47,7 +47,7 @@ export const GlobalNavbar: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         useDarkTheme
-          ? "bg-[#F5F0E6]/95 backdrop-blur-md border-b border-[#A5A786]/30 shadow-sm h-[84px] md:h-[88px] flex items-center"
+          ? "bg-white/95 backdrop-blur-md border-b border-[#E5E8E1] shadow-sm h-[84px] md:h-[88px] flex items-center"
           : "bg-transparent h-[84px] md:h-[88px] flex items-center"
       }`}
     >
@@ -70,7 +70,7 @@ export const GlobalNavbar: React.FC = () => {
             />
           </Link>
           {/* Subtle vertical divider line */}
-          <div className="hidden lg:block w-[1px] h-7 bg-white/20" />
+          <div className="hidden lg:block w-[1px] h-7 bg-[#E5E8E1]" />
         </div>
 
         {/* Center: Desktop Navigation - 13px font, 0.08em tracking, 28-32px gap */}
@@ -85,7 +85,7 @@ export const GlobalNavbar: React.FC = () => {
                   useDarkTheme
                     ? isActive
                       ? "text-[#7B8052] font-semibold"
-                      : "text-[#29291F] hover:text-[#7B8052]"
+                      : "text-black hover:text-[#7B8052]"
                     : isActive
                       ? "text-white font-semibold"
                       : "text-white/85 hover:text-white"
@@ -93,7 +93,7 @@ export const GlobalNavbar: React.FC = () => {
               >
                 {link.name}
                 {isActive && (
-                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-[#9EA657] rounded-full" />
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-[2px] bg-[#8FA36C] rounded-full" />
                 )}
               </Link>
             );
@@ -104,7 +104,7 @@ export const GlobalNavbar: React.FC = () => {
         <div className="flex items-center gap-3">
           <button
             onClick={() => openBookingModal()}
-            className={`hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 h-[46px] md:h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15 cursor-pointer ${
+            className={`hidden sm:inline-flex items-center justify-center gap-2 px-6 sm:px-7 h-[46px] md:h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#465239] transition-all shadow-card hover:shadow-elevated active:scale-98 border border-white/15 cursor-pointer ${
               showLogoAndBookVisit
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -120,7 +120,7 @@ export const GlobalNavbar: React.FC = () => {
             aria-label="Toggle navigation menu"
             className={`lg:hidden p-2.5 rounded-full transition-colors ${
               useDarkTheme
-                ? "text-[#29291F] hover:bg-[#E0DACB]/40"
+                ? "text-black hover:bg-[#F2F5ED]"
                 : "text-white hover:bg-white/10"
             }`}
           >
@@ -131,14 +131,14 @@ export const GlobalNavbar: React.FC = () => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#F5F0E6] border-b border-[#A5A786]/30 px-6 py-6 space-y-4 shadow-xl">
+        <div className="lg:hidden bg-white border-b border-[#E5E8E1] px-6 py-6 space-y-4 shadow-xl">
           <nav className="flex flex-col space-y-3">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[15px] font-medium tracking-[0.06em] text-[#29291F] hover:text-[#7B8052] py-1.5 border-b border-[#A5A786]/15"
+                className="text-[15px] font-medium tracking-[0.06em] text-black hover:text-[#7B8052] py-1.5 border-b border-[#E5E8E1]"
               >
                 {link.name}
               </Link>
@@ -150,7 +150,7 @@ export const GlobalNavbar: React.FC = () => {
                 setMobileMenuOpen(false);
                 openBookingModal();
               }}
-              className="flex items-center justify-center gap-2 w-full h-[48px] rounded-full bg-[#7B8052] text-white text-[14px] uppercase tracking-[0.08em] font-semibold cursor-pointer"
+              className="flex items-center justify-center gap-2 w-full h-[48px] rounded-full bg-[#7B8052] hover:bg-[#465239] text-white text-[14px] uppercase tracking-[0.08em] font-semibold cursor-pointer"
             >
               <span>Book Visit</span>
               <ArrowRight className="w-4 h-4" />

@@ -9,27 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Refined Warm Cream and Olive Palette
+        // Refined Pure White, Soft Pista, Olive, and Deep Olive Palette
         brand: {
-          bg: "#F5F0E6", // Warm Cream - Primary background
-          primary: "#7B8052", // Olive - Primary highlighting color
-          primaryDark: "#555B38", // Deep Olive - Hover states & darker accents
-          primaryLight: "#959B6B",
-          typography: "#29291F", // Dark Charcoal - Headings & body
-          surface: "#FAF8F2", // Soft Cream - Secondary surfaces & alternate cards
-          muted: "#A5A786", // Muted Olive - Decorative lines & subtle borders
+          bg: "#FFFFFF", // Pure White - Main background
+          navbar: "#FFFFFF", // Pure White - Navbar
+          primary: "#7B8052", // Olive Green - Primary CTA & Icons
+          primaryDark: "#465239", // Deep Olive #465239 - CTA hover & Footer
+          highlight: "#8FA36C", // Pista Green - Highlighted text
+          softPista: "#F2F5ED", // Soft Pista - Highlighted sections
+          surface: "#F2F5ED", // Soft Pista - Cards & secondary surfaces
+          border: "#E5E8E1", // Subtle border
+          muted: "#666666", // Medium Grey - Paragraphs
+          typography: "#000000", // Black - Main headings
           white: "#FFFFFF", // Pure White
         },
         clinic: {
-          bg: "#F5F0E6",
-          white: "#FAF8F2",
-          warm: "#F5F0E6",
+          bg: "#FFFFFF",
+          white: "#FFFFFF",
+          surface: "#F2F5ED",
+          softPista: "#F2F5ED",
+          highlight: "#8FA36C",
           olive: "#7B8052",
-          deepOlive: "#555B38",
-          charcoal: "#29291F",
-          softCream: "#FAF8F2",
-          mutedOlive: "#A5A786",
-          border: "#E0DACB",
+          deepOlive: "#465239",
+          black: "#000000",
+          mediumGrey: "#666666",
+          border: "#E5E8E1",
         },
       },
       fontFamily: {

@@ -5,14 +5,14 @@ import { clinicInfo } from "@/data/clinicInfo";
 
 export const MeetDoctorSection: React.FC = () => {
   return (
-    <section id="doctor" className="relative bg-[#F5F0E6]">
+    <section id="doctor" className="relative bg-white">
       
       {/* Top Olive Ribbon Banner with clean, plain blended architectural styling */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="max-w-2xl space-y-2 text-center md:text-left">
-            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#FAF8F2]">
+            <h2 className="text-[12px] sm:text-[13px] font-bold uppercase tracking-[0.12em] text-[#F2F5ED]">
               CLINICAL LEADERSHIP · MEET OUR DOCTOR
             </h2>
             <p className="text-[15px] sm:text-[16px] text-white/95 font-light leading-[1.5]">
@@ -24,7 +24,7 @@ export const MeetDoctorSection: React.FC = () => {
             <div className="hidden lg:block w-[1px] h-12 bg-white/30" />
             <Link
               href="/about"
-              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-semibold text-white hover:text-[#FAF8F2] transition-colors group"
+              className="inline-flex items-center gap-3 text-[13px] uppercase tracking-[0.08em] font-semibold text-white hover:text-[#F2F5ED] transition-colors group"
             >
               <span>ABOUT DOCTOR</span>
               <div className="w-8 h-8 rounded-full border border-white flex items-center justify-center transition-transform group-hover:translate-x-1">
@@ -42,7 +42,7 @@ export const MeetDoctorSection: React.FC = () => {
           
           {/* Doctor Portrait Image (5 Cols) with 3D Depth Shadow */}
           <div className="lg:col-span-5 relative max-w-md mx-auto w-full">
-            <div className="rounded-[24px] overflow-hidden bg-[#FAF8F2] border border-[#A5A786]/40 shadow-elevated aspect-[4/5] relative">
+            <div className="rounded-[24px] overflow-hidden bg-[#F2F5ED] border border-[#E5E8E1] shadow-elevated aspect-[4/5] relative">
               <img
                 src="/Doctor.png"
                 alt="Dr. Preethi Subramanian"
@@ -53,30 +53,30 @@ export const MeetDoctorSection: React.FC = () => {
 
           {/* About Doctor Details (7 Cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-[12px] uppercase tracking-[0.12em] font-bold text-[#7B8052] bg-[#FAF8F2] px-3.5 py-1.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
+            <span className="text-[12px] uppercase tracking-[0.12em] font-bold text-[#7B8052] bg-[#F2F5ED] px-3.5 py-1.5 rounded-full inline-block border border-[#E5E8E1] shadow-sm">
               SPECIALIST ORTHODONTIST
             </span>
 
-            <h2 className="text-[32px] sm:text-[42px] font-serif font-bold text-[#29291F] tracking-tight leading-[1.1]">
+            <h2 className="text-[32px] sm:text-[42px] font-serif font-bold text-black tracking-tight leading-[1.1]">
               {clinicInfo.doctorName}
             </h2>
 
-            <p className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.08em] text-[#7B8052]">
+            <p className="text-[13px] sm:text-[14px] font-semibold uppercase tracking-[0.08em] text-[#8FA36C]">
               Orthodontist | Invisalign Provider · Coimbatore
             </p>
 
-            <p className="text-[16px] sm:text-[17px] text-[#29291F]/80 leading-[1.6] font-light max-w-xl">
+            <p className="text-[16px] sm:text-[17px] text-[#666666] leading-[1.6] font-light max-w-xl">
               Dr. Preethi Subramanian brings clinical precision, advanced digital treatment planning, and compassionate dental care to children, teens, and adults in Coimbatore. Specialising in Invisalign clear aligners, corrective orthodontics, and smile aesthetics, she believes that every smile transformation should be as comfortable and rewarding as the final result.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1 max-w-lg">
-              <div className="p-4 rounded-[16px] bg-[#FAF8F2] border border-[#A5A786]/30 shadow-subtle">
+              <div className="p-4 rounded-[16px] bg-[#F2F5ED] border border-[#E5E8E1] shadow-subtle">
                 <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B8052] block">Clinical Focus</span>
-                <span className="text-[14px] font-bold text-[#29291F] mt-0.5 block">Clear Aligners &amp; Orthodontics</span>
+                <span className="text-[14px] font-bold text-black mt-0.5 block">Clear Aligners &amp; Orthodontics</span>
               </div>
-              <div className="p-4 rounded-[16px] bg-[#FAF8F2] border border-[#A5A786]/30 shadow-subtle">
+              <div className="p-4 rounded-[16px] bg-[#F2F5ED] border border-[#E5E8E1] shadow-subtle">
                 <span className="text-[11px] uppercase tracking-wider font-bold text-[#7B8052] block">Location</span>
-                <span className="text-[14px] font-bold text-[#29291F] mt-0.5 block">Saibaba Colony, Coimbatore</span>
+                <span className="text-[14px] font-bold text-black mt-0.5 block">Saibaba Colony, Coimbatore</span>
               </div>
             </div>
 
@@ -84,14 +84,14 @@ export const MeetDoctorSection: React.FC = () => {
             <div className="pt-3 flex flex-wrap items-center gap-4">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center px-6 sm:px-7 h-[48px] rounded-full bg-[#FAF8F2] border border-[#A5A786]/50 text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-subtle"
+                className="inline-flex items-center justify-center px-6 sm:px-7 h-[48px] rounded-full bg-white border border-[#E5E8E1] text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-all shadow-subtle"
               >
                 <span>Read Full Profile</span>
               </Link>
 
               <Link
                 href="/booking"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#686D42] transition-all shadow-elevated group"
+                className="inline-flex items-center gap-2 px-6 sm:px-7 h-[48px] rounded-full bg-[#7B8052] text-white text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#465239] transition-all shadow-elevated group"
               >
                 <span>Book Consultation with Dr. Preethi</span>
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

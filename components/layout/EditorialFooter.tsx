@@ -5,12 +5,12 @@ import { clinicInfo } from "@/data/clinicInfo";
 
 export const EditorialFooter: React.FC = () => {
   return (
-    <footer className="bg-[#29291F] text-[#FAF8F2] pt-8 pb-5 border-t border-[#A5A786]/20">
+    <footer className="bg-[#465239] text-[#FAF8F2] pt-8 pb-5 border-t border-[#465239]">
       {/* Edge-aligned full width container with left corner logo matching GlobalNavbar */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10">
         
         {/* Compact Grid Section with reduced vertical height */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 pb-6 border-b border-[#A5A786]/20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 pb-6 border-b border-white/15">
           
           {/* Brand Col aligned to far left */}
           <div className="lg:col-span-4 space-y-2">
@@ -22,7 +22,7 @@ export const EditorialFooter: React.FC = () => {
               />
             </Link>
 
-            <p className="text-[11px] text-[#FAF8F2]/70 max-w-sm leading-relaxed font-light mt-1">
+            <p className="text-[11px] text-[#FAF8F2]/75 max-w-sm leading-relaxed font-light mt-1">
               Dr. Preethi Subramanian — Orthodontist | Invisalign Provider. Delivering international-standard clinical care, orthodontic precision, and patient-centred dentistry in Coimbatore.
             </p>
 
@@ -32,41 +32,41 @@ export const EditorialFooter: React.FC = () => {
                 href={clinicInfo.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-7 h-7 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
+                className="w-7 h-7 rounded-full bg-white/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-3 h-3" />
+                <Instagram className="w-3 h-3 text-[#FAF8F2]" />
               </a>
               <a
                 href={`https://wa.me/${clinicInfo.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-7 h-7 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
+                className="w-7 h-7 rounded-full bg-white/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageSquare className="w-3 h-3" />
+                <MessageSquare className="w-3 h-3 text-[#FAF8F2]" />
               </a>
               <a
                 href={`tel:${clinicInfo.phoneRaw}`}
-                className="w-7 h-7 rounded-full bg-[#FAF8F2]/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
+                className="w-7 h-7 rounded-full bg-white/10 hover:bg-[#7B8052] flex items-center justify-center text-[#FAF8F2] transition-colors"
                 aria-label="Phone"
               >
-                <Phone className="w-3 h-3" />
+                <Phone className="w-3 h-3 text-[#FAF8F2]" />
               </a>
             </div>
           </div>
 
           {/* Contact Details */}
           <div className="lg:col-span-4 space-y-2">
-            <h4 className="text-[10px] uppercase font-bold tracking-widest text-[#A5A786]">
+            <h4 className="text-[10px] uppercase font-bold tracking-widest text-[#8FA36C]">
               CLINIC LOCATION &amp; HOURS
             </h4>
-            <p className="text-[11px] text-[#FAF8F2]/80 leading-relaxed flex items-start gap-2">
-              <MapPin className="w-3.5 h-3.5 text-[#7B8052] shrink-0 mt-0.5" />
+            <p className="text-[11px] text-[#FAF8F2]/85 leading-relaxed flex items-start gap-2">
+              <MapPin className="w-3.5 h-3.5 text-[#8FA36C] shrink-0 mt-0.5" />
               <span>{clinicInfo.fullAddress}</span>
             </p>
-            <p className="text-[11px] text-[#FAF8F2]/80 flex items-center gap-2">
-              <Phone className="w-3.5 h-3.5 text-[#7B8052] shrink-0" />
+            <p className="text-[11px] text-[#FAF8F2]/85 flex items-center gap-2">
+              <Phone className="w-3.5 h-3.5 text-[#8FA36C] shrink-0" />
               <span>Call: {clinicInfo.phoneDisplay}</span>
             </p>
             <p className="text-[10px] text-[#FAF8F2]/60">
@@ -76,20 +76,20 @@ export const EditorialFooter: React.FC = () => {
 
           {/* Quick Links */}
           <div className="lg:col-span-4 space-y-2">
-            <h4 className="text-[10px] uppercase font-bold tracking-widest text-[#A5A786]">
+            <h4 className="text-[10px] uppercase font-bold tracking-widest text-[#8FA36C]">
               QUICK NAVIGATION
             </h4>
             <div className="grid grid-cols-2 gap-1.5 text-[11px] uppercase tracking-wider font-semibold text-[#FAF8F2]/75">
-              <Link href="/" className="hover:text-[#FAF8F2] transition-colors">HOME</Link>
-              <Link href="/#treatments" className="hover:text-[#FAF8F2] transition-colors">TREATMENTS</Link>
-              <Link href="/treatments/invisalign-clear-aligners" className="hover:text-[#FAF8F2] transition-colors">INVISALIGN®</Link>
-              <Link href="/#goclear" className="hover:text-[#FAF8F2] transition-colors">GOCLEAR</Link>
-              <Link href="/#clinic-gallery" className="hover:text-[#FAF8F2] transition-colors">GALLERY</Link>
-              <Link href="/#doctor" className="hover:text-[#FAF8F2] transition-colors">OUR DOCTOR</Link>
-              <Link href="/#testimonials" className="hover:text-[#FAF8F2] transition-colors">REVIEWS</Link>
-              <Link href="/#journal" className="hover:text-[#FAF8F2] transition-colors text-[#A5A786]">JOURNAL</Link>
-              <Link href="/#faq" className="hover:text-[#FAF8F2] transition-colors text-[#A5A786]">FAQ</Link>
-              <Link href="/booking" className="hover:text-[#7B8052] text-[#FAF8F2] transition-colors font-bold">APPOINTMENT</Link>
+              <Link href="/" className="hover:text-white transition-colors">HOME</Link>
+              <Link href="/#treatments" className="hover:text-white transition-colors">TREATMENTS</Link>
+              <Link href="/treatments/invisalign-clear-aligners" className="hover:text-white transition-colors">INVISALIGN®</Link>
+              <Link href="/#goclear" className="hover:text-white transition-colors">GOCLEAR</Link>
+              <Link href="/#clinic-gallery" className="hover:text-white transition-colors">GALLERY</Link>
+              <Link href="/#doctor" className="hover:text-white transition-colors">OUR DOCTOR</Link>
+              <Link href="/#testimonials" className="hover:text-white transition-colors">REVIEWS</Link>
+              <Link href="/#journal" className="hover:text-white transition-colors text-[#FAF8F2]/60">JOURNAL</Link>
+              <Link href="/#faq" className="hover:text-white transition-colors text-[#FAF8F2]/60">FAQ</Link>
+              <Link href="/booking" className="hover:text-[#8FA36C] text-[#FAF8F2] transition-colors font-bold">APPOINTMENT</Link>
             </div>
           </div>
 

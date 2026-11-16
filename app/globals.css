@@ -5,17 +5,18 @@
 @tailwind utilities;
 
 :root {
-  /* Elegant Premium Dental Color Palette */
-  --color-warm-cream: #F5F0E6;       /* Primary background */
-  --color-olive: #7B8052;            /* Primary highlight, buttons, active nav, icons */
-  --color-deep-olive: #555B38;       /* Hover states, dark button hover */
-  --color-olive-hover: #686D42;      /* Refined button hover */
-  --color-dark-charcoal: #29291F;    /* Headings and body text */
-  --color-soft-cream: #FAF8F2;       /* Secondary surfaces, alternate section cards */
-  --color-muted-olive: #A5A786;      /* Decorative lines, subtle borders */
-  --color-pure-white: #FFFFFF;       /* Pure white accents */
-  --color-accent-lime: #9EA657;      /* Accent architectural lines & indicators */
-  --color-italic-gold: #C5CE7C;      /* Editorial italic accents */
+  /* Exact Client-Specified Palette */
+  --color-main-bg: #FFFFFF;          /* Main background: Pure White */
+  --color-navbar-bg: #FFFFFF;        /* Navbar: Pure White */
+  --color-primary-cta: #7B8052;      /* Primary CTA: Olive Green */
+  --color-cta-hover: #465239;        /* CTA hover: Deep Olive #465239 */
+  --color-highlight-text: #8FA36C;   /* Highlighted text: Pista Green */
+  --color-highlight-section: #F2F5ED;/* Highlighted sections: Soft Pista */
+  --color-heading: #000000;          /* Main headings: Black */
+  --color-paragraph: #666666;        /* Paragraphs: Medium Grey */
+  --color-icons: #7B8052;            /* Icons: Olive Green */
+  --color-border: #E5E8E1;           /* Borders: #E5E8E1 */
+  --color-footer-bg: #465239;        /* Footer: Deep Olive */
 
   --font-heading: "Cormorant Garamond", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -43,15 +44,15 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--color-warm-cream);
-  color: var(--color-dark-charcoal);
+  background-color: var(--color-main-bg);
+  color: var(--color-heading);
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   margin: 0;
-  background-color: var(--color-warm-cream);
-  color: var(--color-dark-charcoal);
+  background-color: var(--color-main-bg);
+  color: var(--color-paragraph);
   font-family: var(--font-body);
   overflow-x: clip;
 }
@@ -150,7 +151,7 @@ section {
   scrollbar-width: none !important;  /* Firefox */
 }
 
-/* Free floating nav hover line with lime-olive accent */
+/* Free floating nav hover line with pista green accent */
 .hover-line {
   position: relative;
 }
@@ -161,7 +162,7 @@ section {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #9EA657;
+  background-color: #8FA36C;
   transition: width 0.25s ease-in-out;
   border-radius: 9999px;
 }

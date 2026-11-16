@@ -73,7 +73,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
-      <body className="min-h-screen bg-[#F5F0E6] text-[#29291F] antialiased font-sans flex flex-col selection:bg-[#7B8052] selection:text-white">
+      <body className="min-h-screen bg-white text-[#666666] antialiased font-sans flex flex-col selection:bg-[#7B8052] selection:text-white">
         <BookingModalProvider>
           <GlobalNavbar />
           <main className="flex-1 w-full">{children}</main>
