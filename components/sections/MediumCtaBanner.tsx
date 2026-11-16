@@ -154,8 +154,8 @@ export const MediumCtaBanner: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Google Maps & Location Card */}
-          <div className="lg:col-span-5 bg-[#FAF8F2] p-5 sm:p-6 rounded-[20px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-2.5">
+          {/* Right Column: Google Maps Location Pin Mask & Location Card */}
+          <div className="lg:col-span-5 bg-[#FAF8F2] p-5 sm:p-6 rounded-[20px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-3">
             <div>
               <span className="text-[9.5px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-2.5 py-0.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 CLINIC DETAILS
@@ -163,26 +163,48 @@ export const MediumCtaBanner: React.FC = () => {
               <h3 className="text-[17px] sm:text-[19px] font-serif font-bold text-[#29291F] mt-1">
                 Visit Dr. Preethi&apos;s Dentistry
               </h3>
-              <p className="text-[11px] text-[#29291F]/70 mt-0.5 leading-relaxed">
-                {clinicInfo.fullAddress}
-              </p>
             </div>
 
-            {/* Google Map Iframe with matching proportion and subtle border */}
-            <div className="rounded-[12px] overflow-hidden border border-[#A5A786]/35 aspect-[16/10] w-full shadow-subtle relative min-h-[140px]">
-              <iframe
-                title="Dr. Preethi's Dentistry Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9423697!3d11.0167232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859068037b587%3A0xd6fe6b1bcfd194c5!2sDr.Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            {/* Location Pin Shaped Interactive Map View */}
+            <div className="flex flex-col items-center justify-center my-auto py-1">
+              {/* Outer Pin container with subtle shadow & olive ring */}
+              <div className="relative filter drop-shadow-xl hover:scale-[1.02] transition-transform duration-300">
+                <div 
+                  className="w-[200px] h-[260px] sm:w-[220px] sm:h-[285px] relative overflow-hidden bg-white p-1"
+                  style={{
+                    clipPath: "path('M 110,0 C 170.75,0 220,49.25 220,110 C 220,165 140,240 110,285 C 80,240 0,165 0,110 C 0,49.25 49.25,0 110,0 Z')"
+                  }}
+                >
+                  <iframe
+                    title="Dr. Preethi's Dentistry Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9423697!3d11.0167232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859068037b587%3A0xd6fe6b1bcfd194c5!2sDr.Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                    className="w-full h-full border-0"
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                  {/* Subtle inner pin ring border overlay */}
+                  <div className="absolute inset-0 border-4 border-[#7B8052]/30 pointer-events-none rounded-[50%_50%_50%_50%_/_40%_40%_60%_60%]" />
+                </div>
+                {/* Pin Tip Ground Pulse Dot */}
+                <div className="w-6 h-1.5 bg-[#29291F]/20 rounded-full mx-auto blur-[1.5px] mt-1" />
+              </div>
+
+              {/* Text directly below the Location Pin */}
+              <div className="text-center mt-2.5 space-y-0.5">
+                <h4 className="text-[14px] font-serif font-bold text-[#29291F]">
+                  Dr. Preethi&apos;s Dentistry
+                </h4>
+                <p className="text-[11.5px] text-[#7B8052] font-semibold">
+                  Saibaba Colony, Coimbatore
+                </p>
+                <p className="text-[10px] text-[#29291F]/70 max-w-xs mx-auto leading-tight pt-0.5 font-light">
+                  Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road
+                </p>
+              </div>
             </div>
 
-            <div className="pt-1 flex items-center justify-between text-[10.5px] font-semibold text-[#7B8052]">
+            <div className="pt-2 border-t border-[#A5A786]/25 flex items-center justify-between text-[10.5px] font-semibold text-[#7B8052]">
               <a
                 href={`https://wa.me/${clinicInfo.whatsappNumber}`}
                 target="_blank"
@@ -195,9 +217,9 @@ export const MediumCtaBanner: React.FC = () => {
                 href={clinicInfo.googleMapsDirectionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1.5 text-[#29291F]"
+                className="hover:underline flex items-center gap-1.5 text-[#29291F] hover:text-[#7B8052]"
               >
-                <span>Google Maps Directions →</span>
+                <span>Open in Google Maps →</span>
               </a>
             </div>
           </div>
