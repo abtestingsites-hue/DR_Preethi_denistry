@@ -19,16 +19,16 @@ export const MediumCtaBanner: React.FC = () => {
   };
 
   return (
-    <section id="contact-section" className="bg-white text-[#666666]">
+    <section id="contact-section" className="bg-[#FAF8F2] text-[#29291F]">
       
       {/* Top Olive Ribbon Banner matching all other sections */}
-      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#465239]/40 relative z-10 shadow-sm">
+      <div className="bg-[#7B8052] text-white py-8 sm:py-10 px-4 sm:px-6 md:px-8 lg:px-10 border-y border-[#555B38]/30 relative z-10 shadow-sm">
         <div className="w-full flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#F2F5ED]/90 block">
+            <span className="text-[11px] sm:text-[12px] uppercase tracking-[0.1em] font-semibold text-[#FAF8F2]/90 block">
               COMPREHENSIVE CONSULTATION &amp; CARE
             </span>
-            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-white">
+            <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-[#FAF8F2]">
               WANT TO BEGIN YOUR SMILE JOURNEY?
             </h2>
           </div>
@@ -36,7 +36,7 @@ export const MediumCtaBanner: React.FC = () => {
           <div className="shrink-0 flex items-center gap-4">
             <a
               href={`tel:${clinicInfo.phoneRaw}`}
-              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-white text-black text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-[#F2F5ED] transition-all shadow-md group border border-[#E5E8E1]"
+              className="inline-flex items-center gap-2.5 px-6 h-[44px] rounded-full bg-[#FAF8F2] text-[#29291F] text-[13px] uppercase tracking-[0.08em] font-semibold hover:bg-white transition-all shadow-md group"
             >
               <Phone className="w-4 h-4 text-[#7B8052]" />
               <span>Call {clinicInfo.phoneDisplay}</span>
@@ -45,28 +45,28 @@ export const MediumCtaBanner: React.FC = () => {
         </div>
       </div>
 
-      {/* Form and Location Two-Column Card: Full screen bounds matching Navbar & Footer */}
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 py-10 sm:py-14">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch w-full">
+      {/* Form and Location Two-Column Card: Centered Container with Compact Scale */}
+      <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-stretch w-full">
           
           {/* Left Column: Interactive Consultation Contact Form */}
-          <div className="lg:col-span-7 bg-[#F2F5ED] p-5 sm:p-6 rounded-[20px] border border-[#E5E8E1] shadow-elevated flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-[#F5F0E6] p-5 sm:p-6 rounded-[20px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between">
             <div>
-              <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B8052] bg-white px-2.5 py-0.5 rounded-full inline-block border border-[#E5E8E1] shadow-sm">
+              <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-2.5 py-0.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 DIRECT INQUIRY
               </span>
-              <h3 className="text-[18px] sm:text-[21px] font-serif font-bold text-black mt-1.5">
+              <h3 className="text-[18px] sm:text-[21px] font-serif font-bold text-[#29291F] mt-1.5">
                 Send a Consultation Request
               </h3>
-              <p className="text-[11.5px] text-[#666666] mt-0.5 mb-3">
+              <p className="text-[11.5px] text-[#29291F]/70 mt-0.5 mb-3">
                 Our clinic team will confirm your consultation slot via call or WhatsApp.
               </p>
 
               {submitted ? (
-                <div className="p-5 rounded-2xl bg-white border border-[#7B8052] text-center space-y-2 animate-fade-in">
+                <div className="p-5 rounded-2xl bg-[#7B8052]/10 border border-[#7B8052] text-center space-y-2 animate-fade-in">
                   <CheckCircle className="w-9 h-9 text-[#7B8052] mx-auto" />
-                  <h4 className="text-base font-serif font-bold text-black">Thank You, {formData.name || "Patient"}!</h4>
-                  <p className="text-[11px] text-[#666666]">
+                  <h4 className="text-base font-serif font-bold text-[#29291F]">Thank You, {formData.name || "Patient"}!</h4>
+                  <p className="text-[11px] text-[#29291F]/80">
                     Your consultation request has been received. Our reception desk will contact you at {formData.phone || "your phone"} shortly.
                   </p>
                   <button
@@ -80,7 +80,7 @@ export const MediumCtaBanner: React.FC = () => {
                 <form onSubmit={handleSubmit} className="space-y-2.5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="text-[10px] uppercase font-bold tracking-wider text-black block mb-0.5">
+                      <label className="text-[10px] uppercase font-bold tracking-wider text-[#29291F] block mb-0.5">
                         Full Name *
                       </label>
                       <input
@@ -89,11 +89,11 @@ export const MediumCtaBanner: React.FC = () => {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Ramesh Kumar"
-                        className="w-full px-3 py-2 rounded-lg bg-white border border-[#E5E8E1] text-black text-xs placeholder:text-[#666666]/50 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
+                        className="w-full px-3 py-2 rounded-lg bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs placeholder:text-[#29291F]/40 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                       />
                     </div>
                     <div>
-                      <label className="text-[10px] uppercase font-bold tracking-wider text-black block mb-0.5">
+                      <label className="text-[10px] uppercase font-bold tracking-wider text-[#29291F] block mb-0.5">
                         Phone Number *
                       </label>
                       <input
@@ -102,19 +102,19 @@ export const MediumCtaBanner: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="e.g. +91 98765 43210"
-                        className="w-full px-3 py-2 rounded-lg bg-white border border-[#E5E8E1] text-black text-xs placeholder:text-[#666666]/50 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
+                        className="w-full px-3 py-2 rounded-lg bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs placeholder:text-[#29291F]/40 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="text-[10px] uppercase font-bold tracking-wider text-black block mb-0.5">
+                    <label className="text-[10px] uppercase font-bold tracking-wider text-[#29291F] block mb-0.5">
                       Treatment Interested In
                     </label>
                     <select
                       value={formData.treatment}
                       onChange={(e) => setFormData({ ...formData, treatment: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white border border-[#E5E8E1] text-black text-xs focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
+                      className="w-full px-3 py-2 rounded-lg bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                     >
                       <option>Invisalign &amp; Clear Aligners</option>
                       <option>GoClear Aligners</option>
@@ -128,7 +128,7 @@ export const MediumCtaBanner: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="text-[10px] uppercase font-bold tracking-wider text-black block mb-0.5">
+                    <label className="text-[10px] uppercase font-bold tracking-wider text-[#29291F] block mb-0.5">
                       Notes or Preferred Time
                     </label>
                     <textarea
@@ -136,14 +136,14 @@ export const MediumCtaBanner: React.FC = () => {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Any specific dental concerns or preferred timing..."
-                      className="w-full px-3 py-1.5 rounded-lg bg-white border border-[#E5E8E1] text-black text-xs placeholder:text-[#666666]/50 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
+                      className="w-full px-3 py-1.5 rounded-lg bg-[#FAF8F2] border border-[#A5A786]/40 text-[#29291F] text-xs placeholder:text-[#29291F]/40 focus:outline-none focus:border-[#7B8052] focus:ring-1 focus:ring-[#7B8052]/40 transition-all shadow-subtle"
                     />
                   </div>
 
                   <div className="pt-0.5">
                     <button
                       type="submit"
-                      className="w-full py-2.5 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#465239] transition-all shadow-md flex items-center justify-center gap-2 group"
+                      className="w-full py-2.5 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#686D42] transition-all shadow-md flex items-center justify-center gap-2 group"
                     >
                       <span>Request Appointment</span>
                       <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -155,21 +155,21 @@ export const MediumCtaBanner: React.FC = () => {
           </div>
 
           {/* Right Column: Google Maps & Location Card */}
-          <div className="lg:col-span-5 bg-[#F2F5ED] p-5 sm:p-6 rounded-[20px] border border-[#E5E8E1] shadow-elevated flex flex-col justify-between space-y-2.5">
+          <div className="lg:col-span-5 bg-[#FAF8F2] p-5 sm:p-6 rounded-[20px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between space-y-2.5">
             <div>
-              <span className="text-[9.5px] uppercase font-bold tracking-wider text-[#7B8052] bg-white px-2.5 py-0.5 rounded-full inline-block border border-[#E5E8E1] shadow-sm">
+              <span className="text-[9.5px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#F5F0E6] px-2.5 py-0.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 CLINIC DETAILS
               </span>
-              <h3 className="text-[17px] sm:text-[19px] font-serif font-bold text-black mt-1">
+              <h3 className="text-[17px] sm:text-[19px] font-serif font-bold text-[#29291F] mt-1">
                 Visit Dr. Preethi&apos;s Dentistry
               </h3>
-              <p className="text-[11px] text-[#666666] mt-0.5 leading-relaxed">
+              <p className="text-[11px] text-[#29291F]/70 mt-0.5 leading-relaxed">
                 {clinicInfo.fullAddress}
               </p>
             </div>
 
             {/* Google Map Iframe with matching proportion and subtle border */}
-            <div className="rounded-[12px] overflow-hidden border border-[#E5E8E1] aspect-[16/10] w-full shadow-subtle relative min-h-[140px]">
+            <div className="rounded-[12px] overflow-hidden border border-[#A5A786]/35 aspect-[16/10] w-full shadow-subtle relative min-h-[140px]">
               <iframe
                 title="Dr. Preethi's Dentistry Location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9423697!3d11.0167232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859068037b587%3A0xd6fe6b1bcfd194c5!2sDr.Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -195,7 +195,7 @@ export const MediumCtaBanner: React.FC = () => {
                 href={clinicInfo.googleMapsDirectionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1.5 text-black hover:text-[#7B8052]"
+                className="hover:underline flex items-center gap-1.5 text-[#29291F]"
               >
                 <span>Google Maps Directions →</span>
               </a>
