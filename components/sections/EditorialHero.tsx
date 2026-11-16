@@ -42,15 +42,6 @@ export const EditorialHero: React.FC = () => {
           isHovered ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-4 pointer-events-none"
         }`}>
           
-          {/* Eyebrow Label with Architectural Lines flanking DR. PREETHI'S DENTISTRY */}
-          <div className="flex items-center gap-3.5 mb-5">
-            <span className="w-10 sm:w-14 h-[2px] bg-[#8FA36C] shrink-0" />
-            <span className="text-[12px] sm:text-[13px] uppercase font-semibold tracking-[0.22em] text-[#FAF8F2] drop-shadow-sm font-sans">
-              DR. PREETHI&apos;S DENTISTRY
-            </span>
-            <span className="w-10 sm:w-14 h-[2px] bg-[#8FA36C] shrink-0" />
-          </div>
-
           {/* Main Heading: Reduced by ~8-10% (68px max desktop) with deliberate 2-line break */}
           <h1 className="text-[40px] sm:text-[50px] md:text-[60px] lg:text-[68px] font-serif font-bold text-white leading-[1.05] tracking-tight drop-shadow-md mb-5">
             <span className="block">Care Designed</span>
