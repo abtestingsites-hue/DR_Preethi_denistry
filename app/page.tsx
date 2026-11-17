@@ -45,9 +45,6 @@ export default function HomePage() {
       {/* 9. Doctor's Clinical Journal */}
       <HomeJournalSection />
 
-      {/* 10. Frequently Asked Questions */}
-      <HomeFaqSection />
-
       {/* 11. Consultation Request & Location Map */}
       <MediumCtaBanner />
     </div>

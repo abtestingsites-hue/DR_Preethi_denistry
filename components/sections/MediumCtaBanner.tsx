@@ -189,20 +189,20 @@ export const MediumCtaBanner: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Standalone Location Pin Mask Map (NO background card) */}
+          {/* Right Column: Standalone Location Pin Mask Map with Satellite View & Card Depth */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center p-2">
             
-            {/* Location Pin Shape containing the exact clinic location map */}
-            <div className="relative filter drop-shadow-2xl hover:scale-[1.02] transition-transform duration-300">
+            {/* Location Pin Shape containing Satellite Map */}
+            <div className="relative filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.18)] hover:scale-[1.02] transition-transform duration-300">
               <div 
-                className="w-[220px] h-[285px] sm:w-[240px] sm:h-[310px] relative overflow-hidden bg-white p-1 border-2 border-[#7B8052]/20"
+                className="w-[230px] h-[300px] sm:w-[250px] sm:h-[325px] relative overflow-hidden bg-white p-1 border-2 border-[#7B8052]/30"
                 style={{
-                  clipPath: "path('M 120,0 C 186.27,0 240,53.73 240,120 C 240,180 152.73,261.82 120,310 C 87.27,261.82 0,180 0,120 C 0,53.73 53.73,0 120,0 Z')"
+                  clipPath: "path('M 125,0 C 194,0 250,56 250,125 C 250,188 159,274 125,325 C 91,274 0,188 0,125 C 0,56 56,0 125,0 Z')"
                 }}
               >
                 <iframe
-                  title="Dr. Preethi's Dentistry Google Maps Pin Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9402281!3d11.019515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8596732572851%3A0xd96470fbd3a71db1!2sDr.%20Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  title="Dr. Preethi's Dentistry Google Maps Satellite Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9402281!3d11.019515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8596732572851%3A0xd96470fbd3a71db1!2sDr.%20Preethi&#39;s%20Dentistry!5e1!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   className="w-full h-full border-0"
                   allowFullScreen={false}
                   loading="lazy"
@@ -213,11 +213,11 @@ export const MediumCtaBanner: React.FC = () => {
               </div>
               
               {/* Pin Tip Ground Pulse Dot */}
-              <div className="w-8 h-2 bg-[#29291F]/25 rounded-full mx-auto blur-[1.5px] mt-1.5" />
+              <div className="w-10 h-2.5 bg-[#29291F]/30 rounded-full mx-auto blur-[2px] mt-2" />
             </div>
 
-            {/* Typography directly underneath the pin */}
-            <div className="text-center mt-3.5 space-y-1">
+            {/* Typography Card with Depth & Shadow matching contact form */}
+            <div className="w-full max-w-sm mt-5 bg-[#F5F0E6] p-5 rounded-[20px] border border-[#A5A786]/40 shadow-elevated text-center space-y-1.5">
               <h4 className="text-[17px] sm:text-[18px] font-serif font-bold text-[#29291F]">
                 Dr. Preethi&apos;s Dentistry
               </h4>
@@ -229,12 +229,12 @@ export const MediumCtaBanner: React.FC = () => {
               </p>
               
               {/* Actions below address */}
-              <div className="pt-2 flex items-center justify-center gap-4 text-[11px] font-semibold">
+              <div className="pt-2.5 border-t border-[#A5A786]/30 flex items-center justify-center gap-4 text-[11px] font-semibold">
                 <a
                   href={`https://wa.me/${clinicInfo.whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#7B8052] hover:underline"
+                  className="text-[#7B8052] hover:underline flex items-center gap-1"
                 >
                   WhatsApp Desk
                 </a>

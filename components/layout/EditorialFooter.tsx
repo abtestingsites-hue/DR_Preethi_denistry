@@ -88,7 +88,7 @@ export const EditorialFooter: React.FC = () => {
               <Link href="/#doctor" className="hover:text-white transition-colors">OUR DOCTOR</Link>
               <Link href="/#testimonials" className="hover:text-white transition-colors">REVIEWS</Link>
               <Link href="/#journal" className="hover:text-white transition-colors text-[#FAF8F2]/60">JOURNAL</Link>
-              <Link href="/#faq" className="hover:text-white transition-colors text-[#FAF8F2]/60">FAQ</Link>
+              <Link href="/faq" className="hover:text-white transition-colors text-[#FAF8F2]/90 font-bold">FAQ</Link>
               <Link href="/booking" className="hover:text-[#8FA36C] text-[#FAF8F2] transition-colors font-bold">APPOINTMENT</Link>
             </div>
           </div>
