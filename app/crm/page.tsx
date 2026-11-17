@@ -80,6 +80,26 @@ export default function DentalCRMPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [updatingId, setUpdatingId] = useState<string | null>(null);
   const [reminderStatus, setReminderStatus] = useState<string | null>(null);
+  const [currentUser, setCurrentUser] = useState<any>(null);
+
+  const checkAuth = async () => {
+    try {
+      const res = await fetch("/api/auth/me");
+      const data = await res.json();
+      if (data.authenticated) {
+        setCurrentUser(data.user);
+      } else {
+        window.location.href = "/login";
+      }
+    } catch {
+      window.location.href = "/login";
+    }
+  };
+
+  const handleLogout = async () => {
+    await fetch("/api/auth/me", { method: "POST" });
+    window.location.href = "/login";
+  };
 
   // New Patient Modal state
   const [isNewPatientOpen, setIsNewPatientOpen] = useState(false);
@@ -124,6 +144,7 @@ export default function DentalCRMPage() {
   };
 
   useEffect(() => {
+    checkAuth();
     fetchCRMData();
   }, []);
 
@@ -258,6 +279,12 @@ export default function DentalCRMPage() {
               title="Refresh CRM Data"
             >
               <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
+            </button>
+            <button
+              onClick={handleLogout}
+              className="px-3 py-1.5 rounded-lg border border-[#7B8052] bg-white/10 hover:bg-white/20 text-white text-xs font-semibold transition-colors"
+            >
+              Logout
             </button>
           </div>
         </div>
