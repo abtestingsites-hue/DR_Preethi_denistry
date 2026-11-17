@@ -1,0 +1,214 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  CLINIC_ADMIN
+  DENTIST
+  RECEPTIONIST
+}
+
+enum LeadSource {
+  WEBSITE
+  WHATSAPP
+  DIRECT
+  PHONE
+  INSTAGRAM
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  CONSULTATION_BOOKED
+  UNRESPONSIVE
+  ARCHIVED
+}
+
+enum AppointmentStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  RESCHEDULED
+  COMPLETED
+  NO_SHOW
+}
+
+enum CommChannel {
+  WHATSAPP
+  SMS
+  EMAIL
+  CALL
+}
+
+enum CommDirection {
+  INBOUND
+  OUTBOUND
+}
+
+enum CommStatus {
+  QUEUED
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+model Tenant {
+  id               String             @id @default(uuid())
+  slug             String             @unique
+  name             String
+  phone            String
+  email            String
+  address          String
+  city             String             @default("Coimbatore")
+  state            String             @default("Tamil Nadu")
+  country          String             @default("India")
+  settings         Json?              @default("{}")
+  createdAt        DateTime           @default(now()) @map("created_at")
+  updatedAt        DateTime           @updatedAt @map("updated_at")
+
+  users            User[]
+  leads            Lead[]
+  patients         Patient[]
+  appointments     Appointment[]
+  communicationLogs CommunicationLog[]
+  auditLogs        AuditLog[]
+
+  @@map("tenants")
+}
+
+model User {
+  id           String       @id @default(uuid())
+  tenantId     String       @map("tenant_id")
+  email        String
+  passwordHash String       @map("password_hash")
+  fullName     String       @map("full_name")
+  role         UserRole     @default(RECEPTIONIST)
+  isActive     Boolean      @default(true) @map("is_active")
+  createdAt    DateTime     @default(now()) @map("created_at")
+  updatedAt    DateTime     @updatedAt @map("updated_at")
+
+  tenant       Tenant       @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  assignedLeads Lead[]      @relation("AssignedLeads")
+  doctorAppointments Appointment[] @relation("DoctorAppointments")
+  auditLogs    AuditLog[]
+
+  @@unique([tenantId, email])
+  @@index([tenantId])
+  @@map("users")
+}
+
+model Lead {
+  id              String      @id @default(uuid())
+  tenantId        String      @map("tenant_id")
+  fullName        String      @map("full_name")
+  phoneNumber     String      @map("phone_number")
+  email           String?
+  treatmentSlug   String      @map("treatment_slug")
+  source          LeadSource  @default(WEBSITE)
+  status          LeadStatus  @default(NEW)
+  assignedToUserId String?    @map("assigned_to_user_id")
+  notes           String?
+  metadata        Json?       @default("{}")
+  createdAt       DateTime    @default(now()) @map("created_at")
+  updatedAt       DateTime    @updatedAt @map("updated_at")
+
+  tenant          Tenant      @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  assignedToUser  User?       @relation("AssignedLeads", fields: [assignedToUserId], references: [id], onDelete: SetNull)
+  convertedPatient Patient?   @relation("LeadToPatient")
+
+  @@index([tenantId, status])
+  @@index([tenantId, phoneNumber])
+  @@map("leads")
+}
+
+model Patient {
+  id                 String        @id @default(uuid())
+  tenantId           String        @map("tenant_id")
+  leadId             String?       @unique @map("lead_id")
+  medicalRecordNumber String       @unique @map("medical_record_number")
+  fullName           String        @map("full_name")
+  phoneNumber        String        @map("phone_number")
+  email              String?
+  dateOfBirth        DateTime?     @map("date_of_birth")
+  medicalHistory     String?       @map("medical_history")
+  createdAt          DateTime      @default(now()) @map("created_at")
+  updatedAt          DateTime      @updatedAt @map("updated_at")
+
+  tenant             Tenant        @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  lead               Lead?         @relation("LeadToPatient", fields: [leadId], references: [id], onDelete: SetNull)
+  appointments       Appointment[]
+
+  @@index([tenantId, phoneNumber])
+  @@map("patients")
+}
+
+model Appointment {
+  id                 String            @id @default(uuid())
+  tenantId           String            @map("tenant_id")
+  patientId          String            @map("patient_id")
+  dentistId          String?           @map("dentist_id")
+  treatmentType      String            @map("treatment_type")
+  scheduledStart     DateTime          @map("scheduled_start")
+  scheduledEnd       DateTime          @map("scheduled_end")
+  status             AppointmentStatus @default(PENDING)
+  notes              String?
+  cancellationReason String?           @map("cancellation_reason")
+  createdAt          DateTime          @default(now()) @map("created_at")
+  updatedAt          DateTime          @updatedAt @map("updated_at")
+
+  tenant             Tenant            @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  patient            Patient           @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  dentist            User?             @relation("DoctorAppointments", fields: [dentistId], references: [id], onDelete: SetNull)
+  communicationLogs  CommunicationLog[]
+
+  @@index([tenantId, scheduledStart])
+  @@index([tenantId, status])
+  @@map("appointments")
+}
+
+model CommunicationLog {
+  id             String        @id @default(uuid())
+  tenantId       String        @map("tenant_id")
+  appointmentId  String?       @map("appointment_id")
+  recipientPhone String        @map("recipient_phone")
+  channel        CommChannel   @default(WHATSAPP)
+  direction      CommDirection @default(OUTBOUND)
+  templateName   String?       @map("template_name")
+  messageBody    String        @map("message_body")
+  status         CommStatus    @default(QUEUED)
+  metadata       Json?         @default("{}")
+  createdAt      DateTime      @default(now()) @map("created_at")
+
+  tenant         Tenant        @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  appointment    Appointment?  @relation(fields: [appointmentId], references: [id], onDelete: SetNull)
+
+  @@index([tenantId, recipientPhone])
+  @@map("communication_logs")
+}
+
+model AuditLog {
+  id         String   @id @default(uuid())
+  tenantId   String   @map("tenant_id")
+  userId     String?  @map("user_id")
+  action     String
+  entityType String   @map("entity_type")
+  entityId   String   @map("entity_id")
+  changes    Json?    @default("{}")
+  ipAddress  String?  @map("ip_address")
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  tenant     Tenant   @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([tenantId, entityType, entityId])
+  @@index([tenantId, createdAt])
+  @@map("audit_logs")
+}
