@@ -67,9 +67,9 @@ export default function DentalCRMPage() {
     setLoading(true);
     try {
       const [statsRes, leadsRes, apptsRes] = await Promise.all([
-        fetch("/api/crm/stats"),
-        fetch("/api/crm/leads"),
-        fetch("/api/crm/appointments"),
+        fetch("/api/crm/stats", { cache: "no-store" }),
+        fetch("/api/crm/leads", { cache: "no-store" }),
+        fetch("/api/crm/appointments", { cache: "no-store" }),
       ]);
 
       const statsData = await statsRes.json();
@@ -80,8 +80,12 @@ export default function DentalCRMPage() {
         setStats(statsData.stats);
         setAuditLogs(statsData.auditLogs || []);
       }
-      if (leadsData.success) setLeads(leadsData.leads);
-      if (apptsData.success) setAppointments(apptsData.appointments);
+      if (leadsData.success && Array.isArray(leadsData.leads)) {
+        setLeads(leadsData.leads);
+      }
+      if (apptsData.success && Array.isArray(apptsData.appointments)) {
+        setAppointments(apptsData.appointments);
+      }
     } catch (err) {
       console.error("Error fetching CRM records:", err);
     } finally {
