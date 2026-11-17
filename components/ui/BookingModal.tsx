@@ -21,6 +21,8 @@ export const BookingModal: React.FC = () => {
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [serverError, setServerError] = useState("");
 
   useEffect(() => {
     if (preselectedTreatment) {
@@ -75,27 +77,71 @@ export const BookingModal: React.FC = () => {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!validate()) {
       return;
     }
 
-    setIsSubmitted(true);
+    setSubmitting(true);
+    setServerError("");
 
-    const waUrl = buildWhatsAppBookingUrl({
-      name: formData.name,
-      mobile: formData.mobile,
-      treatment: formData.treatment,
-      preferredDate: formData.preferredDate,
-      preferredTime: formData.preferredTime,
-      message: formData.message,
-    });
+    try {
+      // 1. Ingest Appointment Request into Postgres Database
+      const res = await fetch("/api/appointments", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.name,
+          phoneNumber: formData.mobile,
+          treatmentType: formData.treatment,
+          preferredDate: formData.preferredDate,
+          preferredTimeSlot: formData.preferredTime.includes("Morning")
+            ? "10:30"
+            : formData.preferredTime.includes("Afternoon")
+            ? "15:00"
+            : "18:00",
+          notes: formData.message || undefined,
+        }),
+      });
 
-    setTimeout(() => {
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to submit booking.");
+      }
+
+      setIsSubmitted(true);
+
+      // 2. Open WhatsApp Confirmation with clinic reception
+      const waUrl = buildWhatsAppBookingUrl({
+        name: formData.name,
+        mobile: formData.mobile,
+        treatment: formData.treatment,
+        preferredDate: formData.preferredDate,
+        preferredTime: formData.preferredTime,
+        message: formData.message,
+      });
+
+      setTimeout(() => {
+        window.open(waUrl, "_blank", "noopener,noreferrer");
+      }, 700);
+    } catch (err: any) {
+      setServerError(err.message || "Could not log appointment. Direct WhatsApp transmission available.");
+      // Fallback still allows direct WhatsApp connection
+      const waUrl = buildWhatsAppBookingUrl({
+        name: formData.name,
+        mobile: formData.mobile,
+        treatment: formData.treatment,
+        preferredDate: formData.preferredDate,
+        preferredTime: formData.preferredTime,
+        message: formData.message,
+      });
       window.open(waUrl, "_blank", "noopener,noreferrer");
-    }, 700);
+      setIsSubmitted(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -267,13 +313,20 @@ export const BookingModal: React.FC = () => {
                   />
                 </div>
 
+                {serverError && (
+                  <div className="p-2 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 text-[10px]">
+                    {serverError}
+                  </div>
+                )}
+
                 <div className="pt-1">
                   <button
                     type="submit"
-                    className="w-full py-2.5 rounded-full bg-[#7B8052] hover:bg-[#465239] text-white font-semibold text-xs uppercase tracking-[0.08em] transition-all shadow-md flex items-center justify-center gap-2 group"
+                    disabled={submitting}
+                    className="w-full py-2.5 rounded-full bg-[#7B8052] hover:bg-[#465239] disabled:opacity-60 text-white font-semibold text-xs uppercase tracking-[0.08em] transition-all shadow-md flex items-center justify-center gap-2 group"
                   >
-                    <span>Request Appointment via WhatsApp</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    <span>{submitting ? "Booking Appointment..." : "Request Appointment via WhatsApp"}</span>
+                    {!submitting && <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />}
                   </button>
                 </div>
               </form>

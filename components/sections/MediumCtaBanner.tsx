@@ -6,6 +6,8 @@ import { clinicInfo } from "@/data/clinicInfo";
 
 export const MediumCtaBanner: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -13,9 +15,35 @@ export const MediumCtaBanner: React.FC = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formData.name,
+          phoneNumber: formData.phone,
+          treatmentSlug: formData.treatment,
+          notes: formData.message,
+          source: "WEBSITE",
+        }),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || "Failed to submit request.");
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setErrorMessage(err.message || "An unexpected error occurred. Please call the clinic directly.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -140,13 +168,20 @@ export const MediumCtaBanner: React.FC = () => {
                     />
                   </div>
 
+                  {errorMessage && (
+                    <div className="p-2.5 rounded-lg bg-red-50 border border-red-200 text-red-600 text-[11px]">
+                      {errorMessage}
+                    </div>
+                  )}
+
                   <div className="pt-0.5">
                     <button
                       type="submit"
-                      className="w-full py-2.5 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#686D42] transition-all shadow-md flex items-center justify-center gap-2 group"
+                      disabled={submitting}
+                      className="w-full py-2.5 rounded-full bg-[#7B8052] text-white font-semibold text-xs uppercase tracking-[0.08em] hover:bg-[#686D42] disabled:opacity-60 transition-all shadow-md flex items-center justify-center gap-2 group"
                     >
-                      <span>Request Appointment</span>
-                      <span className="transition-transform group-hover:translate-x-1">→</span>
+                      <span>{submitting ? "Submitting Request..." : "Request Appointment"}</span>
+                      {!submitting && <span className="transition-transform group-hover:translate-x-1">→</span>}
                     </button>
                   </div>
                 </form>
