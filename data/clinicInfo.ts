@@ -54,8 +54,8 @@ export const clinicInfo: ClinicContactInfo = {
   whatsappNumber: "917812871829",
   whatsappDisplay: "+91 78128 71829",
   instagramUrl: "https://www.instagram.com/dr_preethi_subramanian/",
-  googleMapsDirectionsUrl: "https://www.google.com/maps/search/?api=1&query=Saro+Enclave+7th+Cross+Bharathi+Park+Road+Saibaba+Colony+Coimbatore+641043",
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.838339178082!2d76.9388307!3d11.0232454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85888e2c079db%3A0xb36b5ec63259ce36!2sSaibaba%20Colony%2C%20Coimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
+  googleMapsDirectionsUrl: "https://maps.app.goo.gl/UCy9MqjMcKPTzWp69",
+  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.291753303649!2d76.9402281!3d11.019515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8596732572851%3A0xd96470fbd3a71db1!2sDr.%20Preethi&#39;s%20Dentistry!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin",
   openingHours: [
     { day: "Monday – Saturday", hours: "10:00 AM – 08:00 PM" },
     { day: "Sunday", hours: "By Prior Appointment Only", isClosed: false },

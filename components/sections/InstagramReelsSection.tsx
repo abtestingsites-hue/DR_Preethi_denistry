@@ -14,46 +14,59 @@ interface ReelItem {
 }
 
 export const InstagramReelsSection: React.FC = () => {
-  const [isMuted, setIsMuted] = useState(true);
+  // Individual mute state per reel
+  const [mutedStates, setMutedStates] = useState<Record<string, boolean>>({
+    "reel-1": true,
+    "reel-2": true,
+    "reel-3": true,
+    "reel-4": true,
+  });
 
   const reels: ReelItem[] = [
     {
       id: "reel-1",
-      videoUrl: "/videos/teeth-scan.mp4",
-      title: "Invisalign 3D Digital Scan vs Traditional Impressions",
-      thumbnail: "/treatments/invisalign.jpg",
+      videoUrl: "/videos/video_2026-11-17_11-10-18.mp4",
+      title: "Invisalign® Clear Aligners Staging & Patient Care",
+      thumbnail: "/Doctor.png",
       category: "Invisalign",
     },
     {
       id: "reel-2",
-      videoUrl: "/videos/teeth-hero.mp4",
-      title: "Creating Confident Smiles with Modern Orthodontics",
+      videoUrl: "/videos/video_2026-11-17_11-09-54.mp4",
+      title: "Creating Confident Smiles with Precision Orthodontics",
       thumbnail: "/treatments/orthodontics.jpg",
       category: "Smile Care",
     },
     {
       id: "reel-3",
-      videoUrl: "/videos/Teeth.mp4",
-      title: "Inside our Saibaba Colony Sterilisation Bay",
-      thumbnail: "/Clinic2.png",
+      videoUrl: "/videos/video_2026-11-17_11-10-04.mp4",
+      title: "Inside Dr. Preethi's Dentistry Clinic Experience",
+      thumbnail: "/Clinic.png",
       category: "Clinic Tour",
     },
     {
       id: "reel-4",
-      videoUrl: "/videos/teeth-scan.mp4",
-      title: "How Clear Aligners Gently Shift Misaligned Teeth",
-      thumbnail: "/treatments/dental-implants.jpg",
-      category: "Education",
+      videoUrl: "/videos/video_2026-11-17_11-10-11.mp4",
+      title: "Gentle Aesthetic Dental Care & Digital Diagnostics",
+      thumbnail: "/Clinic2.png",
+      category: "Specialist Care",
     },
   ];
 
-  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const videoRefs = useRef<Record<string, HTMLVideoElement | null>>({});
 
-  const toggleMute = () => {
-    const nextMute = !isMuted;
-    setIsMuted(nextMute);
-    videoRefs.current.forEach((v) => {
-      if (v) v.muted = nextMute;
+  const toggleMute = (reelId: string) => {
+    setMutedStates((prev) => {
+      const isCurrentlyMuted = prev[reelId] ?? true;
+      const nextMuted = !isCurrentlyMuted;
+      const videoEl = videoRefs.current[reelId];
+      if (videoEl) {
+        videoEl.muted = nextMuted;
+      }
+      return {
+        ...prev,
+        [reelId]: nextMuted,
+      };
     });
   };
 
@@ -114,13 +127,13 @@ export const InstagramReelsSection: React.FC = () => {
               {/* Autoplay Video Loop */}
               <video
                 ref={(el) => {
-                  videoRefs.current[index] = el;
+                  videoRefs.current[reel.id] = el;
                 }}
                 src={reel.videoUrl}
                 poster={reel.thumbnail}
                 autoPlay
                 loop
-                muted={isMuted}
+                muted={mutedStates[reel.id] ?? true}
                 playsInline
                 className="w-full h-full object-cover"
               />
@@ -144,11 +157,11 @@ export const InstagramReelsSection: React.FC = () => {
 
                 <div className="flex items-center justify-between pt-1 text-[11px] text-white/80 border-t border-white/20">
                   <button
-                    onClick={toggleMute}
+                    onClick={() => toggleMute(reel.id)}
                     className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm transition-colors text-[11px] font-medium"
-                    aria-label="Toggle mute"
+                    aria-label={`Toggle mute for ${reel.title}`}
                   >
-                    {isMuted ? (
+                    {(mutedStates[reel.id] ?? true) ? (
                       <>
                         <VolumeX className="w-3.5 h-3.5" />
                         <span>Unmute</span>
