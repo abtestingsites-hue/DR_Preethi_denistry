@@ -75,10 +75,10 @@ export const MediumCtaBanner: React.FC = () => {
 
       {/* Form and Location Two-Column Container */}
       <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch w-full">
           
           {/* Left Column: Interactive Consultation Contact Form */}
-          <div className="lg:col-span-7 bg-[#F5F0E6] p-5 sm:p-6 rounded-[20px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between">
+          <div className="lg:col-span-7 bg-[#F5F0E6] p-5 sm:p-6 rounded-[20px] border border-[#A5A786]/40 shadow-elevated flex flex-col justify-between h-full">
             <div>
               <span className="text-[10px] uppercase font-bold tracking-wider text-[#7B8052] bg-[#FAF8F2] px-2.5 py-0.5 rounded-full inline-block border border-[#A5A786]/35 shadow-sm">
                 DIRECT INQUIRY
@@ -190,14 +190,14 @@ export const MediumCtaBanner: React.FC = () => {
           </div>
 
           {/* Right Column: Standalone Location Pin Mask Map with Satellite View & Card Depth */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center p-2">
+          <div className="lg:col-span-5 flex flex-col justify-between items-center h-full space-y-4">
             
             {/* Location Pin Shape containing Satellite Map */}
-            <div className="relative filter drop-shadow-[0_20px_25px_rgba(0,0,0,0.18)] hover:scale-[1.02] transition-transform duration-300">
+            <div className="relative filter drop-shadow-[0_15px_20px_rgba(0,0,0,0.16)] hover:scale-[1.02] transition-transform duration-300 flex-1 flex flex-col items-center justify-center">
               <div 
-                className="w-[230px] h-[300px] sm:w-[250px] sm:h-[325px] relative overflow-hidden bg-white p-1 border-2 border-[#7B8052]/30"
+                className="w-[200px] h-[260px] sm:w-[215px] sm:h-[280px] relative overflow-hidden bg-white p-1 border-2 border-[#7B8052]/30"
                 style={{
-                  clipPath: "path('M 125,0 C 194,0 250,56 250,125 C 250,188 159,274 125,325 C 91,274 0,188 0,125 C 0,56 56,0 125,0 Z')"
+                  clipPath: "path('M 107.5,0 C 166.8,0 215,48.2 215,107.5 C 215,161.8 136.7,236.2 107.5,280 C 78.3,236.2 0,161.8 0,107.5 C 0,48.2 48.2,0 107.5,0 Z')"
                 }}
               >
                 <iframe
@@ -213,23 +213,23 @@ export const MediumCtaBanner: React.FC = () => {
               </div>
               
               {/* Pin Tip Ground Pulse Dot */}
-              <div className="w-10 h-2.5 bg-[#29291F]/30 rounded-full mx-auto blur-[2px] mt-2" />
+              <div className="w-8 h-2 bg-[#29291F]/25 rounded-full mx-auto blur-[1.5px] mt-1.5" />
             </div>
 
-            {/* Typography Card with Depth & Shadow matching contact form */}
-            <div className="w-full max-w-sm mt-5 bg-[#F5F0E6] p-5 rounded-[20px] border border-[#A5A786]/40 shadow-elevated text-center space-y-1.5">
-              <h4 className="text-[17px] sm:text-[18px] font-serif font-bold text-[#29291F]">
+            {/* Typography Card with Depth & Shadow matching contact form height balance */}
+            <div className="w-full bg-[#F5F0E6] p-4 sm:p-4.5 rounded-[20px] border border-[#A5A786]/40 shadow-elevated text-center space-y-1">
+              <h4 className="text-[16px] sm:text-[17px] font-serif font-bold text-[#29291F]">
                 Dr. Preethi&apos;s Dentistry
               </h4>
-              <p className="text-[12.5px] text-[#7B8052] font-semibold">
+              <p className="text-[12px] text-[#7B8052] font-semibold">
                 Saibaba Colony, Coimbatore
               </p>
-              <p className="text-[11px] text-[#29291F]/70 max-w-xs mx-auto leading-relaxed font-light">
+              <p className="text-[10.5px] text-[#29291F]/70 max-w-xs mx-auto leading-relaxed font-light">
                 Second Floor, Saro Enclave, 7th Cross, Bharathi Park Road
               </p>
               
               {/* Actions below address */}
-              <div className="pt-2.5 border-t border-[#A5A786]/30 flex items-center justify-center gap-4 text-[11px] font-semibold">
+              <div className="pt-2 border-t border-[#A5A786]/30 flex items-center justify-center gap-4 text-[10.5px] font-semibold">
                 <a
                   href={`https://wa.me/${clinicInfo.whatsappNumber}`}
                   target="_blank"

@@ -56,7 +56,7 @@ export const GoClearAlignersSection: React.FC = () => {
             </div>
 
             <h2 className="text-[22px] sm:text-[26px] md:text-[30px] font-serif font-bold uppercase tracking-wide text-white">
-              GOCLEAR CLEAR ALIGNERS
+              CLEAR ALIGNERS
             </h2>
           </div>
 

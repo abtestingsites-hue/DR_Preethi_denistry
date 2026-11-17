@@ -46,9 +46,6 @@ export const ServicesGallerySection: React.FC = () => {
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 pt-8 pb-3">
         <div className="p-4 sm:p-5 rounded-2xl bg-[#F2F5ED] border border-[#E5E8E1] shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#7B8052] text-white flex items-center justify-center shrink-0 shadow-sm">
-              <span className="text-base font-bold">✨</span>
-            </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="px-2.5 py-0.5 rounded bg-[#7B8052]/15 text-[11px] font-extrabold uppercase tracking-widest text-[#7B8052]">
