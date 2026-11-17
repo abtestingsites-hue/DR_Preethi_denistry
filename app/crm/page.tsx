@@ -9,12 +9,15 @@ import {
   Clock,
   Phone,
   MessageSquare,
-  ShieldAlert,
   Search,
-  Filter,
   RefreshCw,
-  ChevronRight,
   TrendingUp,
+  FolderOpen,
+  Send,
+  PieChart,
+  BarChart3,
+  UserPlus,
+  X,
 } from "lucide-react";
 
 interface Lead {
@@ -40,9 +43,21 @@ interface Appointment {
     phoneNumber: string;
     medicalRecordNumber: string;
   };
-  dentist?: {
-    fullName: string;
-  } | null;
+}
+
+interface Patient {
+  id: string;
+  fullName: string;
+  phoneNumber: string;
+  medicalRecordNumber: string;
+  medicalHistory: string | null;
+  createdAt: string;
+  appointments: {
+    id: string;
+    treatmentType: string;
+    scheduledStart: string;
+    status: string;
+  }[];
 }
 
 interface CRMStats {
@@ -54,38 +69,53 @@ interface CRMStats {
 }
 
 export default function DentalCRMPage() {
-  const [activeTab, setActiveTab] = useState<"leads" | "appointments" | "audit">("leads");
+  const [activeTab, setActiveTab] = useState<"leads" | "appointments" | "patients" | "analytics" | "audit">("leads");
   const [stats, setStats] = useState<CRMStats | null>(null);
   const [leads, setLeads] = useState<Lead[]>([]);
   const [appointments, setAppointments] = useState<Appointment[]>([]);
+  const [patients, setPatients] = useState<Patient[]>([]);
+  const [analytics, setAnalytics] = useState<any>(null);
   const [auditLogs, setAuditLogs] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [updatingId, setUpdatingId] = useState<string | null>(null);
+  const [reminderStatus, setReminderStatus] = useState<string | null>(null);
+
+  // New Patient Modal state
+  const [isNewPatientOpen, setIsNewPatientOpen] = useState(false);
+  const [newPatientData, setNewPatientData] = useState({
+    fullName: "",
+    phoneNumber: "",
+    medicalHistory: "",
+  });
 
   const fetchCRMData = async () => {
     setLoading(true);
     try {
-      const [statsRes, leadsRes, apptsRes] = await Promise.all([
+      const [statsRes, leadsRes, apptsRes, patientsRes, analyticsRes] = await Promise.all([
         fetch("/api/crm/stats", { cache: "no-store" }),
         fetch("/api/crm/leads", { cache: "no-store" }),
         fetch("/api/crm/appointments", { cache: "no-store" }),
+        fetch("/api/crm/patients", { cache: "no-store" }),
+        fetch("/api/crm/analytics", { cache: "no-store" }),
       ]);
 
-      const statsData = await statsRes.json();
-      const leadsData = await leadsRes.json();
-      const apptsData = await apptsRes.json();
+      const [statsData, leadsData, apptsData, patientsData, analyticsData] = await Promise.all([
+        statsRes.json(),
+        leadsRes.json(),
+        apptsRes.json(),
+        patientsRes.json(),
+        analyticsRes.json(),
+      ]);
 
       if (statsData.success) {
         setStats(statsData.stats);
         setAuditLogs(statsData.auditLogs || []);
       }
-      if (leadsData.success && Array.isArray(leadsData.leads)) {
-        setLeads(leadsData.leads);
-      }
-      if (apptsData.success && Array.isArray(apptsData.appointments)) {
-        setAppointments(apptsData.appointments);
-      }
+      if (leadsData.success && Array.isArray(leadsData.leads)) setLeads(leadsData.leads);
+      if (apptsData.success && Array.isArray(apptsData.appointments)) setAppointments(apptsData.appointments);
+      if (patientsData.success && Array.isArray(patientsData.patients)) setPatients(patientsData.patients);
+      if (analyticsData.success) setAnalytics(analyticsData.analytics);
     } catch (err) {
       console.error("Error fetching CRM records:", err);
     } finally {
@@ -96,6 +126,38 @@ export default function DentalCRMPage() {
   useEffect(() => {
     fetchCRMData();
   }, []);
+
+  const triggerAutomatedReminders = async () => {
+    setReminderStatus("Dispatching reminders...");
+    try {
+      const res = await fetch("/api/crm/reminders", { method: "POST" });
+      const data = await res.json();
+      setReminderStatus(data.message || "Reminders dispatched.");
+      setTimeout(() => setReminderStatus(null), 5000);
+      fetchCRMData();
+    } catch (err) {
+      setReminderStatus("Failed to dispatch reminders.");
+    }
+  };
+
+  const handleCreatePatient = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/crm/patients", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newPatientData),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIsNewPatientOpen(false);
+        setNewPatientData({ fullName: "", phoneNumber: "", medicalHistory: "" });
+        fetchCRMData();
+      }
+    } catch (err) {
+      console.error("Failed to add patient:", err);
+    }
+  };
 
   const updateLeadStatus = async (leadId: string, newStatus: string) => {
     setUpdatingId(leadId);
@@ -151,6 +213,13 @@ export default function DentalCRMPage() {
       a.treatmentType.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const filteredPatients = patients.filter(
+    (p) =>
+      p.fullName.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.phoneNumber.includes(searchQuery) ||
+      p.medicalRecordNumber.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen bg-[#F8F9F6] text-[#29291F]">
       {/* Top Navigation Bar */}
@@ -171,6 +240,13 @@ export default function DentalCRMPage() {
           </div>
 
           <div className="flex items-center gap-3">
+            <button
+              onClick={triggerAutomatedReminders}
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#7B8052] hover:bg-[#5E623A] text-white shadow-sm transition-colors"
+            >
+              <Send className="w-3.5 h-3.5" />
+              <span>Send 24h Reminders</span>
+            </button>
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium bg-[#7B8052]/40 text-[#FAF8F2] border border-[#7B8052]">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               Saibaba Colony Flagship
@@ -186,6 +262,13 @@ export default function DentalCRMPage() {
           </div>
         </div>
       </header>
+
+      {/* Reminder Notification Banner */}
+      {reminderStatus && (
+        <div className="bg-emerald-600 text-white text-xs font-semibold text-center py-2 px-4 shadow-sm animate-fade-in">
+          {reminderStatus}
+        </div>
+      )}
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
@@ -231,14 +314,14 @@ export default function DentalCRMPage() {
                 Active Patients
               </p>
               <h3 className="text-2xl font-serif font-bold text-[#29291F] mt-1">
-                {stats?.totalPatients ?? "--"}
+                {patients.length}
               </h3>
               <p className="text-[10px] text-emerald-600 font-semibold mt-0.5">
-                All records isolated
+                Medical Records Tracked
               </p>
             </div>
             <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center">
-              <TrendingUp className="w-5 h-5" />
+              <FolderOpen className="w-5 h-5" />
             </div>
           </div>
 
@@ -261,8 +344,8 @@ export default function DentalCRMPage() {
         </section>
 
         {/* Tab & Search Bar */}
-        <div className="bg-white p-4 rounded-2xl border border-[#E5E8E1] shadow-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 w-full sm:w-auto">
+        <div className="bg-white p-4 rounded-2xl border border-[#E5E8E1] shadow-subtle flex flex-col lg:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center gap-2 w-full lg:w-auto">
             <button
               onClick={() => setActiveTab("leads")}
               className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
@@ -271,7 +354,7 @@ export default function DentalCRMPage() {
                   : "bg-[#F8F9F6] text-[#666666] hover:bg-[#E5E8E1]"
               }`}
             >
-              Consultation Leads ({leads.length})
+              Leads ({leads.length})
             </button>
             <button
               onClick={() => setActiveTab("appointments")}
@@ -282,6 +365,26 @@ export default function DentalCRMPage() {
               }`}
             >
               Appointments ({appointments.length})
+            </button>
+            <button
+              onClick={() => setActiveTab("patients")}
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+                activeTab === "patients"
+                  ? "bg-[#7B8052] text-white shadow-sm"
+                  : "bg-[#F8F9F6] text-[#666666] hover:bg-[#E5E8E1]"
+              }`}
+            >
+              Patient Directory ({patients.length})
+            </button>
+            <button
+              onClick={() => setActiveTab("analytics")}
+              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+                activeTab === "analytics"
+                  ? "bg-[#7B8052] text-white shadow-sm"
+                  : "bg-[#F8F9F6] text-[#666666] hover:bg-[#E5E8E1]"
+              }`}
+            >
+              BI Analytics
             </button>
             <button
               onClick={() => setActiveTab("audit")}
@@ -295,19 +398,30 @@ export default function DentalCRMPage() {
             </button>
           </div>
 
-          <div className="relative w-full sm:w-72">
-            <Search className="w-4 h-4 text-gray-400 absolute left-3 top-2.5" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by name or phone..."
-              className="w-full pl-9 pr-3 py-1.5 rounded-xl bg-[#F8F9F6] border border-[#E5E8E1] text-xs text-[#29291F] focus:outline-none focus:border-[#7B8052]"
-            />
+          <div className="flex items-center gap-3 w-full lg:w-auto">
+            {activeTab === "patients" && (
+              <button
+                onClick={() => setIsNewPatientOpen(true)}
+                className="px-3 py-1.5 rounded-xl bg-[#7B8052] hover:bg-[#5E623A] text-white text-xs font-semibold flex items-center gap-1.5 transition-colors shrink-0"
+              >
+                <UserPlus className="w-3.5 h-3.5" />
+                <span>Add Patient</span>
+              </button>
+            )}
+            <div className="relative w-full sm:w-72">
+              <Search className="w-4 h-4 text-gray-400 absolute left-3 top-2.5" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search..."
+                className="w-full pl-9 pr-3 py-1.5 rounded-xl bg-[#F8F9F6] border border-[#E5E8E1] text-xs text-[#29291F] focus:outline-none focus:border-[#7B8052]"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Tab Content: Leads Triage Pipeline */}
+        {/* Tab 1: Leads Triage Pipeline */}
         {activeTab === "leads" && (
           <div className="bg-white rounded-2xl border border-[#E5E8E1] shadow-subtle overflow-hidden">
             <div className="p-4 border-b border-[#E5E8E1] bg-[#F8F9F6] flex items-center justify-between">
@@ -380,7 +494,6 @@ export default function DentalCRMPage() {
                       </p>
                     </div>
 
-                    {/* Action Buttons */}
                     <div className="flex items-center gap-2 shrink-0">
                       <a
                         href={`https://wa.me/${lead.phoneNumber.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
@@ -415,7 +528,7 @@ export default function DentalCRMPage() {
           </div>
         )}
 
-        {/* Tab Content: Appointments Manager */}
+        {/* Tab 2: Appointments Manager */}
         {activeTab === "appointments" && (
           <div className="bg-white rounded-2xl border border-[#E5E8E1] shadow-subtle overflow-hidden">
             <div className="p-4 border-b border-[#E5E8E1] bg-[#F8F9F6] flex items-center justify-between">
@@ -501,7 +614,132 @@ export default function DentalCRMPage() {
           </div>
         )}
 
-        {/* Tab Content: Compliance & Audit Trail */}
+        {/* Tab 3: Patient Directory */}
+        {activeTab === "patients" && (
+          <div className="bg-white rounded-2xl border border-[#E5E8E1] shadow-subtle overflow-hidden">
+            <div className="p-4 border-b border-[#E5E8E1] bg-[#F8F9F6] flex items-center justify-between">
+              <h2 className="text-sm font-serif font-bold text-[#29291F]">
+                Clinical Patient Directory & Medical History
+              </h2>
+              <span className="text-[11px] text-[#666666]">
+                Permanent MRN records
+              </span>
+            </div>
+
+            {loading ? (
+              <div className="p-12 text-center text-xs text-[#666666]">
+                Loading patients...
+              </div>
+            ) : filteredPatients.length === 0 ? (
+              <div className="p-12 text-center text-xs text-[#666666]">
+                No patients found. Add one above.
+              </div>
+            ) : (
+              <div className="divide-y divide-[#E5E8E1]">
+                {filteredPatients.map((p) => (
+                  <div key={p.id} className="p-4 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 hover:bg-[#FAF9F5]">
+                    <div className="space-y-1">
+                      <div className="flex items-center gap-2">
+                        <h3 className="text-sm font-serif font-bold text-[#29291F]">
+                          {p.fullName}
+                        </h3>
+                        <span className="font-mono text-[10px] bg-[#7B8052]/10 text-[#7B8052] font-semibold px-2 py-0.5 rounded">
+                          {p.medicalRecordNumber}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs text-[#666666]">
+                        <span className="font-mono">{p.phoneNumber}</span>
+                        {p.medicalHistory && (
+                          <>
+                            <span>•</span>
+                            <span className="text-gray-500">History: {p.medicalHistory}</span>
+                          </>
+                        )}
+                      </div>
+                      <p className="text-[10px] text-gray-400">
+                        Total Visits: {p.appointments?.length || 0}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Tab 4: BI Analytics */}
+        {activeTab === "analytics" && (
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Marketing Acquisition Source */}
+              <div className="bg-white p-5 rounded-2xl border border-[#E5E8E1] shadow-subtle space-y-4">
+                <div className="flex items-center gap-2">
+                  <PieChart className="w-4 h-4 text-[#7B8052]" />
+                  <h3 className="text-sm font-serif font-bold text-[#29291F]">
+                    Acquisition Sources
+                  </h3>
+                </div>
+                <div className="space-y-2">
+                  {analytics?.marketing?.leadsBySource?.map((item: any) => (
+                    <div key={item.source} className="flex items-center justify-between text-xs py-1 border-b border-[#E5E8E1]">
+                      <span className="font-medium text-[#666666]">{item.source}</span>
+                      <span className="font-bold text-[#7B8052]">{item.count} Inquiries</span>
+                    </div>
+                  )) || <p className="text-xs text-gray-400">No source data yet.</p>}
+                </div>
+              </div>
+
+              {/* Treatment Demand Distribution */}
+              <div className="bg-white p-5 rounded-2xl border border-[#E5E8E1] shadow-subtle space-y-4">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="w-4 h-4 text-[#7B8052]" />
+                  <h3 className="text-sm font-serif font-bold text-[#29291F]">
+                    Treatment Demand Breakdown
+                  </h3>
+                </div>
+                <div className="space-y-2">
+                  {analytics?.marketing?.leadsByTreatment?.map((item: any) => (
+                    <div key={item.treatment} className="flex items-center justify-between text-xs py-1 border-b border-[#E5E8E1]">
+                      <span className="font-medium text-[#666666]">{item.treatment}</span>
+                      <span className="font-bold text-[#465239]">{item.count}</span>
+                    </div>
+                  )) || <p className="text-xs text-gray-400">No treatment demand data yet.</p>}
+                </div>
+              </div>
+            </div>
+
+            {/* Conversion Funnel */}
+            <div className="bg-white p-6 rounded-2xl border border-[#E5E8E1] shadow-subtle space-y-4">
+              <h3 className="text-sm font-serif font-bold text-[#29291F]">
+                Clear Aligner & Patient Conversion Funnel
+              </h3>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 text-center">
+                <div className="p-3 rounded-xl bg-[#FAF9F5] border border-[#E5E8E1]">
+                  <p className="text-[10px] uppercase font-bold text-gray-500">1. Inquiries</p>
+                  <p className="text-xl font-bold text-[#29291F] mt-1">{analytics?.funnel?.impressionsToInquiry ?? 0}</p>
+                </div>
+                <div className="p-3 rounded-xl bg-[#FAF9F5] border border-[#E5E8E1]">
+                  <p className="text-[10px] uppercase font-bold text-gray-500">2. Contacted</p>
+                  <p className="text-xl font-bold text-[#7B8052] mt-1">{analytics?.funnel?.inquiryToContacted ?? 0}</p>
+                </div>
+                <div className="p-3 rounded-xl bg-[#FAF9F5] border border-[#E5E8E1]">
+                  <p className="text-[10px] uppercase font-bold text-gray-500">3. Qualified</p>
+                  <p className="text-xl font-bold text-[#465239] mt-1">{analytics?.funnel?.contactedToQualified ?? 0}</p>
+                </div>
+                <div className="p-3 rounded-xl bg-[#FAF9F5] border border-[#E5E8E1]">
+                  <p className="text-[10px] uppercase font-bold text-gray-500">4. Booked</p>
+                  <p className="text-xl font-bold text-purple-700 mt-1">{analytics?.funnel?.qualifiedToBooked ?? 0}</p>
+                </div>
+                <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200">
+                  <p className="text-[10px] uppercase font-bold text-emerald-700">5. Completed</p>
+                  <p className="text-xl font-bold text-emerald-800 mt-1">{analytics?.funnel?.bookedToCompleted ?? 0}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Tab 5: Compliance & Audit Trail */}
         {activeTab === "audit" && (
           <div className="bg-white rounded-2xl border border-[#E5E8E1] shadow-subtle overflow-hidden">
             <div className="p-4 border-b border-[#E5E8E1] bg-[#F8F9F6] flex items-center justify-between">
@@ -540,6 +778,77 @@ export default function DentalCRMPage() {
           </div>
         )}
       </main>
+
+      {/* Modal: Add New Patient */}
+      {isNewPatientOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 border border-[#E5E8E1] shadow-2xl space-y-4">
+            <div className="flex items-center justify-between border-b border-[#E5E8E1] pb-3">
+              <h3 className="text-base font-serif font-bold text-[#29291F]">
+                Register New Clinical Patient
+              </h3>
+              <button
+                onClick={() => setIsNewPatientOpen(false)}
+                className="text-gray-400 hover:text-gray-600"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleCreatePatient} className="space-y-3">
+              <div>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-[#666666] block mb-1">
+                  Full Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={newPatientData.fullName}
+                  onChange={(e) => setNewPatientData({ ...newPatientData, fullName: e.target.value })}
+                  placeholder="e.g. Anandhi Sundar"
+                  className="w-full px-3 py-2 rounded-lg border border-[#E5E8E1] text-xs text-[#29291F] focus:outline-none focus:border-[#7B8052]"
+                />
+              </div>
+
+              <div>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-[#666666] block mb-1">
+                  Phone Number *
+                </label>
+                <input
+                  type="tel"
+                  required
+                  value={newPatientData.phoneNumber}
+                  onChange={(e) => setNewPatientData({ ...newPatientData, phoneNumber: e.target.value })}
+                  placeholder="e.g. +91 98765 43210"
+                  className="w-full px-3 py-2 rounded-lg border border-[#E5E8E1] text-xs text-[#29291F] focus:outline-none focus:border-[#7B8052]"
+                />
+              </div>
+
+              <div>
+                <label className="text-[10px] font-bold uppercase tracking-wider text-[#666666] block mb-1">
+                  Medical Notes / Dental History
+                </label>
+                <textarea
+                  rows={2}
+                  value={newPatientData.medicalHistory}
+                  onChange={(e) => setNewPatientData({ ...newPatientData, medicalHistory: e.target.value })}
+                  placeholder="e.g. Mild malocclusion, previous restoration..."
+                  className="w-full px-3 py-1.5 rounded-lg border border-[#E5E8E1] text-xs text-[#29291F] focus:outline-none focus:border-[#7B8052]"
+                />
+              </div>
+
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  className="w-full py-2.5 rounded-full bg-[#7B8052] hover:bg-[#465239] text-white font-semibold text-xs uppercase tracking-wider transition-colors shadow-md"
+                >
+                  Create Medical Record
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
