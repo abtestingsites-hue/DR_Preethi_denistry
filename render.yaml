@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dr-preethi-dentistry
+    env: node
+    plan: free
+    buildCommand: npm install && npx prisma generate && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_TENANT_SLUG
+        value: preethis-dentistry-cbe
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
