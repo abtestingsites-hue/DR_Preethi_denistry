@@ -9,6 +9,7 @@ import { MeetDoctorSection } from "@/components/sections/MeetDoctorSection";
 import { MediumPartnershipTestimonials } from "@/components/sections/MediumPartnershipTestimonials";
 import { HomeJournalSection } from "@/components/sections/HomeJournalSection";
 import { HomeFaqSection } from "@/components/sections/HomeFaqSection";
+import { AlignerAssessmentWidget } from "@/components/sections/AlignerAssessmentWidget";
 import { MediumCtaBanner } from "@/components/sections/MediumCtaBanner";
 
 export default function HomePage() {
@@ -28,6 +29,9 @@ export default function HomePage() {
 
       {/* 5. GoClear Clear Aligners: Positioned strategically BEFORE the Clinic Environment Gallery */}
       <GoClearAlignersSection />
+
+      {/* 5b. Interactive Clear Aligner Smile Assessment Tool */}
+      <AlignerAssessmentWidget />
 
       {/* 6. Clinic Environment Gallery */}
       <ClinicGallerySection />
